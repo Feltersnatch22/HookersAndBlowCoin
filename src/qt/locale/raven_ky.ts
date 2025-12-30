@@ -193,7 +193,7 @@
     </message>
     </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -203,8 +203,8 @@
         <translation>Билдирүүнү &amp;текшерүү...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>

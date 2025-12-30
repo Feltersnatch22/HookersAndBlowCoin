@@ -1,5 +1,5 @@
 [Unit]
-Description=Raven's distributed currency daemon
+Description=HookersAndBlow's distributed currency daemon
 After=network.target
 
 [Service]

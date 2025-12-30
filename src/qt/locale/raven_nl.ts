@@ -62,12 +62,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Ravenadressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw ravens verzendt.</translation>
+        <source>These are your HookersAndBlow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw HookersAndBlowadressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw ravens verzendt.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw Raven-adressen waarmee u betalingen kunt ontvangen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your HookersAndBlow addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw HookersAndBlow-adressen waarmee u betalingen kunt ontvangen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -613,12 +613,12 @@
         <translation>Wis</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 HNB</source>
+        <translation>123.456 HNB</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Waarschuwing: Ongeldig Ravenadres</translation>
+        <source>Warning: Invalid HookersAndBlow address</source>
+        <translation>Waarschuwing: Ongeldig HookersAndBlowadres</translation>
     </message>
     <message>
         <source>or</source>
@@ -680,8 +680,8 @@
         <translation>Bewerk verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
-        <translation>Het opgegeven adres "%1" is een ongeldig Ravenadres.</translation>
+        <source>The entered address "%1" is not a valid HookersAndBlow address.</source>
+        <translation>Het opgegeven adres "%1" is een ongeldig HookersAndBlowadres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -833,8 +833,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Gebruik een persoonlijke gegevensmap:</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Approximately %1 GB of data will be stored in this directory.</source>
@@ -925,7 +925,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the raven network, as detailed below.</source>
-        <translation>Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de geldbeugel is daarom mogelijk niet correct. Deze informatie is correct van zodra de synchronisatie met het Raven-netwerk werd voltooid, zoals onderaan beschreven.</translation>
+        <translation>Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de geldbeugel is daarom mogelijk niet correct. Deze informatie is correct van zodra de synchronisatie met het HookersAndBlow-netwerk werd voltooid, zoals onderaan beschreven.</translation>
     </message>
     <message>
         <source>Attempting to spend ravens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1109,8 +1109,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>&amp;Spendeer onbevestigd wisselgeld</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de Ravenpoort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Open de HookersAndBlowpoort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1121,8 +1121,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Accepteer inkomende connecties</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
-        <translation>Verbind met het Ravennetwerk via een SOCKS5 proxy.</translation>
+        <source>Connect to the HookersAndBlow network through a SOCKS5 proxy.</source>
+        <translation>Verbind met het HookersAndBlownetwerk via een SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1157,8 +1157,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Maak verbinding met Ravennetwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
+        <source>Connect to the HookersAndBlow network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Maak verbinding met HookersAndBlownetwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1260,8 +1260,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het Ravennetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het HookersAndBlownetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1300,8 +1300,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Uw totale saldo</translation>
     </message>
     <message>
-        <source>RVN Balances</source>
-        <translation>RVN Balance</translation>
+        <source>HNB Balances</source>
+        <translation>HNB Balance</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1367,8 +1367,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Ongeldig betalingsadres %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Raven address or malformed URI parameters.</source>
-        <translation>URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig Raven adres of misvormde URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid HookersAndBlow address or malformed URI parameters.</source>
+        <translation>URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig HookersAndBlow adres of misvormde URI parameters.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1469,8 +1469,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Voer een Ravenadres in (bijv. %1)</translation>
+        <source>Enter a HookersAndBlow address (e.g. %1)</source>
+        <translation>Voer een HookersAndBlowadres in (bijv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1827,7 +1827,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Onderteken bericht...</translation>
@@ -1937,8 +1937,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Bezig met herindexeren van blokken op harde schijf...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Verstuur munten naar een Ravenadres</translation>
+        <source>Send coins to a HookersAndBlow address</source>
+        <translation>Verstuur munten naar een HookersAndBlowadres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1957,8 +1957,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>&amp;Verifiëer bericht...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1985,12 +1985,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Versleutel de geheime sleutels die bij uw portemonnee horen</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw Ravenadressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw HookersAndBlowadressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Ravenadressen</translation>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
+        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde HookersAndBlowadressen</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -2057,8 +2057,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Bijgewerkt</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
-        <translation>Toon het %1 hulpbericht om een lijst te krijgen met mogelijke Raven commandoregelopties</translation>
+        <source>Show the %1 help message to get a list with possible HookersAndBlow command-line options</source>
+        <translation>Toon het %1 hulpbericht om een lijst te krijgen met mogelijke HookersAndBlow commandoregelopties</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -2131,8 +2131,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Portemonnee is &lt;b&gt;versleuteld&lt;/b&gt; en momenteel &lt;b&gt;gesloten&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
-        <translation>Een fatale fout heeft zich voorgedaan. Raven kan niet veilig worden verdergezet en wordt afgesloten.</translation>
+        <source>A fatal error occurred. HookersAndBlow can no longer continue safely and will quit.</source>
+        <translation>Een fatale fout heeft zich voorgedaan. HookersAndBlow kan niet veilig worden verdergezet en wordt afgesloten.</translation>
     </message>
 </context>
 <context>
@@ -2158,8 +2158,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>H&amp;ergebruik en bestaand ontvangstadres (niet aanbevolen)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Raven network.</source>
-        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, welke zal getoond worden wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het Ravennetwerk.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the HookersAndBlow network.</source>
+        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, welke zal getoond worden wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het HookersAndBlownetwerk.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2648,8 +2648,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Betaal alleen de verplichte transactiekosten van %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Waarschuwing: Ongeldig Ravenadres</translation>
+        <source>Warning: Invalid HookersAndBlow address</source>
+        <translation>Waarschuwing: Ongeldig HookersAndBlowadres</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2687,8 +2687,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Dit is een normale betaling.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Het Ravenadres om betaling aan te versturen</translation>
+        <source>The HookersAndBlow address to send the payment to</source>
+        <translation>Het HookersAndBlowadres om betaling aan te versturen</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2731,8 +2731,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Vul een label voor dit adres in om het aan de lijst met gebruikte adressen toe te voegen</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
-        <translation>Een bericht dat werd toegevoegd aan de raven: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Ravennetwerk.</translation>
+        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the HookersAndBlow network.</source>
+        <translation>Een bericht dat werd toegevoegd aan de raven: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het HookersAndBlownetwerk.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2773,11 +2773,11 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     </message>
     <message>
         <source>You can sign messages/agreements with your addresses to prove you can receive ravens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u Ravens kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
+        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u HookersAndBlows kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>Het Ravenadres om bericht mee te ondertekenen</translation>
+        <source>The HookersAndBlow address to sign the message with</source>
+        <translation>Het HookersAndBlowadres om bericht mee te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2808,8 +2808,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald Ravenadres bezit</translation>
+        <source>Sign the message to prove you own this HookersAndBlow address</source>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald HookersAndBlowadres bezit</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2832,12 +2832,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Voer het adres van de ontvanger in, bericht (zorg ervoor dat de regeleinden, spaties, tabs etc. precies kloppen) en onderteken onderaan om het bericht te verifiëren. Wees voorzicht om niet meer in de ondertekening te lezen dan in het getekende bericht zelf, om te voorkomen dat je wordt aangevallen met een man-in-the-middle attack. Houd er mee rekening dat dit alleen de ondertekende partij bewijst met het ontvangen adres, er kan niet bewezen worden dat er een transactie heeft plaatsgevonden!</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>Het Ravenadres waarmee het bericht ondertekend is</translation>
+        <source>The HookersAndBlow address the message was signed with</source>
+        <translation>Het HookersAndBlowadres waarmee het bericht ondertekend is</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde Ravenadres het bericht heeft ondertekend.</translation>
+        <source>Verify the message to ensure it was signed with the specified HookersAndBlow address</source>
+        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde HookersAndBlowadres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3473,8 +3473,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Niet mogelijk ok HTTP-server te starten. Zie debuglogboek voor details.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>HookersAndBlow Core</source>
+        <translation>HookersAndBlow Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

@@ -1,4 +1,4 @@
-Build instructions for Ravencoin 
+Build instructions for HookersAndBlowCoin 
 =================================
 
 This will install most of the dependencies from ubuntu.
@@ -130,12 +130,12 @@ protobuf-compiler
 
 Directory structure
 ------------------
-Ravencoin sources in `$HOME/src`
+HookersAndBlowCoin sources in `$HOME/src`
 
 Berkeley DB will be installed to `$HOME/src/db4`
 
 
-Ravencoin
+HookersAndBlowCoin
 ------------------
 
 Start in $HOME
@@ -146,11 +146,11 @@ Make the directory for sources and go into it.
 
 `cd src`
 
-__Download Ravencoin source.__
+__Download HookersAndBlowCoin source.__
 
-`git clone https://github.com/RavenProject/Ravencoin`
+`git clone https://github.com/HookersAndBlowProject/HookersAndBlowCoin`
 
-`cd Ravencoin`
+`cd HookersAndBlowCoin`
 
 `git checkout develop` # this checks out the develop branch.
 

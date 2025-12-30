@@ -62,12 +62,12 @@
         <translation>Adresa za primanje</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ovo su vase Ravencoin adrese za slanje. Uvek proverite iznos i adresu primaoca pre slanja novcica.</translation>
+        <source>These are your HookersAndBlow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ovo su vase HookersAndBlowCoin adrese za slanje. Uvek proverite iznos i adresu primaoca pre slanja novcica.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ovo su vase Ravencoin adrese za prijem.  Preporucljivo je da za svaki prijem novcica kreirate novu adresu za prijem.</translation>
+        <source>These are your HookersAndBlow addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ovo su vase HookersAndBlowCoin adrese za prijem.  Preporucljivo je da za svaki prijem novcica kreirate novu adresu za prijem.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -450,7 +450,7 @@ Zapamtite da enkripcija vašeg novčanika ne može u potpunosti zaštititi vaša
     </message>
     </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Синхронизација са мрежом у току...</translation>
@@ -504,7 +504,7 @@ Zapamtite da enkripcija vašeg novčanika ne može u potpunosti zaštititi vaša
         <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
+        <source>Send coins to a HookersAndBlow address</source>
         <translation>Пошаљите новац на raven адресу</translation>
     </message>
     <message>

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2017 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The Raven Core developers
+# Copyright (c) 2017-2020 The HookersAndBlow Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -40,10 +40,10 @@ Test is as follows:
 
 import os
 import time
-from test_framework.test_framework import RavenTestFramework
+from test_framework.test_framework import HookersAndBlowTestFramework
 from test_framework.util import assert_equal, Decimal, wait_until, assert_raises_rpc_error
 
-class MempoolPersistTest(RavenTestFramework):
+class MempoolPersistTest(HookersAndBlowTestFramework):
     def set_test_params(self):
         self.num_nodes = 3
         self.extra_args = [[], ["-persistmempool=0"], []]

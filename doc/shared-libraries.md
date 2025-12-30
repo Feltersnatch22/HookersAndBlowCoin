@@ -3,7 +3,7 @@ Shared Libraries
 
 ## ravenconsensus
 
-The purpose of this library is to make the verification functionality that is critical to Raven's consensus available to other applications, e.g. to language bindings.
+The purpose of this library is to make the verification functionality that is critical to HookersAndBlow's consensus available to other applications, e.g. to language bindings.
 
 ### API
 
@@ -43,7 +43,7 @@ The interface is defined in the C header `ravenconsensus.h` located in  `src/scr
 - `ravenconsensus_ERR_AMOUNT_REQUIRED` - Input amount is required if WITNESS is used
 
 ### Example Implementations
-- [NRaven](https://github.com/NicolasDorier/NRaven/blob/master/NRaven/Script.cs#L814) (.NET Bindings)
+- [NHookersAndBlow](https://github.com/NicolasDorier/NHookersAndBlow/blob/master/NHookersAndBlow/Script.cs#L814) (.NET Bindings)
 - [node-libravenconsensus](https://github.com/bitpay/node-libravenconsensus) (Node.js Bindings)
 - [java-libravenconsensus](https://github.com/dexX7/java-libravenconsensus) (Java Bindings)
 - [ravenconsensus-php](https://github.com/Bit-Wasp/ravenconsensus-php) (PHP Bindings)

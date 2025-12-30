@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2015-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The Raven Core developers
+# Copyright (c) 2017-2020 The HookersAndBlow Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -33,13 +33,13 @@ addnode connect to generic DNS name
 import socket
 import os
 from test_framework.socks5 import Socks5Configuration, Socks5Command, Socks5Server, AddressType
-from test_framework.test_framework import RavenTestFramework
+from test_framework.test_framework import HookersAndBlowTestFramework
 from test_framework.util import PORT_MIN, PORT_RANGE, assert_equal
 from test_framework.netutil import test_ipv6_local
 
 RANGE_BEGIN = PORT_MIN + 2 * PORT_RANGE  # Start after p2p and rpc ports
 
-class ProxyTest(RavenTestFramework):
+class ProxyTest(HookersAndBlowTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
 

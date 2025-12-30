@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The Raven Core developers
+# Copyright (c) 2017-2020 The HookersAndBlow Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -67,10 +67,10 @@ def assert_fee_amount(fee, tx_size, fee_per_kb):
     """Assert the fee was in range"""
     target_fee = tx_size * fee_per_kb / 1000
     if fee < target_fee:
-        raise AssertionError("Fee of %s RVN too low! (Should be %s RVN)" % (str(fee), str(target_fee)))
+        raise AssertionError("Fee of %s HNB too low! (Should be %s HNB)" % (str(fee), str(target_fee)))
     # allow the wallet's estimation to be at most 2 bytes off
     if fee > (tx_size + 2) * fee_per_kb / 1000:
-        raise AssertionError("Fee of %s RVN too high! (Should be %s RVN)" % (str(fee), str(target_fee)))
+        raise AssertionError("Fee of %s HNB too high! (Should be %s HNB)" % (str(fee), str(target_fee)))
 
 
 def assert_equal(thing1, thing2, *args):
@@ -236,7 +236,7 @@ def assert_happening(date_str, within_secs=120):
 ##########################################################################################
 
 def check_json_precision():
-    """Make sure json library being used does not lose precision converting RVN values"""
+    """Make sure json library being used does not lose precision converting HNB values"""
     n = Decimal("20000000.00000003")
     satoshis = int(json.loads(json.dumps(float(n))) * 1.0e8)
     if satoshis != 2000000000000003:

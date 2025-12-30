@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2017-2019 The HookersAndBlow Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -549,13 +549,13 @@ void PrintExceptionContinue(const std::exception *pex, const char *pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Raven
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Raven
-    // Mac: ~/Library/Application Support/Raven
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\HookersAndBlow
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\HookersAndBlow
+    // Mac: ~/Library/Application Support/HookersAndBlow
     // Unix: ~/.raven
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Raven";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "HookersAndBlow";
 #else
     fs::path pathRet;
     char *pszHome = getenv("HOME");
@@ -565,7 +565,7 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Raven";
+    return pathRet / "Library/Application Support/HookersAndBlow";
 #else
     // Unix
     return pathRet / ".raven";
@@ -926,10 +926,10 @@ std::string CopyrightHolders(const std::string &strPrefix)
 {
     std::string strCopyrightHolders = strPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 
-    // Check for untranslated substitution to make sure Raven Core copyright is not removed by accident
-    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Raven Core") == std::string::npos)
+    // Check for untranslated substitution to make sure HookersAndBlow Core copyright is not removed by accident
+    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("HookersAndBlow Core") == std::string::npos)
     {
-        strCopyrightHolders += "\n" + strPrefix + "The Raven Core developers";
+        strCopyrightHolders += "\n" + strPrefix + "The HookersAndBlow Core developers";
     }
     return strCopyrightHolders;
 }

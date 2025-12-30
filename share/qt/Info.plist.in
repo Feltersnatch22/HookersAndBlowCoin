@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Raven-Qt</string>
+  <string>HookersAndBlow-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Raven-Qt</string>
+  <string>HookersAndBlow-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.ravenfoundation.Raven-Qt</string>
+  <string>org.ravenfoundation.HookersAndBlow-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.raven.RavenPayment</string>
+      <string>org.raven.HookersAndBlowPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>raven</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.raven.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Raven payment request</string>
+      <string>HookersAndBlow payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

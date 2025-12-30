@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
+// Copyright (c) 2017-2021 The HookersAndBlow Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -685,7 +685,7 @@ void WalletModel::listCoins(std::map<QString, std::vector<COutput> >& mapCoins) 
     }
 }
 
-/** RVN START */
+/** HNB START */
 // AvailableCoins + LockedCoins grouped by wallet address (put change in one group with wallet address)
 void WalletModel::listAssets(std::map<QString, std::map<QString, std::vector<COutput> > >& mapCoins) const
 {
@@ -711,7 +711,7 @@ void WalletModel::listAssets(std::map<QString, std::map<QString, std::vector<COu
         }
     }
 }
-/** RVN END */
+/** HNB END */
 
 bool WalletModel::isLockedCoin(uint256 hash, unsigned int n) const
 {
@@ -803,15 +803,15 @@ bool WalletModel::bumpFee(uint256 hash)
 //    questionString.append("<tr><td>");
 //    questionString.append(tr("Current fee:"));
 //    questionString.append("</td><td>");
-//    questionString.append(RavenUnits::formatHtmlWithUnit(getOptionsModel()->getDisplayUnit(), oldFee));
+//    questionString.append(HookersAndBlowUnits::formatHtmlWithUnit(getOptionsModel()->getDisplayUnit(), oldFee));
 //    questionString.append("</td></tr><tr><td>");
 //    questionString.append(tr("Increase:"));
 //    questionString.append("</td><td>");
-//    questionString.append(RavenUnits::formatHtmlWithUnit(getOptionsModel()->getDisplayUnit(), newFee - oldFee));
+//    questionString.append(HookersAndBlowUnits::formatHtmlWithUnit(getOptionsModel()->getDisplayUnit(), newFee - oldFee));
 //    questionString.append("</td></tr><tr><td>");
 //    questionString.append(tr("New fee:"));
 //    questionString.append("</td><td>");
-//    questionString.append(RavenUnits::formatHtmlWithUnit(getOptionsModel()->getDisplayUnit(), newFee));
+//    questionString.append(HookersAndBlowUnits::formatHtmlWithUnit(getOptionsModel()->getDisplayUnit(), newFee));
 //    questionString.append("</td></tr></table>");
 //    SendConfirmationDialog confirmationDialog(tr("Confirm fee bump"), questionString);
 //    confirmationDialog.exec();

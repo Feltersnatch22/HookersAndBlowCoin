@@ -463,8 +463,8 @@
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ouvrir le port du client Raven automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ouvrir le port du client HookersAndBlow automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -611,8 +611,8 @@
         <translation>Montant</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Entrer une adresse Raven (e.g. %1)</translation>
+        <source>Enter a HookersAndBlow address (e.g. %1)</source>
+        <translation>Entrer une adresse HookersAndBlow (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -861,7 +861,7 @@
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signer un &amp;message...</translation>
@@ -951,8 +951,8 @@
         <translation>Réindexer les blocs sur le disque...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Envoyer des pièces à une adresse Raven</translation>
+        <source>Send coins to a HookersAndBlow address</source>
+        <translation>Envoyer des pièces à une adresse HookersAndBlow</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -971,8 +971,8 @@
         <translation>&amp;Vérification du message</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -999,8 +999,8 @@
         <translation>Crypter les clé privées qui appartiennent votre portefeuille</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Signer vos messages avec vos adresses Raven pour prouver que vous les détenez</translation>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
+        <translation>Signer vos messages avec vos adresses HookersAndBlow pour prouver que vous les détenez</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1695,8 +1695,8 @@
         <translation>Impossible de démarrer le serveur HTTP. Voir le journal de débogage pour plus de détails.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>HookersAndBlow Core</source>
+        <translation>HookersAndBlow Core</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

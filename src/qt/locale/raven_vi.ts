@@ -133,7 +133,7 @@
     <name>RPCConsole</name>
     </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>

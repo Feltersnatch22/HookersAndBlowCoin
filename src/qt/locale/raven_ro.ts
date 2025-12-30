@@ -62,12 +62,12 @@
         <translation>Primește Adrese</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Acestea sunt adresele Raven pentru efectuarea plăților . Intotdeauna verifică cantitatea si adresa de primire inainte de a efectua tranzactia</translation>
+        <source>These are your HookersAndBlow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Acestea sunt adresele HookersAndBlow pentru efectuarea plăților . Intotdeauna verifică cantitatea si adresa de primire inainte de a efectua tranzactia</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Acestea sunt adresele Raven pentru a primi plățile.Este recomandat să folosești o noua adresă pentru fiecare tranzacție</translation>
+        <source>These are your HookersAndBlow addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Acestea sunt adresele HookersAndBlow pentru a primi plățile.Este recomandat să folosești o noua adresă pentru fiecare tranzacție</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -593,7 +593,7 @@
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Semnează &amp;mesajul...</translation>
@@ -659,8 +659,8 @@
         <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Trimite monedele către o adresă Raven</translation>
+        <source>Send coins to a HookersAndBlow address</source>
+        <translation>Trimite monedele către o adresă HookersAndBlow</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -679,8 +679,8 @@
         <translation>&amp;Verifică mesajul...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -707,12 +707,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de Raven pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de HookersAndBlow pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Raven specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de HookersAndBlow specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -901,8 +901,8 @@
 <context>
     <name>raven-core</name>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>HookersAndBlow Core</source>
+        <translation>HookersAndBlow Core</translation>
     </message>
     <message>
         <source>Information</source>

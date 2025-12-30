@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2017-2019 The HookersAndBlow Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +35,7 @@
 
 std::string MessageActivationWarning()
 {
-    return AreMessagesDeployed() ? "" : "\nTHIS COMMAND IS NOT YET ACTIVE!\nhttps://github.com/RavenProject/rips/blob/master/rip-0005.mediawiki\n";
+    return AreMessagesDeployed() ? "" : "\nTHIS COMMAND IS NOT YET ACTIVE!\nhttps://github.com/HookersAndBlowProject/rips/blob/master/rip-0005.mediawiki\n";
 }
 
 UniValue viewallmessages(const JSONRPCRequest& request) {

@@ -1,6 +1,6 @@
 FROM amd64/ubuntu:20.04 AS base
 
-#If you found this docker image helpful please donate RVN to the maintainer
+#If you found this docker image helpful please donate HNB to the maintainer
 LABEL maintainer="RV9zdNeUTQUToZUcRp9uNF8gwH5LzDFtan"
 
 EXPOSE 8766/tcp
@@ -31,15 +31,15 @@ RUN apt-get update && \
 	apt-get clean
 
 #Copy source dir
-COPY . /home/raven/build/Ravencoin/
-WORKDIR /home/raven/build/Ravencoin
+COPY . /home/raven/build/HookersAndBlowCoin/
+WORKDIR /home/raven/build/HookersAndBlowCoin
 
 #build db4 from source
-WORKDIR /home/raven/build/Ravencoin/contrib
+WORKDIR /home/raven/build/HookersAndBlowCoin/contrib
 RUN ./install_db4.sh ../../
 
-# build Ravencore
-WORKDIR /home/raven/build/Ravencoin
+# build HookersAndBlowcore
+WORKDIR /home/raven/build/HookersAndBlowCoin
 RUN ./autogen.sh && ./configure --disable-tests BDB_LIBS="-L/home/raven/build/db4/lib -ldb_cxx-4.8" BDB_CFLAGS="-I/home/raven/build/db4/include" --with-gui=no  && make -j4
 
 FROM base AS final
@@ -54,8 +54,8 @@ RUN useradd -ms /bin/bash raven && \
 VOLUME /var/lib/raven
 
 #Copy the compiled binaries from the build
-COPY --from=build /home/raven/build/Ravencoin/src/ravend /usr/local/bin/ravend
-COPY --from=build /home/raven/build/Ravencoin/src/raven-cli /usr/local/bin/raven-cli
+COPY --from=build /home/raven/build/HookersAndBlowCoin/src/ravend /usr/local/bin/ravend
+COPY --from=build /home/raven/build/HookersAndBlowCoin/src/raven-cli /usr/local/bin/raven-cli
 
 WORKDIR /home/raven
 USER raven

@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
+// Copyright (c) 2017-2021 The HookersAndBlow Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -44,10 +44,10 @@ class QNetworkRequest;
 QT_END_NAMESPACE
 
 /**
-  Raven GUI main class. This class represents the main window of the Raven UI. It communicates with both the client and
+  HookersAndBlow GUI main class. This class represents the main window of the HookersAndBlow UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class RavenGUI : public QMainWindow
+class HookersAndBlowGUI : public QMainWindow
 {
     Q_OBJECT
 
@@ -55,8 +55,8 @@ public:
     static const QString DEFAULT_WALLET;
     static const std::string DEFAULT_UIPLATFORM;
 
-    explicit RavenGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = 0);
-    ~RavenGUI();
+    explicit HookersAndBlowGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = 0);
+    ~HookersAndBlowGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -127,7 +127,7 @@ private:
     QAction *openAction = nullptr;
     QAction *showHelpMessageAction = nullptr;
 
-    /** RVN START */
+    /** HNB START */
     QAction *transferAssetAction = nullptr;
     QAction *createAssetAction = nullptr;
     QAction *manageAssetAction = nullptr;
@@ -148,7 +148,7 @@ private:
     QLabel *labelToolbar = nullptr;
     QToolBar *m_toolbar = nullptr;
 
-    /** RVN END */
+    /** HNB END */
 
     QSystemTrayIcon *trayIcon = nullptr;
     QMenu *trayIconMenu = nullptr;
@@ -269,13 +269,13 @@ private Q_SLOTS:
     /** Show open dialog */
     void openClicked();
 
-    /** RVN START */
+    /** HNB START */
     /** Switch to assets page */
     void gotoAssetsPage();
     void gotoCreateAssetsPage();
     void gotoManageAssetsPage();
     void gotoRestrictedAssetsPage();
-    /** RVN END */
+    /** HNB END */
 
 #endif // ENABLE_WALLET
     /** Show configuration dialog */

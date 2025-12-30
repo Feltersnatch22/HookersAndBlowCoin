@@ -62,11 +62,11 @@
         <translation>Адреси за получаване</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your HookersAndBlow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Това са адресите на получателите на плащания. Винаги проверявайте размера на сумата и адреса на получателя, преди да изпратите монети.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your HookersAndBlow addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Това са Вашите Биткойн адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
     </message>
     <message>
@@ -429,7 +429,7 @@
         <translation>Заплати само изискуемата такса от %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid HookersAndBlow address</source>
         <translation>Внимание! Невалиден Рейвън адрес</translation>
     </message>
     <message>
@@ -676,7 +676,7 @@
         <translation>Редактиране на адрес за изпращане</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
+        <source>The entered address "%1" is not a valid HookersAndBlow address.</source>
         <translation>"%1" не е валиден Биткоин адрес.</translation>
     </message>
     <message>
@@ -829,8 +829,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Използване на директория ръчно</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1005,15 +1005,15 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Похарчете непотвърденото ресто</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваряне на входящия Raven порт. Работи само с рутери поддържащи UPnP.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваряне на входящия HookersAndBlow порт. Работи само с рутери поддържащи UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Отваряне на входящия порт чрез &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
+        <source>Connect to the HookersAndBlow network through a SOCKS5 proxy.</source>
         <translation>Свързване с Биткойн мрежата чрез SOCKS5  прокси.</translation>
     </message>
     <message>
@@ -1116,7 +1116,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Формуляр</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</source>
         <translation>Текущата информация на екрана може да не е актуална. Вашият портфейл ще се синхронизира автоматично с мрежата на Биткоин, щом поне една връзката с нея се установи; този процес все още не е приключил.</translation>
     </message>
     <message>
@@ -1257,7 +1257,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Сума</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
+        <source>Enter a HookersAndBlow address (e.g. %1)</source>
         <translation>Въведете Биткойн адрес (например: %1)</translation>
     </message>
     <message>
@@ -1507,7 +1507,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Подписване на &amp;съобщение...</translation>
@@ -1601,8 +1601,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Wallet</translation>
     </message>
     <message>
-        <source>Ravencoin Market Price</source>
-        <translation>Пазарна цена на Ravencoin</translation>
+        <source>HookersAndBlowCoin Market Price</source>
+        <translation>Пазарна цена на HookersAndBlowCoin</translation>
     </message>
     <message>
         <source>Brought to you by binance.com</source>
@@ -1629,7 +1629,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Повторно индексиране на блоковете на диска...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
+        <source>Send coins to a HookersAndBlow address</source>
         <translation>Изпращане към Биткоин адрес</translation>
     </message>
     <message>
@@ -1649,7 +1649,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-        <source>Raven</source>
+        <source>HookersAndBlow</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -1677,11 +1677,11 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Шифроване на личните ключове,които принадлежат на портфейла Ви.</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
         <translation>Пишете съобщения със своя Биткойн адрес за да докажете,че е ваш.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
         <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените Биткойн адреси.</translation>
     </message>
     <message>
@@ -1749,7 +1749,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Синхронизиран</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
+        <source>Show the %1 help message to get a list with possible HookersAndBlow command-line options</source>
         <translation>Покажи %1 помощно съобщение за да получиш лист с възможни Биткойн команди</translation>
     </message>
     <message>
@@ -1987,8 +1987,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Салдо</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 HNB</source>
+        <translation>123.456 HNB</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -2224,7 +2224,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Заявката за плащане е изтекла.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid HookersAndBlow address</source>
         <translation>Внимание: Невалиден Биткойн адрес</translation>
     </message>
     <message>
@@ -2340,7 +2340,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Копиране на текущия подпис</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
+        <source>Sign the message to prove you own this HookersAndBlow address</source>
         <translation>Подпишете съобщение като доказателство, че притежавате определен адрес</translation>
     </message>
     <message>
@@ -2356,7 +2356,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Провери</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
+        <source>Verify the message to ensure it was signed with the specified HookersAndBlow address</source>
         <translation>Проверете съобщение, за да сте сигурни че е подписано с определен Биткоин адрес</translation>
     </message>
     <message>
@@ -2909,7 +2909,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Pruning blockstore...</translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>HookersAndBlow Core</source>
         <translation>Биткойн ядро</translation>
     </message>
     <message>

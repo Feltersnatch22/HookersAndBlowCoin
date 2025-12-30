@@ -62,12 +62,12 @@
         <translation>Mottagaradresser</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Detta är dina Raven adresser för att skicka betalningar. Kolla alltid summan och den mottagande adressen innan du skickar Ravens.</translation>
+        <source>These are your HookersAndBlow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Detta är dina HookersAndBlow adresser för att skicka betalningar. Kolla alltid summan och den mottagande adressen innan du skickar HookersAndBlows.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Detta är dina Raven adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
+        <source>These are your HookersAndBlow addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Detta är dina HookersAndBlow adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -437,8 +437,8 @@ Var vänlig och försök igen.</translation>
         <translation>Redigera avsändaradress</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
-        <translation>Den angivna adressen "%1" är inte en giltig Raven-adress.</translation>
+        <source>The entered address "%1" is not a valid HookersAndBlow address.</source>
+        <translation>Den angivna adressen "%1" är inte en giltig HookersAndBlow-adress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -736,16 +736,16 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Spendera obekräftad växel</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna automatiskt Raven-klientens port på routern. Detta fungerar endast om din router har UPnP aktiverat.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna automatiskt HookersAndBlow-klientens port på routern. Detta fungerar endast om din router har UPnP aktiverat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Tilldela port med hjälp av &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
-        <translation>Anslut till Raven-nätverket genom en SOCKS5-proxy.</translation>
+        <source>Connect to the HookersAndBlow network through a SOCKS5 proxy.</source>
+        <translation>Anslut till HookersAndBlow-nätverket genom en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -780,8 +780,8 @@ Var vänlig och försök igen.</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Anslut till Raven-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
+        <source>Connect to the HookersAndBlow network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Anslut till HookersAndBlow-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -867,8 +867,8 @@ Var vänlig och försök igen.</translation>
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med Raven-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med HookersAndBlow-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -954,8 +954,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ogiltig betalningsadress %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Raven address or malformed URI parameters.</source>
-        <translation>URI kan inte tolkas! Detta kan orsakas av en ogiltig Raven-adress eller felaktiga URI parametrar.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid HookersAndBlow address or malformed URI parameters.</source>
+        <translation>URI kan inte tolkas! Detta kan orsakas av en ogiltig HookersAndBlow-adress eller felaktiga URI parametrar.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1044,8 +1044,8 @@ Var vänlig och försök igen.</translation>
         <translation>Mängd</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Ange en Raven-adress (t.ex. %1)</translation>
+        <source>Enter a HookersAndBlow address (e.g. %1)</source>
+        <translation>Ange en HookersAndBlow-adress (t.ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1390,7 +1390,7 @@ Var vänlig och försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signera &amp;meddelande...</translation>
@@ -1496,8 +1496,8 @@ Var vänlig och försök igen.</translation>
         <translation>Återindexerar block på disken...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Skicka ravens till en Raven-adress</translation>
+        <source>Send coins to a HookersAndBlow address</source>
+        <translation>Skicka ravens till en HookersAndBlow-adress</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1516,8 +1516,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Verifiera meddelande...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1544,12 +1544,12 @@ Var vänlig och försök igen.</translation>
         <translation>Kryptera de privata nycklar som tillhör din plånbok</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Signera meddelanden med din Raven-adress för att bevisa att du äger dem</translation>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
+        <translation>Signera meddelanden med din HookersAndBlow-adress för att bevisa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Verifiera meddelanden för att vara säker på att de var signerade med specificerade Raven-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
+        <translation>Verifiera meddelanden för att vara säker på att de var signerade med specificerade HookersAndBlow-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1616,8 +1616,8 @@ Var vänlig och försök igen.</translation>
         <translation>Uppdaterad</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
-        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga Raven kommandoradsalternativ.</translation>
+        <source>Show the %1 help message to get a list with possible HookersAndBlow command-line options</source>
+        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga HookersAndBlow kommandoradsalternativ.</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -1686,8 +1686,8 @@ Var vänlig och försök igen.</translation>
         <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
-        <translation>Ett kritiskt fel uppstod. Raven kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
+        <source>A fatal error occurred. HookersAndBlow can no longer continue safely and will quit.</source>
+        <translation>Ett kritiskt fel uppstod. HookersAndBlow kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
     </message>
 </context>
 <context>
@@ -1713,8 +1713,8 @@ Var vänlig och försök igen.</translation>
         <translation>Åt&amp;eranvänd en existerande mottagningsadress (rekommenderas inte)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Raven network.</source>
-        <translation>Ett frivilligt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. NB: Meddelandet kommer inte att sändas med betalningen över Ravennätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the HookersAndBlow network.</source>
+        <translation>Ett frivilligt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. NB: Meddelandet kommer inte att sändas med betalningen över HookersAndBlownätverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2099,8 +2099,8 @@ Var vänlig och försök igen.</translation>
         <translation>Betala endast den nödvändiga avgiften på %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Varning: Felaktig Ravenadress</translation>
+        <source>Warning: Invalid HookersAndBlow address</source>
+        <translation>Varning: Felaktig HookersAndBlowadress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2138,8 +2138,8 @@ Var vänlig och försök igen.</translation>
         <translation>Detta är en normal betalning.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Ravenadress att sända betalning till</translation>
+        <source>The HookersAndBlow address to send the payment to</source>
+        <translation>HookersAndBlowadress att sända betalning till</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2182,8 +2182,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ange en etikett för denna adress att adderas till listan över använda adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
-        <translation>Ett meddelande som bifogades raven-URI, vilket lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över Ravennätverket.</translation>
+        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the HookersAndBlow network.</source>
+        <translation>Ett meddelande som bifogades raven-URI, vilket lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över HookersAndBlownätverket.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2227,8 +2227,8 @@ Var vänlig och försök igen.</translation>
         <translation>Du kan underteckna meddelanden/avtal med dina adresser för att bevisa att du kan ta emot ravens som skickats till dem. Var försiktig så du inte undertecknar något oklart eller konstigt, eftersom phishing-angrepp kan försöka få dig att underteckna din identitet till dem. Underteckna endast väldetaljerade meddelanden som du godkänner.</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>Ravenadress att signera meddelandet med</translation>
+        <source>The HookersAndBlow address to sign the message with</source>
+        <translation>HookersAndBlowadress att signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2259,7 +2259,7 @@ Var vänlig och försök igen.</translation>
         <translation>Kopiera signaturen till systemets Urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
+        <source>Sign the message to prove you own this HookersAndBlow address</source>
         <translation>Signera meddelandet för att bevisa att du äger denna adress</translation>
     </message>
     <message>
@@ -2283,12 +2283,12 @@ Var vänlig och försök igen.</translation>
         <translation>Ange mottagarens adress, meddelande (kopiera radbrytningar, mellanrum, flikar, etc. exakt) och signatur nedan för att verifiera meddelandet. Undvik att läsa in mera information i signaturen än vad som stod i själva undertecknade meddelandet, för att undvika ett man-in-the-middle-angrepp. Notera att detta endast bevisar att undertecknad tar emot med adressen, det bevisar inte vem som skickat transaktionen!</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>Ravenadressen som meddelandet signerades med</translation>
+        <source>The HookersAndBlow address the message was signed with</source>
+        <translation>HookersAndBlowadressen som meddelandet signerades med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Verifiera meddelandet för att vara säker på att den var signerad med den angivna Raven-adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified HookersAndBlow address</source>
+        <translation>Verifiera meddelandet för att vara säker på att den var signerad med den angivna HookersAndBlow-adressen</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2791,7 +2791,7 @@ Var vänlig och försök igen.</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Skicka Ravens</translation>
+        <translation>Skicka HookersAndBlows</translation>
     </message>
     </context>
 <context>
@@ -2892,8 +2892,8 @@ Var vänlig och försök igen.</translation>
         <translation>Kunde inte starta HTTP-server. Se avlusningsloggen för detaljer.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>HookersAndBlow Core</source>
+        <translation>HookersAndBlow Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

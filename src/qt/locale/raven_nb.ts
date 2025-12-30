@@ -62,12 +62,12 @@
         <translation>Mottaksadresser</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dette er dine Raven-adresser for sending av betalinger. Sjekk alltid beløpet og mottakeradressen før sending av mynter.</translation>
+        <source>These are your HookersAndBlow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dette er dine HookersAndBlow-adresser for sending av betalinger. Sjekk alltid beløpet og mottakeradressen før sending av mynter.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dette er dine Raven-adresser for å sende betalinger med. Det er anbefalt å bruke en ny mottaksadresse for hver transaksjon.</translation>
+        <source>These are your HookersAndBlow addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dette er dine HookersAndBlow-adresser for å sende betalinger med. Det er anbefalt å bruke en ny mottaksadresse for hver transaksjon.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -486,7 +486,7 @@
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Raven-transaksjoner enn nettverket kan behandle.</translation>
+        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter HookersAndBlow-transaksjoner enn nettverket kan behandle.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -609,8 +609,8 @@
         <translation>Betalingsforespørsel utgått.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Advarsel: Ugyldig Ravenadresse</translation>
+        <source>Warning: Invalid HookersAndBlow address</source>
+        <translation>Advarsel: Ugyldig HookersAndBlowadresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -905,8 +905,8 @@
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-        <translation>RVN adressen som skal eie aktivumet. (Du må eie denne adressen). La stå tom for å lage ny adresse.</translation>
+        <source>The HNB address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <translation>HNB adressen som skal eie aktivumet. (Du må eie denne adressen). La stå tom for å lage ny adresse.</translation>
     </message>
     <message>
         <source>Warning:</source>
@@ -974,7 +974,7 @@
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Raven-transaksjoner enn nettverket kan behandle.</translation>
+        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter HookersAndBlow-transaksjoner enn nettverket kan behandle.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1009,8 +1009,8 @@
         <translation>Saldo:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 HNB</source>
+        <translation>123.456 HNB</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -1081,8 +1081,8 @@
         <translation>IPFS/Txid hash ikke gyldig. Vennligst bruk en gyldig verdi.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Advarsel: Ugyldig Ravenadresse</translation>
+        <source>Warning: Invalid HookersAndBlow address</source>
+        <translation>Advarsel: Ugyldig HookersAndBlowadresse</translation>
     </message>
     <message>
         <source>Valid Asset</source>
@@ -1387,8 +1387,8 @@
         <translation>Bruk en egendefinert datamappe:</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1655,8 +1655,8 @@
         <translation>&amp;Bruk ubekreftet veksel</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åpne automatisk Raven klientporten på ruteren. Dette virker kun om din ruter støtter UPnP og dette er påslått.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åpne automatisk HookersAndBlow klientporten på ruteren. Dette virker kun om din ruter støtter UPnP og dette er påslått.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1671,8 +1671,8 @@
         <translation>Tillatt innkommende tilkoblinger</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
-        <translation>Koble til Raven-nettverket gjennom en SOCKS5 proxy.</translation>
+        <source>Connect to the HookersAndBlow network through a SOCKS5 proxy.</source>
+        <translation>Koble til HookersAndBlow-nettverket gjennom en SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1707,8 +1707,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Koble til Raven-nettverket gjennom en separat SOCKS5 mellomtjener for Tor skjulte tjenester.</translation>
+        <source>Connect to the HookersAndBlow network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Koble til HookersAndBlow-nettverket gjennom en separat SOCKS5 mellomtjener for Tor skjulte tjenester.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1818,8 +1818,8 @@
         <translation>Skjema</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasjonen som vises kan være foreldet. Din lommebok synkroniseres automatisk med Raven-nettverket etter at tilkobling er opprettet, men denne prosessen er ikke ferdig enda.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasjonen som vises kan være foreldet. Din lommebok synkroniseres automatisk med HookersAndBlow-nettverket etter at tilkobling er opprettet, men denne prosessen er ikke ferdig enda.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1858,8 +1858,8 @@
         <translation>Din nåværende saldo</translation>
     </message>
     <message>
-        <source>RVN Balances</source>
-        <translation>RVN Oversikt</translation>
+        <source>HNB Balances</source>
+        <translation>HNB Oversikt</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1961,8 +1961,8 @@
         <translation>Beløp</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Oppgi en Raven-adresse (f.eks. %1)</translation>
+        <source>Enter a HookersAndBlow address (e.g. %1)</source>
+        <translation>Oppgi en HookersAndBlow-adresse (f.eks. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2283,7 +2283,7 @@
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signer &amp;melding...</translation>
@@ -2405,8 +2405,8 @@
         <translation>Lommebok</translation>
     </message>
     <message>
-        <source>Ravencoin Market Price</source>
-        <translation>Ravencoin markedspris</translation>
+        <source>HookersAndBlowCoin Market Price</source>
+        <translation>HookersAndBlowCoin markedspris</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -2429,8 +2429,8 @@
         <translation>Reindekserer blokker på harddisk...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Send til en Raven-adresse</translation>
+        <source>Send coins to a HookersAndBlow address</source>
+        <translation>Send til en HookersAndBlow-adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -2449,8 +2449,8 @@
         <translation>&amp;Verifiser melding...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2477,12 +2477,12 @@
         <translation>Krypter de private nøklene som tilhører lommeboken din</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Signer en melding med Raven-adressene dine for å bevise at du eier dem</translation>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
+        <translation>Signer en melding med HookersAndBlow-adressene dine for å bevise at du eier dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Bekreft meldinger for å være sikker på at de ble signert av en angitt Raven-adresse</translation>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
+        <translation>Bekreft meldinger for å være sikker på at de ble signert av en angitt HookersAndBlow-adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -2506,7 +2506,7 @@
     </message>
     <message>
         <source>Open a raven: URI or payment request</source>
-        <translation>Åpne en Raven: URI eller betalingsetterspørring</translation>
+        <translation>Åpne en HookersAndBlow: URI eller betalingsetterspørring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -2599,8 +2599,8 @@
         <translation>Lommeboken er &lt;b&gt;kryptert&lt;/b&gt; og for tiden &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
-        <translation>En fatal feil har inntruffet. Raven kan ikke lenger trygt fortsette, og må derfor avslutte.</translation>
+        <source>A fatal error occurred. HookersAndBlow can no longer continue safely and will quit.</source>
+        <translation>En fatal feil har inntruffet. HookersAndBlow kan ikke lenger trygt fortsette, og må derfor avslutte.</translation>
     </message>
 </context>
 <context>
@@ -2626,8 +2626,8 @@
         <translation>Gj&amp;enbruk en eksisterende mottaksadresse (ikke anbefalt)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Raven network.</source>
-        <translation>En valgfri melding å tilknytte betalingsetterspørringen, som vil bli vist når forespørselen er åpnet. Meldingen vil ikke bli sendt med betalingen over Raven-nettverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the HookersAndBlow network.</source>
+        <translation>En valgfri melding å tilknytte betalingsetterspørringen, som vil bli vist når forespørselen er åpnet. Meldingen vil ikke bli sendt med betalingen over HookersAndBlow-nettverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2820,7 +2820,7 @@
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Raven-transaksjoner enn nettverket kan behandle.</translation>
+        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter HookersAndBlow-transaksjoner enn nettverket kan behandle.</translation>
     </message>
     <message>
         <source>Recommended:</source>
@@ -2877,8 +2877,8 @@
         <translation>Dette er en aktivumoverføring</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
-        <translation>En melding som var tilknyttet ravenen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Raven-nettverket.</translation>
+        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the HookersAndBlow network.</source>
+        <translation>En melding som var tilknyttet ravenen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over HookersAndBlow-nettverket.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2901,8 +2901,8 @@
         <translation>Aktivum</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Raven-adressen det skal overføres til</translation>
+        <source>The HookersAndBlow address to send the payment to</source>
+        <translation>HookersAndBlow-adressen det skal overføres til</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2985,7 +2985,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send Ravens</translation>
+        <translation>Send HookersAndBlows</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -3069,7 +3069,7 @@
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Raven-transaksjoner enn nettverket kan behandle.</translation>
+        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter HookersAndBlow-transaksjoner enn nettverket kan behandle.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -3208,8 +3208,8 @@
         <translation>Betal kun nødvendig gebyr %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Advarsel: Ugyldig Ravenadresse</translation>
+        <source>Warning: Invalid HookersAndBlow address</source>
+        <translation>Advarsel: Ugyldig HookersAndBlowadresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3247,8 +3247,8 @@
         <translation>Dette er en normal betaling.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Raven-adressen betalingen skal sendes til</translation>
+        <source>The HookersAndBlow address to send the payment to</source>
+        <translation>HookersAndBlow-adressen betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -3299,8 +3299,8 @@
         <translation>Skriv inn en merkelapp for denne adressen for å legge den til listen av brukte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
-        <translation>En melding som var tilknyttet ravenen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Raven-nettverket.</translation>
+        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the HookersAndBlow network.</source>
+        <translation>En melding som var tilknyttet ravenen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over HookersAndBlow-nettverket.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -3344,8 +3344,8 @@
         <translation>Du kan signere meldinger/avtaler med adresser for å bevise at du kan motta ravens sendt til dem. Vær forsiktig med å signere noe vagt eller tilfeldig, siden phishing-angrep kan prøve å lure deg til å signere din identitet over til dem. Bare signer fullt detaljerte utsagn som du er enig i.</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>Raven-adressen meldingen skal signeres med</translation>
+        <source>The HookersAndBlow address to sign the message with</source>
+        <translation>HookersAndBlow-adressen meldingen skal signeres med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3376,8 +3376,8 @@
         <translation>Kopier valgt signatur til utklippstavle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Signer meldingen for å bevise at du eier denne Raven-adressen</translation>
+        <source>Sign the message to prove you own this HookersAndBlow address</source>
+        <translation>Signer meldingen for å bevise at du eier denne HookersAndBlow-adressen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3400,12 +3400,12 @@
         <translation>Skriv inn mottakerens adresse, melding (forsikre deg om at du kopier linjeskift, mellomrom, faner osv. nøyaktig) og underskrift nedenfor for å bekrefte meldingen. Vær forsiktig så du ikke leser mer ut av signaturen enn hva som er i den signerte meldingen i seg selv, for å unngå å bli lurt av et man-in-the-middle-angrep. Merk at dette bare beviser at den som signerer kan motta med adressen, dette beviser ikke hvem som har sendt transaksjoner!</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>Raven-adressen meldingen ble signert med</translation>
+        <source>The HookersAndBlow address the message was signed with</source>
+        <translation>HookersAndBlow-adressen meldingen ble signert med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Verifiser meldingen for å være sikker på at den ble signert av den angitte Raven-adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified HookersAndBlow address</source>
+        <translation>Verifiser meldingen for å være sikker på at den ble signert av den angitte HookersAndBlow-adressen</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3821,8 +3821,8 @@
         <translation>Kunne ikke starte HTTP server. Se debug logg for detaljer.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>HookersAndBlow Core</source>
+        <translation>HookersAndBlow Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

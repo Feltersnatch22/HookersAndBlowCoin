@@ -189,7 +189,7 @@
     </message>
     </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -211,7 +211,7 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>Raven</source>
+        <source>HookersAndBlow</source>
         <translation>Биткоин</translation>
     </message>
     <message>

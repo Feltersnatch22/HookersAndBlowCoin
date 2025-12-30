@@ -291,8 +291,8 @@
         <translation>Moedeiro</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente o porto do cliente Raven no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente o porto do cliente HookersAndBlow no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -370,8 +370,8 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
-        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Raven despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</source>
+        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede HookersAndBlow despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -509,7 +509,7 @@
     </message>
     </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Asinar mensaxe...</translation>
@@ -575,8 +575,8 @@
         <translation>Reindexando bloques no disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Enviar moedas a unha dirección Raven</translation>
+        <source>Send coins to a HookersAndBlow address</source>
+        <translation>Enviar moedas a unha dirección HookersAndBlow</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -595,8 +595,8 @@
         <translation>&amp;Verificar mensaxe...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -623,12 +623,12 @@
         <translation>Encriptar as claves privadas que pertencen ao teu moedeiro</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Asina mensaxes coas túas direccións Raven para probar que te pertencen</translation>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
+        <translation>Asina mensaxes coas túas direccións HookersAndBlow para probar que te pertencen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Verificar mensaxes para asegurar que foron asinados con direccións Raven dadas.</translation>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
+        <translation>Verificar mensaxes para asegurar que foron asinados con direccións HookersAndBlow dadas.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -928,8 +928,8 @@
         <translation>Copiar a sinatura actual ao portapapeis do sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Asina a mensaxe para probar que posees esta dirección Raven</translation>
+        <source>Sign the message to prove you own this HookersAndBlow address</source>
+        <translation>Asina a mensaxe para probar que posees esta dirección HookersAndBlow</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -948,8 +948,8 @@
         <translation>&amp;Verificar Mensaxe</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección Raven especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified HookersAndBlow address</source>
+        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección HookersAndBlow especificada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1029,8 +1029,8 @@
         <translation>Executar no fondo como un demo e aceptar comandos</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Core de Raven</translation>
+        <source>HookersAndBlow Core</source>
+        <translation>Core de HookersAndBlow</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

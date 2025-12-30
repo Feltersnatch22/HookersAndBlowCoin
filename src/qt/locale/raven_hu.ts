@@ -341,16 +341,16 @@
         <translation type="vanished">Szakértő</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="vanished">A Raven-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="vanished">A HookersAndBlow-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation type="vanished">&amp;UPnP port-feltérképezés</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
-        <translation type="vanished">Csatlakozás a Raven hálózatához SOCKS5 proxyn keresztül</translation>
+        <source>Connect to the HookersAndBlow network through a SOCKS5 proxy.</source>
+        <translation type="vanished">Csatlakozás a HookersAndBlow hálózatához SOCKS5 proxyn keresztül</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -444,8 +444,8 @@
         <translation type="vanished">Űrlap</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
-        <translation type="vanished">A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Raven hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</source>
+        <translation type="vanished">A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a HookersAndBlow hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -510,8 +510,8 @@
         <translation type="vanished">Összeg</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation type="vanished">Ad meg egy Raven címet (pl: %1)</translation>
+        <source>Enter a HookersAndBlow address (e.g. %1)</source>
+        <translation type="vanished">Ad meg egy HookersAndBlow címet (pl: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -758,7 +758,7 @@
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation type="vanished">Üzenet aláírása...</translation>
@@ -840,8 +840,8 @@
         <translation type="vanished">Lemezen lévő blokkok újraindexelése...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation type="vanished">Raven küldése megadott címre</translation>
+        <source>Send coins to a HookersAndBlow address</source>
+        <translation type="vanished">HookersAndBlow küldése megadott címre</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -864,8 +864,8 @@
         <translation type="vanished">Üzenet &amp;valódiságának ellenőrzése</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation type="vanished">Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation type="vanished">HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -892,12 +892,12 @@
         <translation type="vanished">A tárcádhoz tartozó privát kulcsok titkosítása</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation type="vanished">Üzenetek aláírása a Raven-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
+        <translation type="vanished">Üzenetek aláírása a HookersAndBlow-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation type="vanished">Üzenetek ellenőrzése, hogy valóban a megjelölt Raven-címekkel vannak-e aláírva</translation>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
+        <translation type="vanished">Üzenetek ellenőrzése, hogy valóban a megjelölt HookersAndBlow-címekkel vannak-e aláírva</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -936,9 +936,9 @@
         <translation type="vanished">Paran&amp;cssor kapcsolók</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Raven network</source>
+        <source>%n active connection(s) to HookersAndBlow network</source>
         <translation type="vanished">
-            <numerusform>%n aktív kapcsolat a Raven hálózathoz</numerusform>
+            <numerusform>%n aktív kapcsolat a HookersAndBlow hálózathoz</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -1299,7 +1299,7 @@
         <translation type="vanished">A jelenleg kiválasztott aláírás másolása a rendszer-vágólapra</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
+        <source>Sign the message to prove you own this HookersAndBlow address</source>
         <translation type="vanished">Üzenet </translation>
     </message>
     <message>
@@ -1385,8 +1385,8 @@
 </translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation type="vanished">Raven Core</translation>
+        <source>HookersAndBlow Core</source>
+        <translation type="vanished">HookersAndBlow Core</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>

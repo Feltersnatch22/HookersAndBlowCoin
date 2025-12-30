@@ -1,9 +1,9 @@
-// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2017-2019 The HookersAndBlow Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef RAVENCOIN_ASSETFILTERPROXY_H
-#define RAVENCOIN_ASSETFILTERPROXY_H
+#ifndef HOOKERSANDBLOWCOIN_ASSETFILTERPROXY_H
+#define HOOKERSANDBLOWCOIN_ASSETFILTERPROXY_H
 
 #include <QSortFilterProxyModel>
 
@@ -26,4 +26,4 @@ private:
 };
 
 
-#endif //RAVENCOIN_ASSETFILTERPROXY_H
+#endif //HOOKERSANDBLOWCOIN_ASSETFILTERPROXY_H

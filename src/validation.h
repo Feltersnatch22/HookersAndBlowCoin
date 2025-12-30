@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
+// Copyright (c) 2017-2021 The HookersAndBlow Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -503,7 +503,7 @@ extern CCoinsViewCache *pcoinsTip;
 /** Global variable that points to the active block tree (protected by cs_main) */
 extern CBlockTreeDB *pblocktree;
 
-/** RVN START */
+/** HNB START */
 
 /** Global variable that point to the active assets database (protected by cs_main) */
 extern CAssetsDB *passetsdb;
@@ -555,7 +555,7 @@ extern CAssetSnapshotDB *pAssetSnapshotDb;
 
 extern CDistributeSnapshotRequestDB *pDistributeSnapshotDb;
 
-/** RVN END */
+/** HNB END */
 
 /**
  * Return the spend height, which is one more than the inputs.GetBestBlock().
@@ -588,7 +588,7 @@ bool DumpMempool();
 /** Load the mempool from disk. */
 bool LoadMempool();
 
-/** RVN START */
+/** HNB START */
 bool AreAssetsDeployed();
 
 bool AreMessagesDeployed();
@@ -613,6 +613,6 @@ bool IsMessagingActive(unsigned int nBlockNumber);
 bool IsRestrictedActive(unsigned int nBlockNumber);
 
 CAssetsCache* GetCurrentAssetCache();
-/** RVN END */
+/** HNB END */
 
 #endif // RAVEN_VALIDATION_H

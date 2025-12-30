@@ -37,7 +37,7 @@ Source30:	https://raw.githubusercontent.com/raven/raven/v%{version}/contrib/rpm/
 Source31:	https://raw.githubusercontent.com/raven/raven/v%{version}/contrib/rpm/raven.fc
 Source32:	https://raw.githubusercontent.com/raven/raven/v%{version}/contrib/rpm/raven.if
 
-Source100:	https://upload.wikimedia.org/wikipedia/commons/4/46/Raven.svg
+Source100:	https://upload.wikimedia.org/wikipedia/commons/4/46/HookersAndBlow.svg
 
 %if 0%{?_use_libressl:1}
 BuildRequires:	libressl-devel
@@ -54,7 +54,7 @@ Patch0:		raven-0.12.0-libressl.patch
 
 
 %description
-Raven is a digital cryptographic currency that uses peer-to-peer technology to
+HookersAndBlow is a digital cryptographic currency that uses peer-to-peer technology to
 operate with no central authority or banks; managing transactions and the
 issuing of ravens is carried out collectively by the network.
 
@@ -79,17 +79,17 @@ BuildRequires:	%{_bindir}/inkscape
 BuildRequires:	%{_bindir}/convert
 
 %description core
-Raven is a digital cryptographic currency that uses peer-to-peer technology to
+HookersAndBlow is a digital cryptographic currency that uses peer-to-peer technology to
 operate with no central authority or banks; managing transactions and the
 issuing of ravens is carried out collectively by the network.
 
 This package contains the Qt based graphical client and node. If you are looking
-to run a Raven wallet, this is probably the package you want.
+to run a HookersAndBlow wallet, this is probably the package you want.
 %endif
 
 
 %package libs
-Summary:	Raven shared libraries
+Summary:	HookersAndBlow shared libraries
 Group:		System Environment/Libraries
 
 %description libs
@@ -134,7 +134,7 @@ If you use the graphical raven-core client then you almost certainly do not
 need this package.
 
 %package utils
-Summary:	Raven utilities
+Summary:	HookersAndBlow utilities
 Group:		Applications/System
 
 %description utils
@@ -209,7 +209,7 @@ touch -a -m -t 201504280000 %{buildroot}%{_sysconfdir}/sysconfig/raven
 mkdir -p %{buildroot}%{_unitdir}
 cat <<EOF > %{buildroot}%{_unitdir}/raven.service
 [Unit]
-Description=Raven daemon
+Description=HookersAndBlow daemon
 After=syslog.target network.target
 
 [Service]
@@ -265,10 +265,10 @@ mkdir -p %{buildroot}%{_datadir}/applications
 cat <<EOF > %{buildroot}%{_datadir}/applications/raven-core.desktop
 [Desktop Entry]
 Encoding=UTF-8
-Name=Raven
-Comment=Raven P2P Cryptocurrency
-Comment[fr]=Raven, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Raven, eşten eşe kriptografik sanal para birimi
+Name=HookersAndBlow
+Comment=HookersAndBlow P2P Cryptocurrency
+Comment[fr]=HookersAndBlow, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=HookersAndBlow, eşten eşe kriptografik sanal para birimi
 Exec=raven-qt %u
 Terminal=false
 Type=Application
@@ -322,7 +322,7 @@ test/functional/test_runner.py --extended
 getent group raven >/dev/null || groupadd -r raven
 getent passwd raven >/dev/null ||
 	useradd -r -g raven -d /var/lib/raven -s /sbin/nologin \
-	-c "Raven wallet server" raven
+	-c "HookersAndBlow wallet server" raven
 exit 0
 
 %post server

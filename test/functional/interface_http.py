@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The Raven Core developers
+# Copyright (c) 2017-2020 The HookersAndBlow Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,11 +8,11 @@
 
 import http.client
 import urllib.parse
-from test_framework.test_framework import RavenTestFramework
+from test_framework.test_framework import HookersAndBlowTestFramework
 from test_framework.util import str_to_b64str, assert_equal
 
 # noinspection PyUnresolvedReferences
-class HTTPBasicsTest (RavenTestFramework):
+class HTTPBasicsTest (HookersAndBlowTestFramework):
     def set_test_params(self):
         self.num_nodes = 3
 

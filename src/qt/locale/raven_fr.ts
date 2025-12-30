@@ -62,12 +62,12 @@
         <translation>Adresses de réception</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Voici vos adresses Raven pour envoyer des paiements. Vérifiez toujours le montant et l'adresse du destinataire avant d'envoyer des pièces.</translation>
+        <source>These are your HookersAndBlow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Voici vos adresses HookersAndBlow pour envoyer des paiements. Vérifiez toujours le montant et l'adresse du destinataire avant d'envoyer des pièces.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Voici vos adresses Raven pour recevoir des paiements. Il est recommandé d'utiliser une nouvelle adresse de réception pour chaque transaction.</translation>
+        <source>These are your HookersAndBlow addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Voici vos adresses HookersAndBlow pour recevoir des paiements. Il est recommandé d'utiliser une nouvelle adresse de réception pour chaque transaction.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -473,8 +473,8 @@
         <translation>Balance:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 HNB</source>
+        <translation>123.456 HNB</translation>
     </message>
     <message>
         <source>Sub Asset</source>
@@ -532,8 +532,8 @@
         <translation>Modifier l’adresse d'envoi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
-        <translation>L'adresse saisie « %1 » n'est pas une adresse Raven valide.</translation>
+        <source>The entered address "%1" is not a valid HookersAndBlow address.</source>
+        <translation>L'adresse saisie « %1 » n'est pas une adresse HookersAndBlow valide.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -667,8 +667,8 @@
         <translation>Utiliser un répertoire de données personnalisé :</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -679,8 +679,8 @@
         <translation>Environ %1 Go de données seront stockées dans ce répertoire.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Raven block chain.</source>
-        <translation>%1 va télécharger et stocker une copie de la blockchain de Ravencoin.</translation>
+        <source>%1 will download and store a copy of the HookersAndBlow block chain.</source>
+        <translation>%1 va télécharger et stocker une copie de la blockchain de HookersAndBlowCoin.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -715,7 +715,7 @@
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the raven network, as detailed below.</source>
-        <translation>Les transactions récentes ne sont peut-être pas encore visibles et par conséquent le solde de votre porte-monnaie est peut-être erroné. Cette information sera juste quand votre porte-monnaie aura fini de se synchroniser avec le réseau Raven, comme décrit ci-dessous.</translation>
+        <translation>Les transactions récentes ne sont peut-être pas encore visibles et par conséquent le solde de votre porte-monnaie est peut-être erroné. Cette information sera juste quand votre porte-monnaie aura fini de se synchroniser avec le réseau HookersAndBlow, comme décrit ci-dessous.</translation>
     </message>
     <message>
         <source>Attempting to spend ravens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -891,8 +891,8 @@
         <translation>&amp;Dépenser la monnaie non confirmée</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ouvrir automatiquement le port du client Raven sur le routeur. Cela ne fonctionne que si votre routeur prend en charge l'UPnP et si la fonction est activée.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ouvrir automatiquement le port du client HookersAndBlow sur le routeur. Cela ne fonctionne que si votre routeur prend en charge l'UPnP et si la fonction est activée.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -903,8 +903,8 @@
         <translation>Autoriser les connexions entrantes</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
-        <translation>Se connecter au réseau Raven par un mandataire SOCKS5.</translation>
+        <source>Connect to the HookersAndBlow network through a SOCKS5 proxy.</source>
+        <translation>Se connecter au réseau HookersAndBlow par un mandataire SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -939,8 +939,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Se connecter au réseau Raven au travers d'un mandataire SOCKS5 séparé pour les services cachés de Tor.</translation>
+        <source>Connect to the HookersAndBlow network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Se connecter au réseau HookersAndBlow au travers d'un mandataire SOCKS5 séparé pour les services cachés de Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1046,8 +1046,8 @@
         <translation>Formulaire</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
-        <translation>Les informations affichées peuvent être obsolètes. Votre porte-monnaie est automatiquement synchronisé avec le réseau Raven lorsque la connexion s'établit, or ce processus n'est pas encore terminé.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</source>
+        <translation>Les informations affichées peuvent être obsolètes. Votre porte-monnaie est automatiquement synchronisé avec le réseau HookersAndBlow lorsque la connexion s'établit, or ce processus n'est pas encore terminé.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1086,8 +1086,8 @@
         <translation>Votre solde total actuel</translation>
     </message>
     <message>
-        <source>RVN Balances</source>
-        <translation>Balance RVN</translation>
+        <source>HNB Balances</source>
+        <translation>Balance HNB</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1141,8 +1141,8 @@
         <translation>Adresse de paiement invalide %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Raven address or malformed URI parameters.</source>
-        <translation>L'URI ne peut pas être analysée ! Cela peut être causé par une adresse Raven invalide ou par des paramètres d'URI mal formés.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid HookersAndBlow address or malformed URI parameters.</source>
+        <translation>L'URI ne peut pas être analysée ! Cela peut être causé par une adresse HookersAndBlow invalide ou par des paramètres d'URI mal formés.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1235,8 +1235,8 @@
         <translation>Montant</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Saisir une adresse Raven (p. ex. %1)</translation>
+        <source>Enter a HookersAndBlow address (e.g. %1)</source>
+        <translation>Saisir une adresse HookersAndBlow (p. ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1609,7 +1609,7 @@
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signer un &amp;message...</translation>
@@ -1703,8 +1703,8 @@
         <translation>Ouvrir une &amp;URI...</translation>
     </message>
     <message>
-        <source>Ravencoin Market Price</source>
-        <translation>Ravencoin Prix du Marché</translation>
+        <source>HookersAndBlowCoin Market Price</source>
+        <translation>HookersAndBlowCoin Prix du Marché</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -1727,8 +1727,8 @@
         <translation>Réindexation des blocs sur le disque...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Envoyer des pièces à une adresse Raven</translation>
+        <source>Send coins to a HookersAndBlow address</source>
+        <translation>Envoyer des pièces à une adresse HookersAndBlow</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1747,8 +1747,8 @@
         <translation>&amp;Vérifier un message...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1775,12 +1775,12 @@
         <translation>Chiffrer les clés privées qui appartiennent à votre porte-monnaie</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Signer les messages avec vos adresses Raven pour prouver que vous les détenez</translation>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
+        <translation>Signer les messages avec vos adresses HookersAndBlow pour prouver que vous les détenez</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Vérifier les messages pour s'assurer qu'ils ont été signés avec les adresses Raven spécifiées</translation>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
+        <translation>Vérifier les messages pour s'assurer qu'ils ont été signés avec les adresses HookersAndBlow spécifiées</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1847,8 +1847,8 @@
         <translation>À jour</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
-        <translation>Afficher le message d'aide de %1 pour obtenir la liste des options de ligne de commande Raven possibles.</translation>
+        <source>Show the %1 help message to get a list with possible HookersAndBlow command-line options</source>
+        <translation>Afficher le message d'aide de %1 pour obtenir la liste des options de ligne de commande HookersAndBlow possibles.</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -1917,8 +1917,8 @@
         <translation>Le porte-monnaie est &lt;b&gt;chiffré&lt;/b&gt; et actuellement &lt;b&gt;verrouillé&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
-        <translation>Une erreur fatale est survenue. Raven ne peut plus continuer en toute sécurité et va s'arrêter.</translation>
+        <source>A fatal error occurred. HookersAndBlow can no longer continue safely and will quit.</source>
+        <translation>Une erreur fatale est survenue. HookersAndBlow ne peut plus continuer en toute sécurité et va s'arrêter.</translation>
     </message>
 </context>
 <context>
@@ -1944,8 +1944,8 @@
         <translation>Ré&amp;utiliser une adresse de réception existante (non recommandé)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Raven network.</source>
-        <translation>Un message facultatif à joindre à la demande de paiement et qui sera affiché à l'ouverture de celle-ci. Note : le message ne sera pas envoyé avec le paiement par le réseau Raven.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the HookersAndBlow network.</source>
+        <translation>Un message facultatif à joindre à la demande de paiement et qui sera affiché à l'ouverture de celle-ci. Note : le message ne sera pas envoyé avec le paiement par le réseau HookersAndBlow.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2105,8 +2105,8 @@
         <translation>ex: 1.00000000</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 HNB</source>
+        <translation>123.456 HNB</translation>
     </message>
     <message>
         <source>Copy change</source>
@@ -2390,8 +2390,8 @@
         <translation>Payer seulement les frais exigés de %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Avertissement : adresse Raven invalide</translation>
+        <source>Warning: Invalid HookersAndBlow address</source>
+        <translation>Avertissement : adresse HookersAndBlow invalide</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2429,8 +2429,8 @@
         <translation>Ceci est un paiement normal.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>L'adresse Raven à laquelle envoyer le paiement</translation>
+        <source>The HookersAndBlow address to send the payment to</source>
+        <translation>L'adresse HookersAndBlow à laquelle envoyer le paiement</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2477,8 +2477,8 @@
         <translation>Saisir une étiquette pour cette adresse afin de l'ajouter à la liste d'adresses utilisées</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
-        <translation>Un message qui était joint à l'URI raven: et qui sera stocké avec la transaction pour référence. Note : ce message ne sera pas envoyé par le réseau Raven.</translation>
+        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the HookersAndBlow network.</source>
+        <translation>Un message qui était joint à l'URI raven: et qui sera stocké avec la transaction pour référence. Note : ce message ne sera pas envoyé par le réseau HookersAndBlow.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2522,8 +2522,8 @@
         <translation>Vous pouvez signer des messages ou des accords avec vos adresses pour prouver que vous pouvez recevoir des ravens à ces dernières. Faites attention de ne rien signer de vague ou au hasard, car des attaques d'hameçonnage pourraient essayer de vous faire signer avec votre identité afin de l'usurper. Ne signez que des déclarations entièrement détaillées et avec lesquelles vous êtes d'accord.</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>L'adresse Raven avec laquelle signer le message</translation>
+        <source>The HookersAndBlow address to sign the message with</source>
+        <translation>L'adresse HookersAndBlow avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2554,8 +2554,8 @@
         <translation>Copier la signature actuelle dans le presse-papiers</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Signer le message afin de prouver que vous détenez cette adresse Raven</translation>
+        <source>Sign the message to prove you own this HookersAndBlow address</source>
+        <translation>Signer le message afin de prouver que vous détenez cette adresse HookersAndBlow</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2578,12 +2578,12 @@
         <translation>Saisir ci-dessous l'adresse du destinataire, le message (s'assurer de copier fidèlement les retours à la ligne, les espaces, les tabulations, etc.) et la signature pour vérifier le message. Faire attention à ne pas déduire davantage de la signature que ce qui est contenu dans le message signé même, pour éviter d'être trompé par une attaque d'homme du milieu. Prendre en compte que cela ne fait que prouver que le signataire reçoit l'adresse et ne peut pas prouver la provenance d'une transaction !</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>L'adresse Raven avec laquelle le message a été signé</translation>
+        <source>The HookersAndBlow address the message was signed with</source>
+        <translation>L'adresse HookersAndBlow avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Vérifier le message pour s'assurer qu'il a été signé avec l'adresse Raven spécifiée</translation>
+        <source>Verify the message to ensure it was signed with the specified HookersAndBlow address</source>
+        <translation>Vérifier le message pour s'assurer qu'il a été signé avec l'adresse HookersAndBlow spécifiée</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3235,8 +3235,8 @@
         <translation>Impossible de démarrer le serveur HTTP. Voir le journal de débogage pour plus de détails.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>HookersAndBlow Core</source>
+        <translation>HookersAndBlow Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

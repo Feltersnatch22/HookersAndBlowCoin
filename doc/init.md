@@ -84,9 +84,9 @@ OpenRC).
 ### macOS
 
 Binary:              `/usr/local/bin/ravend`  
-Configuration file:  `~/Library/Application Support/Raven/raven.conf`  
-Data directory:      `~/Library/Application Support/Raven`  
-Lock file:           `~/Library/Application Support/Raven/.lock`  
+Configuration file:  `~/Library/Application Support/HookersAndBlow/raven.conf`  
+Data directory:      `~/Library/Application Support/HookersAndBlow`  
+Lock file:           `~/Library/Application Support/HookersAndBlow/.lock`  
 
 Installing Service Configuration
 -----------------------------------

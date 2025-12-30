@@ -85,7 +85,7 @@ src/qt/test/moc*.cpp
 *.qm
 Makefile
 raven-qt
-Raven-Qt.app
+HookersAndBlow-Qt.app
 
 # Unit-tests
 Makefile.test

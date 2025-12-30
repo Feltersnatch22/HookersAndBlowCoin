@@ -233,7 +233,7 @@
     </message>
     </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Cysoni â'r rhwydwaith...</translation>
@@ -295,8 +295,8 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -521,8 +521,8 @@
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Craidd Raven</translation>
+        <source>HookersAndBlow Core</source>
+        <translation>Craidd HookersAndBlow</translation>
     </message>
     <message>
         <source>Information</source>

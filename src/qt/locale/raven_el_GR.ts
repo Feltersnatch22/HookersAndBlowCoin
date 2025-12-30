@@ -62,12 +62,12 @@
         <translation>Διευθύνσεις λήψης</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Αυτές είναι οι Raven διευθύνσεις για να στέλνεις πληρωμές. Πάντα ελέγχετε το ποσό και την διεύθενση παραλήπτη πριν στείλετε νομίσματα.</translation>
+        <source>These are your HookersAndBlow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Αυτές είναι οι HookersAndBlow διευθύνσεις για να στέλνεις πληρωμές. Πάντα ελέγχετε το ποσό και την διεύθενση παραλήπτη πριν στείλετε νομίσματα.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Αυτές είναι οι Raven διευθύνσεις για να στέλνεις πληρωμές. Είναι προτινόμενο να χρησιμοποιείτε μια νέα διεύθυνση για κάθε συναλλαγή.</translation>
+        <source>These are your HookersAndBlow addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Αυτές είναι οι HookersAndBlow διευθύνσεις για να στέλνεις πληρωμές. Είναι προτινόμενο να χρησιμοποιείτε μια νέα διεύθυνση για κάθε συναλλαγή.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -337,8 +337,8 @@
         <translation>Διεύθυνση:</translation>
     </message>
     <message>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-        <translation>H διεύθυνση RVN που θα κρατά αυτό το περιουσιακό στοιχείο (Πρέπει να σου ανήκει αυτή η διεύθυνση). Άφηστε το κενό για δημιουργία νέας διεύθυνσης.</translation>
+        <source>The HNB address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <translation>H διεύθυνση HNB που θα κρατά αυτό το περιουσιακό στοιχείο (Πρέπει να σου ανήκει αυτή η διεύθυνση). Άφηστε το κενό για δημιουργία νέας διεύθυνσης.</translation>
     </message>
     <message>
         <source>Balance:</source>
@@ -404,8 +404,8 @@
         <translation>Επεξεργασία διεύθυνση αποστολής</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
-        <translation>Η εισαχθείσα διεύθυνση "%1" δεν είναι έγκυρη Raven διεύθυνση.</translation>
+        <source>The entered address "%1" is not a valid HookersAndBlow address.</source>
+        <translation>Η εισαχθείσα διεύθυνση "%1" δεν είναι έγκυρη HookersAndBlow διεύθυνση.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -615,16 +615,16 @@
         <translation>&amp;Ξόδεμα μη επικυρωμένων ρέστων</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Αυτόματο άνοιγμα των θυρών Raven στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Αυτόματο άνοιγμα των θυρών HookersAndBlow στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Απόδοση θυρών με χρήστη &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
-        <translation>Σύνδεση στο Raven δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
+        <source>Connect to the HookersAndBlow network through a SOCKS5 proxy.</source>
+        <translation>Σύνδεση στο HookersAndBlow δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -719,8 +719,8 @@
         <translation>Φόρμα</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
-        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο Raven μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</source>
+        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο HookersAndBlow μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -796,8 +796,8 @@
         <translation>Ποσό</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Εισάγετε μια διεύθυνση Raven (π.χ. %1)</translation>
+        <source>Enter a HookersAndBlow address (e.g. %1)</source>
+        <translation>Εισάγετε μια διεύθυνση HookersAndBlow (π.χ. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -994,7 +994,7 @@
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Υπογραφή &amp;Μηνύματος...</translation>
@@ -1084,7 +1084,7 @@
         <translation>Φόρτωση ευρετηρίου μπλοκ στον σκληρο δισκο...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
+        <source>Send coins to a HookersAndBlow address</source>
         <translation>Στείλε νομίσματα σε μια διεύθυνση raven</translation>
     </message>
     <message>
@@ -1104,8 +1104,8 @@
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1132,12 +1132,12 @@
         <translation>Κρυπτογραφήστε τα ιδιωτικά κλειδιά που ανήκουν στο πορτοφόλι σας </translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
         <translation>Υπογράψτε ένα μήνυμα για να βεβαιώσετε πως είστε ο κάτοχος αυτής της διεύθυνσης</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση Raven</translation>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση HookersAndBlow</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1554,8 +1554,8 @@
         <translation>Αυτή είναι μια απλή πληρωμή.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Η διεύθυνση Raven που θα σταλεί η πληρωμή</translation>
+        <source>The HookersAndBlow address to send the payment to</source>
+        <translation>Η διεύθυνση HookersAndBlow που θα σταλεί η πληρωμή</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1607,8 +1607,8 @@
         <translation>&amp;Υπογραφή Μηνύματος</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>Διεύθυνση Raven που θα σταλεί το μήνυμα</translation>
+        <source>The HookersAndBlow address to sign the message with</source>
+        <translation>Διεύθυνση HookersAndBlow που θα σταλεί το μήνυμα</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1639,8 +1639,8 @@
         <translation>Αντέγραφη της επιλεγμενης διεύθυνσης στο πρόχειρο του συστηματος</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση Raven</translation>
+        <source>Sign the message to prove you own this HookersAndBlow address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση HookersAndBlow</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1659,12 +1659,12 @@
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>Διεύθυνση Raven η οποία το μήνυμα έχει υπογραφεί</translation>
+        <source>The HookersAndBlow address the message was signed with</source>
+        <translation>Διεύθυνση HookersAndBlow η οποία το μήνυμα έχει υπογραφεί</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση Raven</translation>
+        <source>Verify the message to ensure it was signed with the specified HookersAndBlow address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση HookersAndBlow</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1876,8 +1876,8 @@
         <translation>Εκτέλεση στο παρασκήνιο κι αποδοχή εντολών</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>HookersAndBlow Core</source>
+        <translation>HookersAndBlow Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

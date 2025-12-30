@@ -18,8 +18,8 @@ RAVEND_BIN=${RAVEND_BIN:-/usr/bin/ravend}
 RAVEND_NICE=${RAVEND_NICE:-${NICELEVEL:-0}}
 RAVEND_OPTS="${RAVEND_OPTS:-${RAVEN_OPTS}}"
 
-name="Raven Core Daemon"
-description="Raven cryptocurrency P2P network daemon"
+name="HookersAndBlow Core Daemon"
+description="HookersAndBlow cryptocurrency P2P network daemon"
 
 command="/usr/bin/ravend"
 command_args="-pid=\"${RAVEND_PIDFILE}\" \
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Raven Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"HookersAndBlow Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

@@ -13,7 +13,7 @@ Construct a linear, no-fork, best version of the blockchain.
 
 ### [Qos](/contrib/qos) ###
 
-A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the Raven network. This means one can have an always-on ravend instance running, and another local ravend/raven-qt instance which connects to this node and receives blocks from it.
+A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the HookersAndBlow network. This means one can have an always-on ravend instance running, and another local ravend/raven-qt instance which connects to this node and receives blocks from it.
 
 ### [Seeds](/contrib/seeds) ###
 Utility to generate the pnSeed[] array that is compiled into the client.
@@ -26,10 +26,10 @@ Contains files used to package ravend/raven-qt
 for Debian-based Linux systems. If you compile ravend/raven-qt yourself, there are some useful files here.
 
 ### [Gitian-descriptors](/contrib/gitian-descriptors) ###
-Files used during the gitian build process. For more information about gitian, see the [the Raven Core documentation repository](https://github.com/raven-core/docs).
+Files used during the gitian build process. For more information about gitian, see the [the HookersAndBlow Core documentation repository](https://github.com/raven-core/docs).
 
 ### [Gitian-keys](/contrib/gitian-keys)
-PGP keys used for signing Raven Core [Gitian release](/doc/release-process.md) results.
+PGP keys used for signing HookersAndBlow Core [Gitian release](/doc/release-process.md) results.
 
 ### [MacDeploy](/contrib/macdeploy) ###
 Scripts and notes for Mac builds. 
@@ -44,7 +44,7 @@ Test and Verify Tools
 ---------------------
 
 ### [TestGen](/contrib/testgen) ###
-Utilities to generate test vectors for the data-driven Raven tests.
+Utilities to generate test vectors for the data-driven HookersAndBlow tests.
 
 ### [Verify Binaries](/contrib/verifybinaries) ###
 This script attempts to download and verify the signature file SHA256SUMS.asc from raven.org.

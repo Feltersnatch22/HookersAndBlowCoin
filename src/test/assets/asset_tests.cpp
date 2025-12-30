@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2019 The Raven Core developers
+// Copyright (c) 2017-2019 The HookersAndBlow Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -47,20 +47,20 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
         BOOST_CHECK(!IsAssetNameValid("A._BC", type));
         BOOST_CHECK(!IsAssetNameValid("AB_.C", type));
 
-        //- Versions of RAVENCOIN NOT allowed
-        BOOST_CHECK(!IsAssetNameValid("RVN", type));
+        //- Versions of HOOKERSANDBLOWCOIN NOT allowed
+        BOOST_CHECK(!IsAssetNameValid("HNB", type));
         BOOST_CHECK(!IsAssetNameValid("RAVEN", type));
-        BOOST_CHECK(!IsAssetNameValid("RAVENCOIN", type));
+        BOOST_CHECK(!IsAssetNameValid("HOOKERSANDBLOWCOIN", type));
 
-        //- Versions of RAVENCOIN ALLOWED
+        //- Versions of HOOKERSANDBLOWCOIN ALLOWED
         BOOST_CHECK(IsAssetNameValid("RAVEN.COIN", type));
         BOOST_CHECK(IsAssetNameValid("RAVEN_COIN", type));
-        BOOST_CHECK(IsAssetNameValid("RVNSPYDER", type));
-        BOOST_CHECK(IsAssetNameValid("SPYDERRVN", type));
+        BOOST_CHECK(IsAssetNameValid("HNBSPYDER", type));
+        BOOST_CHECK(IsAssetNameValid("SPYDERHNB", type));
         BOOST_CHECK(IsAssetNameValid("RAVENSPYDER", type));
         BOOST_CHECK(IsAssetNameValid("SPYDERAVEN", type));
         BOOST_CHECK(IsAssetNameValid("BLACK_RAVENS", type));
-        BOOST_CHECK(IsAssetNameValid("SERVNOT", type));
+        BOOST_CHECK(IsAssetNameValid("SEHNBOT", type));
 
         // subs
         BOOST_CHECK(IsAssetNameValid("ABC/A", type));

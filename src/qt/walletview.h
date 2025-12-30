@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Raven Core developers
+// Copyright (c) 2017-2021 The HookersAndBlow Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@
 
 #include <QStackedWidget>
 
-class RavenGUI;
+class HookersAndBlowGUI;
 class ClientModel;
 class OverviewPage;
 class PlatformStyle;
@@ -44,7 +44,7 @@ public:
     explicit WalletView(const PlatformStyle *platformStyle, QWidget *parent);
     ~WalletView();
 
-    void setRavenGUI(RavenGUI *gui);
+    void setHookersAndBlowGUI(HookersAndBlowGUI *gui);
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
     */
@@ -76,12 +76,12 @@ private:
     const PlatformStyle *platformStyle;
 
 
-    /** RVN START */
+    /** HNB START */
     AssetsDialog *assetsPage;
     CreateAssetDialog *createAssetsPage;
     ReissueAssetDialog *manageAssetsPage;
     RestrictedAssetsDialog *restrictedAssetsPage;
-    /** RVN END */
+    /** HNB END */
 
 public Q_SLOTS:
     /** Switch to overview (home) page */
@@ -130,7 +130,7 @@ public Q_SLOTS:
     void requestedSyncWarningInfo();
 
 
-    /** RVN START */
+    /** HNB START */
     /** Switch to assets page */
 
     void gotoAssetsPage();
@@ -138,7 +138,7 @@ public Q_SLOTS:
     void gotoManageAssetsPage();
     void gotoRestrictedAssetsPage();
 
-    /** RVN END */
+    /** HNB END */
 
 Q_SIGNALS:
     /** Signal that we want to show the main window */

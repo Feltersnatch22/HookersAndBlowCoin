@@ -42,12 +42,12 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see [*Disable-wallet mode*](/doc/build-osx.md#disable-wallet-mode)).
 
-## Build Raven Core
+## Build HookersAndBlow Core
 
-1. Clone the Raven Core source code:
+1. Clone the HookersAndBlow Core source code:
     ```shell
-    git clone https://github.com/RavenProject/Ravencoin
-    cd Ravencoin
+    git clone https://github.com/HookersAndBlowProject/HookersAndBlowCoin
+    cd HookersAndBlowCoin
     ```
 
 2.  Build raven-core:
@@ -72,7 +72,7 @@ from the root of the repository.
     ```
 
 ## `disable-wallet` mode
-When the intention is to run only a P2P node without a wallet, Raven Core may be
+When the intention is to run only a P2P node without a wallet, HookersAndBlow Core may be
 compiled in `disable-wallet` mode with:
 ```shell
 ./configure --disable-wallet
@@ -83,15 +83,15 @@ In this case there is no dependency on Berkeley DB 4.8 and SQLite.
 Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC call.
 
 ## Running
-Raven Core is now available at `./src/ravend`
+HookersAndBlow Core is now available at `./src/ravend`
 
 Before running, you may create an empty configuration file:
 ```shell
-mkdir -p "/Users/${USER}/Library/Application Support/Raven"
+mkdir -p "/Users/${USER}/Library/Application Support/HookersAndBlow"
 
-touch "/Users/${USER}/Library/Application Support/Raven/raven.conf"
+touch "/Users/${USER}/Library/Application Support/HookersAndBlow/raven.conf"
 
-chmod 600 "/Users/${USER}/Library/Application Support/Raven/raven.conf"
+chmod 600 "/Users/${USER}/Library/Application Support/HookersAndBlow/raven.conf"
 ```
 
 The first time you run ravend, it will start downloading the blockchain. This process could
@@ -99,7 +99,7 @@ take many hours, or even days on slower than average systems.
 
 You can monitor the download process by looking at the debug.log file:
 ```shell
-tail -f $HOME/Library/Application\ Support/Raven/debug.log
+tail -f $HOME/Library/Application\ Support/HookersAndBlow/debug.log
 ```
 
 Other commands:

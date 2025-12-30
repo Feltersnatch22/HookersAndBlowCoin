@@ -1,10 +1,10 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Ravencoin
-Source: https://github.com/RavenProject/Ravencoin
+Upstream-Name: HookersAndBlowCoin
+Source: https://github.com/HookersAndBlowProject/HookersAndBlowCoin
 
 Files: *
 Copyright: 2009-2017, Bitcoin Core Developers
-           2017-2020, Raven Core Developers
+           2017-2020, HookersAndBlow Core Developers
 License: Expat
 Comment: The Bitcoin Core Developers encompasses the current developers listed on bitcoin.org,
          as well as the numerous contributors to the project.
@@ -80,7 +80,7 @@ Files: src/qt/res/icons/about.png
        src/qt/res/icons/raven.*
        share/pixmaps/raven*
        src/qt/res/src/raven.svg
-Copyright: The Raven Core Developers
+Copyright: The HookersAndBlow Core Developers
 License: public-domain
 
 

@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your HookersAndBlow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your HookersAndBlow addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -813,7 +813,7 @@
     </message>
     <message>
         <location line="+107"/>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid HookersAndBlow address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1218,7 +1218,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <source>The HNB address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1389,7 +1389,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 RVN</source>
+        <source>123.456 HNB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1491,7 +1491,7 @@
         <location line="+43"/>
         <location line="+22"/>
         <location line="+645"/>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid HookersAndBlow address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1648,7 +1648,7 @@
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Raven address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid HookersAndBlow address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1932,8 +1932,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
     <message>
         <location filename="../intro.cpp" line="+20"/>
-        <source>Raven</source>
-        <translation type="unfinished">Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation type="unfinished">HookersAndBlow</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1947,7 +1947,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
     <message>
         <location line="+8"/>
-        <source>%1 will download and store a copy of the Raven block chain.</source>
+        <source>%1 will download and store a copy of the HookersAndBlow block chain.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2004,7 +2004,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
     <message>
         <location line="+26"/>
-        <source>Since no wallet.dat file was found in the Raven block chain data directory, a wallet file will be created.</source>
+        <source>Since no wallet.dat file was found in the HookersAndBlow block chain data directory, a wallet file will be created.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2302,7 +2302,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>The asset (or RVN) removed or added to balance.</source>
+        <source>The asset (or HNB) removed or added to balance.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2411,7 +2411,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Choose which currency to display the realtime value of RVN in (ie: BTC/RVN).</source>
+        <source>Choose which currency to display the realtime value of HNB in (ie: BTC/HNB).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2487,8 +2487,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the HookersAndBlow client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2507,7 +2507,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
+        <source>Connect to the HookersAndBlow network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2555,7 +2555,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the Raven network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the HookersAndBlow network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2723,8 +2723,8 @@ They are not recoverable !!</source>
         <location line="+99"/>
         <location line="+407"/>
         <location line="+180"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the HookersAndBlow network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-373"/>
@@ -2773,7 +2773,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-249"/>
-        <source>RVN Balances</source>
+        <source>HNB Balances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2904,7 +2904,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Raven address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid HookersAndBlow address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3036,7 +3036,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="-349"/>
-        <source>Enter a Raven address (e.g. %1)</source>
+        <source>Enter a HookersAndBlow address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3668,7 +3668,7 @@ They are not recoverable !!</source>
     </message>
 </context>
 <context>
-    <name>RavenGUI</name>
+    <name>HookersAndBlowGUI</name>
     <message>
         <location filename="../ravengui.cpp" line="+476"/>
         <source>Sign &amp;message...</source>
@@ -3723,7 +3723,7 @@ They are not recoverable !!</source>
     <message>
         <location line="+1"/>
         <location line="+1143"/>
-        <source>Transfer assets to RVN addresses</source>
+        <source>Transfer assets to HNB addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3865,7 +3865,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+149"/>
-        <source>Ravencoin Market Price</source>
+        <source>HookersAndBlowCoin Market Price</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3900,8 +3900,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-974"/>
-        <source>Send coins to a Raven address</source>
-        <translation>Send coins to a Raven address</translation>
+        <source>Send coins to a HookersAndBlow address</source>
+        <translation>Send coins to a HookersAndBlow address</translation>
     </message>
     <message>
         <location line="+131"/>
@@ -3925,8 +3925,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+912"/>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>HookersAndBlow</source>
+        <translation>HookersAndBlow</translation>
     </message>
     <message>
         <location line="-1252"/>
@@ -3960,13 +3960,13 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Sign messages with your Raven addresses to prove you own them</translation>
+        <source>Sign messages with your HookersAndBlow addresses to prove you own them</source>
+        <translation>Sign messages with your HookersAndBlow addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Raven addresses</translation>
+        <source>Verify messages to ensure they were signed with specified HookersAndBlow addresses</source>
+        <translation>Verify messages to ensure they were signed with specified HookersAndBlow addresses</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -4005,10 +4005,10 @@ They are not recoverable !!</source>
     </message>
     <message numerus="yes">
         <location line="+748"/>
-        <source>%n active connection(s) to Raven network</source>
+        <source>%n active connection(s) to HookersAndBlow network</source>
         <translation>
-            <numerusform>%n active connection to Raven network</numerusform>
-            <numerusform>%n active connections to Raven network</numerusform>
+            <numerusform>%n active connection to HookersAndBlow network</numerusform>
+            <numerusform>%n active connections to HookersAndBlow network</numerusform>
         </translation>
     </message>
     <message>
@@ -4066,7 +4066,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-833"/>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
+        <source>Show the %1 help message to get a list with possible HookersAndBlow command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4158,7 +4158,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location filename="../raven.cpp" line="-114"/>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. HookersAndBlow can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4192,7 +4192,7 @@ They are not recoverable !!</source>
     <message>
         <location line="+14"/>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Raven network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the HookersAndBlow network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4465,7 +4465,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+10"/>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <source>The HNB address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4631,7 +4631,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+7"/>
-        <source>123.456 RVN</source>
+        <source>123.456 HNB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4701,7 +4701,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+8"/>
-        <source>Invalid Raven Destination Address</source>
+        <source>Invalid HookersAndBlow Destination Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4712,7 +4712,7 @@ They are not recoverable !!</source>
     <message>
         <location line="+6"/>
         <location line="+659"/>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid HookersAndBlow address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5022,7 +5022,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+21"/>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
+        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the HookersAndBlow network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5054,7 +5054,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+22"/>
-        <source>The Raven address to send the payment to</source>
+        <source>The HookersAndBlow address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5510,7 +5510,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+101"/>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid HookersAndBlow address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5560,7 +5560,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+66"/>
-        <source>The Raven address to send the payment to</source>
+        <source>The HookersAndBlow address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5628,7 +5628,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-116"/>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
+        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the HookersAndBlow network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5684,7 +5684,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Raven address to sign the message with</source>
+        <source>The HookersAndBlow address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5726,8 +5726,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Sign the message to prove you own this Raven address</translation>
+        <source>Sign the message to prove you own this HookersAndBlow address</source>
+        <translation>Sign the message to prove you own this HookersAndBlow address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5757,13 +5757,13 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+21"/>
-        <source>The Raven address the message was signed with</source>
+        <source>The HookersAndBlow address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Verify the message to ensure it was signed with the specified Raven address</translation>
+        <source>Verify the message to ensure it was signed with the specified HookersAndBlow address</source>
+        <translation>Verify the message to ensure it was signed with the specified HookersAndBlow address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6097,7 +6097,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-37"/>
-        <source>Net RVN amount</source>
+        <source>Net HNB amount</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6323,7 +6323,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>The asset (or RVN) removed or added to balance.</source>
+        <source>The asset (or HNB) removed or added to balance.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6742,8 +6742,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-525"/>
-        <source>Raven Core</source>
-        <translation type="unfinished">Raven Core</translation>
+        <source>HookersAndBlow Core</source>
+        <translation type="unfinished">HookersAndBlow Core</translation>
     </message>
     <message>
         <location line="+1"/>
