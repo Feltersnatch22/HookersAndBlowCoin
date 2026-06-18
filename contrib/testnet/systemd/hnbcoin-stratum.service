@@ -1,0 +1,15 @@
+[Unit]
+Description=HNB testnet KawPow stratum proxy
+After=network-online.target hnbcoin-ravend.service
+Wants=network-online.target
+Requires=hnbcoin-ravend.service
+
+[Service]
+Type=simple
+WorkingDirectory=%h/ravencoin-stratum-proxy
+ExecStart=%h/ravencoin-stratum-proxy/.venv/bin/python stratum-converter.py 3333 127.0.0.1 hnb hnb_dev_password_change_me 28889 true true
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target

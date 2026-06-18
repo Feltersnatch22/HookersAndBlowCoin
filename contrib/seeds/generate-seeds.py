@@ -130,7 +130,7 @@ def main():
         process_nodes(g, f, 'pnSeed6_main', 8767)
     g.write('\n')
     with open(os.path.join(indir,'nodes_test.txt'), 'r', encoding="utf8") as f:
-        process_nodes(g, f, 'pnSeed6_test', 18767)
+        process_nodes(g, f, 'pnSeed6_test', 28890)
     g.write('#endif // RAVEN_CHAINPARAMSSEEDS_H\n')
             
 if __name__ == '__main__':

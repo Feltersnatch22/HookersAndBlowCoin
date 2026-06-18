@@ -5787,6 +5787,11 @@ bool AreAssetsDeployed()
     if (thresholdState == THRESHOLD_ACTIVE)
         fAssetsIsActive = true;
 
+    // Dev testnet: allow asset RPC once BIP9 has locked in (skip extra 144-block wait).
+    if (!fAssetsIsActive && GetParams().NetworkIDString() == CBaseChainParams::TESTNET &&
+        thresholdState == THRESHOLD_LOCKED_IN)
+        return true;
+
     return fAssetsIsActive;
 }
 

@@ -1,6 +1,6 @@
 # List of fixed seed nodes for testnet
+# Regenerate: python3 contrib/seeds/generate-seeds.py contrib/seeds > src/chainparamsseeds.h
 
-# Onion nodes
-thfsmmn2jraven.onion
-
-
+# HNB dev seed node (mjk-devserver)
+100.80.138.89:28890
+192.168.0.89:28890
