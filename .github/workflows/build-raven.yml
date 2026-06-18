@@ -26,7 +26,7 @@ env:
 jobs:
   check-jobs:
       # continue-on-error: true # Uncomment once integration is finished
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     # Map a step output to a job output
     outputs:
       should_skip: ${{ steps.skip_check.outputs.should_skip }}
@@ -52,7 +52,7 @@ jobs:
 
   build:
     needs: check-jobs
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
        OS: [ 'windows', 'linux', 'linux-disable-wallet', 'arm32v7', 'arm32v7-disable-wallet', 'aarch64', 'aarch64-disable-wallet' ]
@@ -60,7 +60,7 @@ jobs:
     steps:
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}
       name: Checkout the Code
-      uses: actions/checkout@v1
+      uses: actions/checkout@v4
 
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}
       name: Install Build Tools
@@ -106,7 +106,7 @@ jobs:
     
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}
       name: Upload Artifacts to Job
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ MATRIX.OS }}
         path: ${{ GITHUB.WORKSPACE }}/release
