@@ -12,9 +12,9 @@
 #include "crypto/common.h"
 
 
-static const uint32_t MAINNET_X16RV2ACTIVATIONTIME = 1569945600;
-static const uint32_t TESTNET_X16RV2ACTIVATIONTIME = 1567533600;
-static const uint32_t REGTEST_X16RV2ACTIVATIONTIME = 1569931200;
+static const uint32_t MAINNET_X16RV2ACTIVATIONTIME = 1750856400; // 7 days after HNB mainnet genesis
+static const uint32_t TESTNET_X16RV2ACTIVATIONTIME = 1750860000; // 7 days after HNB testnet genesis
+static const uint32_t REGTEST_X16RV2ACTIVATIONTIME = 3582830167;
 
 uint32_t nKAWPOWActivationTime;
 

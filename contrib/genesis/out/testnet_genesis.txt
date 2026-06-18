@@ -1,0 +1,8 @@
+HookersAndBlowCoin testnet genesis (mined 2026-06-18)
+timestamp: HookersAndBlowCoin genesis 18/Jun/2026 fair launch peer-to-peer asset network
+time: 1750255200
+nonce: 26670451
+bits: 0x1e00ffff
+version: 2
+merkle: 23fadd3e19079969445a9ebee92805eba3e26ffc54c4275abb826672a439eeee
+hash: 0000001e7af0fe066e9f6821066e3db8db681137bd192a41bb799a55b4c883d0

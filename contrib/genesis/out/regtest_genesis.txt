@@ -1,0 +1,8 @@
+HookersAndBlowCoin regtest genesis (mined 2026-06-18)
+timestamp: HookersAndBlowCoin genesis 18/Jun/2026 fair launch peer-to-peer asset network
+time: 1750258800
+nonce: 1
+bits: 0x207fffff
+version: 4
+merkle: 23fadd3e19079969445a9ebee92805eba3e26ffc54c4275abb826672a439eeee
+hash: 6c166ef5fd6f6eab6429ce4907aef27c3edf81b764c710b139c65b59adc89152
