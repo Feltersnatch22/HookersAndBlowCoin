@@ -1,1 +1,6 @@
-2.228.70.198:8767
+# List of fixed seed nodes for mainnet
+# Regenerate: python3 contrib/seeds/generate-seeds.py contrib/seeds > src/chainparamsseeds.h
+
+# HNB seed node (mjk-devserver) — add more before public launch
+100.80.138.89:28888
+192.168.0.89:28888

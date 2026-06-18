@@ -1,0 +1,15 @@
+[Unit]
+Description=HookersAndBlowCoin mainnet daemon (seed node)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+WorkingDirectory=%h/code/hnbcoin/HookersAndBlowCoin
+ExecStart=%h/code/hnbcoin/HookersAndBlowCoin/src/ravend -daemon -bypassdownload
+ExecStop=%h/code/hnbcoin/HookersAndBlowCoin/src/raven-cli stop
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target

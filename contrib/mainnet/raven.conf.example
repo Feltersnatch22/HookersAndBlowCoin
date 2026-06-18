@@ -1,0 +1,16 @@
+# HookersAndBlowCoin mainnet — seed / full node
+# Install: ~/.raven/raven.conf
+
+server=1
+listen=1
+bypassdownload=1
+
+# Strong password required; do not expose RPC to the internet.
+rpcuser=hnb
+rpcpassword=CHANGE_ME_BEFORE_LAUNCH
+
+# Optional: more connections
+# maxconnections=64
+
+# Optional: manual peer while bootstrapping
+# addnode=100.80.138.89:28888
