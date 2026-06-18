@@ -1,35 +1,38 @@
 # HookersAndBlowCoin v4.6.1 — Mainnet launch
 
+First public release for the independent HNB chain.
+
 ## Downloads
 
-Pre-built binaries: https://github.com/Feltersnatch22/HookersAndBlowCoin/releases
+| Platform | File |
+|----------|------|
+| Linux x86_64 | `linux` artifact from [CI run](https://github.com/Feltersnatch22/HookersAndBlowCoin/actions) |
+| Windows x64 | `windows` artifact from CI run |
 
-| Platform | Artifact |
-|----------|----------|
-| Linux x86_64 | `linux` CI artifact |
-| Windows | `windows` CI artifact |
-| Linux ARM64 | `aarch64` CI artifact |
+Build from source: [doc/build-ubuntu.md](https://github.com/Feltersnatch22/HookersAndBlowCoin/blob/release-v4.6.1/doc/build-ubuntu.md)
 
-Build from source: see `doc/build-ubuntu.md`.
+## Network (mainnet)
 
-## Network
+| Setting | Value |
+|---------|-------|
+| P2P | **28888** |
+| RPC | **28887** (local only) |
+| Genesis | `0000005bc2484f740d4c3087211e3aa44d33e7691c9dfdf099b823f735f0be2b` |
 
-- **P2P:** 28888
-- **RPC:** 28887 (local only)
-- **Genesis:** `0000005bc2484f740d4c3087211e3aa44d33e7691c9dfdf099b823f735f0be2b`
-
-## Quick start
+## Quick start (Linux)
 
 ```bash
-tar xzf hnbcoin-*-linux64.tar.gz
+tar xzf linux-*.tar.gz   # name from CI artifact
 ./ravend -daemon -bypassdownload
 ./raven-cli getblockhash 0
 ```
 
-## Seed nodes
-
-See `contrib/seeds/nodes_main.txt` for fixed seeds baked into this release.
+Expected genesis hash above. See `contrib/mainnet/README.md` for seed nodes and mining setup.
 
 ## Testnet
 
-Testnet guide: `contrib/testnet/README.md` (port 28890, separate chain).
+Separate chain — port **28890**. Guide: `contrib/testnet/README.md`.
+
+## Checksums
+
+SHA256 checksums are included in each platform package when produced by CI (`06-package.sh`).

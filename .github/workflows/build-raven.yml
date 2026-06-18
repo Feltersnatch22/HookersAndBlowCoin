@@ -54,8 +54,9 @@ jobs:
     needs: check-jobs
     runs-on: ubuntu-22.04
     strategy:
+      fail-fast: false
       matrix:
-       OS: [ 'windows', 'linux', 'linux-disable-wallet', 'arm32v7', 'arm32v7-disable-wallet', 'aarch64', 'aarch64-disable-wallet' ]
+       OS: [ 'windows', 'linux' ]
 
     steps:
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}
