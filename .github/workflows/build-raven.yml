@@ -56,7 +56,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-       OS: [ 'windows', 'linux', 'linux-qt' ]
+       OS: [ 'windows', 'windows-qt', 'linux', 'linux-qt' ]
 
     steps:
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}

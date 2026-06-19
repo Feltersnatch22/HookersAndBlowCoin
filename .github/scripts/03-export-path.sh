@@ -9,7 +9,7 @@ if [[ ! ${OS} || ! ${GITHUB_WORKSPACE} ]]; then
     exit 1
 fi
 
-if [[ ${OS} == "windows" ]]; then
+if [[ ${OS} == "windows" || ${OS} == "windows-qt" ]]; then
     export PATH=${GITHUB_WORKSPACE}/depends/x86_64-w64-mingw32/native/bin:${PATH}
 elif [[ ${OS} == "osx" ]]; then
     export PATH=${GITHUB_WORKSPACE}/depends/x86_64-apple-darwin14/native/bin:${PATH}

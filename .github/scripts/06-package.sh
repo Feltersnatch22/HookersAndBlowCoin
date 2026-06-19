@@ -81,6 +81,35 @@ if [[ ${OS} == "windows" ]]; then
         fi
     done
     
+elif [[ ${OS} == "windows-qt" ]]; then
+    PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g')
+
+    make install DESTDIR=${STAGE_DIR}/${DISTNAME}
+
+    cd ${STAGE_DIR}
+    QT_BIN="${STAGE_DIR}/${DISTNAME}/bin/raven-qt.exe"
+    if [[ ! -f ${QT_BIN} ]]; then
+        echo "raven-qt.exe not found at ${QT_BIN}"
+        exit 1
+    fi
+
+    QT_PKG="${DISTNAME}-win64-qt"
+    mkdir -p ${QT_PKG}/bin
+    cp -a ${QT_BIN} ${QT_PKG}/bin/
+    cp -a ${STAGE_DIR}/${DISTNAME}/bin/ravend.exe ${QT_PKG}/bin/ 2>/dev/null || true
+    cp -a ${STAGE_DIR}/${DISTNAME}/bin/raven-cli.exe ${QT_PKG}/bin/ 2>/dev/null || true
+    cp -a ${STAGE_DIR}/${DISTNAME}/share ${QT_PKG}/ 2>/dev/null || true
+
+    if [[ -e ${RELEASE_LOCATION} ]]; then
+        find ./${QT_PKG} -type f | sort | zip -X@ ${RELEASE_LOCATION}/${QT_PKG}.zip
+        cd ${RELEASE_LOCATION}
+        md5sum ${QT_PKG}.zip >> ${QT_PKG}.zip.md5sum
+        sha256sum ${QT_PKG}.zip >> ${QT_PKG}.zip.sha256sum
+    else
+        echo "${RELEASE_LOCATION} doesn't exist"
+        exit 1
+    fi
+
 elif [[ ${OS} == "osx" ]]; then
     
     make install-strip DESTDIR=${STAGE_DIR}/${DISTNAME}

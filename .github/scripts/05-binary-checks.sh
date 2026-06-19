@@ -6,7 +6,7 @@ GITHUB_WORKSPACE=${2}
 # "all" is too much log information. This will increase from verbosity from error"
 #export BOOST_TEST_LOG_LEVEL=all
 
-if [[ ${OS} == "windows" ]]; then
+if [[ ${OS} == "windows" || ${OS} == "windows-qt" ]]; then
     echo "----------------------------------------"
     echo "Checking binary security for ${OS}"
     echo "----------------------------------------"

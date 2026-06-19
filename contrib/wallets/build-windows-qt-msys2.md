@@ -4,7 +4,7 @@ Native GUI for Windows — **black / grey / pink** HNB branding included.
 
 ## Option A — Download from CI (easiest)
 
-1. Open [Actions → Build Windows Qt Wallet](https://github.com/Feltersnatch22/HookersAndBlowCoin/actions/workflows/build-windows-qt.yml)
+1. Open [Actions → Build HookersAndBlow](https://github.com/Feltersnatch22/HookersAndBlowCoin/actions/workflows/build-raven.yml) (job **windows-qt**), or [Build Windows Qt Wallet](https://github.com/Feltersnatch22/HookersAndBlowCoin/actions/workflows/build-windows-qt.yml) (MSYS2 native)
 2. Download the **windows-qt** artifact (`raven-*-win64-qt.zip`)
 3. Unzip anywhere (e.g. `C:\HNB\`)
 4. Run **`raven-qt.exe`**
