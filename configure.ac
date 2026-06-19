@@ -758,7 +758,7 @@ fi
 RAVEN_QT_INIT
 
 dnl sets $raven_enable_qt, $raven_enable_qt_test, $raven_enable_qt_dbus
-RAVEN_QT_CONFIGURE([$use_pkgconfig], [qt5])
+RAVEN_QT_CONFIGURE([5.5.1])
 
 if test x$build_raven_cli$build_raven_tx$build_ravend$raven_enable_qt$use_tests$use_bench = xnononononono; then
     use_boost=no
