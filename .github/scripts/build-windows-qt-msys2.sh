@@ -5,11 +5,17 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$ROOT"
 
-export PATH="/mingw64/bin:/usr/bin:$PATH"
+case "${MSYSTEM:-MINGW64}" in
+  MINGW64) MSYSTEM_PREFIX=/mingw64 ;;
+  UCRT64)  MSYSTEM_PREFIX=/ucrt64 ;;
+  *)       MSYSTEM_PREFIX=/mingw64 ;;
+esac
+export PATH="${MSYSTEM_PREFIX}/bin:/usr/bin:$PATH"
 export MAKEFLAGS="-j$(nproc)"
 
 if ! command -v qmake >/dev/null 2>&1; then
-  echo "qmake not found — run from MSYS2 MINGW64 with mingw-w64-x86_64-qt5 installed" >&2
+  echo "qmake not found under ${MSYSTEM_PREFIX}/bin:" >&2
+  ls -la "${MSYSTEM_PREFIX}/bin"/qmake* 2>/dev/null || true
   exit 1
 fi
 

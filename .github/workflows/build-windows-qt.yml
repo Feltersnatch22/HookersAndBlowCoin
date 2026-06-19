@@ -41,12 +41,11 @@ jobs:
             mingw-w64-x86_64-protobuf
             mingw-w64-x86_64-db
 
+      - name: Ensure Qt build tools
+        run: pacman -S --needed --noconfirm mingw-w64-x86_64-qt5-base mingw-w64-x86_64-qt5-tools
+
       - name: Build raven-qt
-        run: |
-          export PATH="/mingw64/bin:$PATH"
-          command -v qmake
-          command -v windeployqt
-          ./.github/scripts/build-windows-qt-msys2.sh
+        run: ./.github/scripts/build-windows-qt-msys2.sh
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
