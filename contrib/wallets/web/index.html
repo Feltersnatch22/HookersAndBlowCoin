@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HNB Web Wallet</title>
+  <style>
+    :root { --bg: #0f1117; --card: #1a1d27; --accent: #e8b923; --text: #e8eaed; --muted: #9aa0a6; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 1rem; line-height: 1.5; }
+    main { max-width: 640px; margin: 0 auto; }
+    h1 { font-size: 1.4rem; margin: 0 0 0.5rem; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    section { background: var(--card); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+    label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 0.35rem; }
+    input, select, textarea, button { width: 100%; font: inherit; padding: 0.55rem 0.65rem; border-radius: 6px; border: 1px solid #333; background: #0f1117; color: var(--text); }
+    textarea { min-height: 4.5rem; resize: vertical; }
+    button { background: var(--accent); color: #111; border: none; font-weight: 600; cursor: pointer; margin-top: 0.5rem; }
+    button.secondary { background: #333; color: var(--text); }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .mono { font-family: ui-monospace, monospace; word-break: break-all; font-size: 0.9rem; }
+    .warn { color: #f4a261; font-size: 0.85rem; }
+    .ok { color: #6bcb77; }
+    #status { min-height: 1.25rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>HookersAndBlow Web Wallet</h1>
+    <p class="sub">Client-side BIP39 · keys never leave your browser · mainnet &amp; testnet</p>
+
+    <section>
+      <label for="network">Network</label>
+      <select id="network">
+        <option value="mainnet">Mainnet (H… addresses, port 28888)</option>
+        <option value="testnet">Testnet (m… addresses, port 28890)</option>
+      </select>
+    </section>
+
+    <section>
+      <label for="mnemonic">Mnemonic (12/24 words) or generate new</label>
+      <textarea id="mnemonic" placeholder="abandon abandon …" autocomplete="off" spellcheck="false"></textarea>
+      <div class="row">
+        <button type="button" id="btn-generate">Generate 12 words</button>
+        <button type="button" id="btn-import" class="secondary">Import &amp; derive</button>
+      </div>
+      <p id="status"></p>
+    </section>
+
+    <section id="wallet-panel" hidden>
+      <label>HD path</label>
+      <p class="mono" id="hd-path"></p>
+      <label>Receive address</label>
+      <p class="mono" id="address"></p>
+      <label>WIF (keep secret)</label>
+      <p class="mono" id="wif"></p>
+    </section>
+
+    <section>
+      <label for="rpc-url">Optional: ravend RPC URL (must allow CORS)</label>
+      <input id="rpc-url" type="url" placeholder="http://127.0.0.1:28887/">
+      <button type="button" id="btn-balance" class="secondary">Check balance</button>
+      <p class="mono" id="balance"></p>
+      <p class="warn">Production use needs your own node with CORS or an ElectrumX server. Do not enter mainnet seeds on untrusted hosts.</p>
+    </section>
+  </main>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

@@ -16,6 +16,9 @@ echo "----------------------------------------"
 if [[ ${OS} == "arm32v7-disable-wallet" || ${OS} == "linux-disable-wallet" || ${OS} == "aarch64-disable-wallet" ]]; then
     OS=`echo ${OS} | cut -d"-" -f1`
 fi
+if [[ ${OS} == "linux-qt" ]]; then
+    OS=linux
+fi
 
 echo "----------------------------------------"
 echo "Building Dependencies for ${OS}"

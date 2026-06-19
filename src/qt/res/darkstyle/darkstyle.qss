@@ -40,7 +40,7 @@ QMenu::item:disabled{
   color:palette(disabled);
 }
 QMenu::item:selected{
-  border-color:rgba(147,191,236,127);
+  border-color:rgba(255,20,147,127);
   background:palette(highlight);
 }
 QMenu::icon:checked{

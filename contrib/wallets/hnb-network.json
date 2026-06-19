@@ -1,0 +1,35 @@
+{
+  "name": "HookersAndBlowCoin",
+  "ticker": "HNB",
+  "mainnet": {
+    "p2pPort": 28888,
+    "rpcPort": 28887,
+    "messageStart": [161, 178, 195, 212],
+    "pubkeyAddressPrefix": 40,
+    "scriptAddressPrefix": 85,
+    "secretKeyPrefix": 200,
+    "extPubKey": [4, 136, 178, 30],
+    "extSecretKey": [4, 136, 173, 228],
+    "bip44CoinType": 1919,
+    "defaultHdPath": "m/44'/1919'/0'/0/0",
+    "genesisHash": "0000005bc2484f740d4c3087211e3aa44d33e7691c9dfdf099b823f735f0be2b",
+    "seeds": [
+      "100.80.138.89:28888",
+      "192.168.0.89:28888"
+    ]
+  },
+  "testnet": {
+    "p2pPort": 28890,
+    "rpcPort": 28889,
+    "messageStart": [72, 78, 66, 84],
+    "pubkeyAddressPrefix": 111,
+    "scriptAddressPrefix": 196,
+    "secretKeyPrefix": 239,
+    "extPubKey": [4, 53, 135, 207],
+    "extSecretKey": [4, 53, 131, 148],
+    "bip44CoinType": 1,
+    "defaultHdPath": "m/44'/1'/0'/0/0",
+    "genesisHash": "0000001e7af0fe066e9f6821066e3db8db681137bd192a41bb799a55b4c883d0",
+    "seeds": []
+  }
+}

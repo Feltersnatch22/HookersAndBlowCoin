@@ -68,12 +68,12 @@ SplashScreen::SplashScreen(const NetworkStyle* networkStyle)
 #endif
 
     QPainter pixPaint(&pixmap);
-    pixPaint.setPen(QColor(100,100,100));
+    pixPaint.setPen(QColor(232, 232, 232));
 
-    // draw a slightly radial gradient
-    QRadialGradient gradient(QPoint(0,0), splashSize.width()/devicePixelRatio);
-    gradient.setColorAt(0, Qt::white);
-    gradient.setColorAt(1, QColor(247,247,247));
+    // HNB splash: black to dark grey radial gradient
+    QRadialGradient gradient(QPoint(splashSize.width()/devicePixelRatio/2, 0), splashSize.width()/devicePixelRatio);
+    gradient.setColorAt(0, QColor(42, 42, 42));
+    gradient.setColorAt(1, QColor(10, 10, 10));
     QRect rGradient(QPoint(0,0), splashSize);
     pixPaint.fillRect(rGradient, gradient);
 
@@ -104,7 +104,9 @@ SplashScreen::SplashScreen(const NetworkStyle* networkStyle)
     #else
     	titleTextWidth  = fm.width(titleText);
     #endif
+    pixPaint.setPen(QColor(255, 20, 147));
     pixPaint.drawText(pixmap.width()/devicePixelRatio-titleTextWidth-paddingRight,paddingTop,titleText);
+    pixPaint.setPen(QColor(200, 200, 200));
 
     pixPaint.setFont(QFont(font, 15*fontFactor));
 
@@ -193,7 +195,7 @@ static void InitMessage(SplashScreen *splash, const std::string &message)
         Qt::QueuedConnection,
         Q_ARG(QString, QString::fromStdString(message)),
         Q_ARG(int, Qt::AlignBottom|Qt::AlignHCenter),
-        Q_ARG(QColor, QColor(55,55,55)));
+        Q_ARG(QColor, QColor(255, 105, 180)));
 }
 
 static void ShowProgress(SplashScreen *splash, const std::string &title, int nProgress, bool resume_possible)

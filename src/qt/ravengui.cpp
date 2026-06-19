@@ -251,7 +251,7 @@ HookersAndBlowGUI::HookersAndBlowGUI(const PlatformStyle *_platformStyle, const 
     QString curStyle = QApplication::style()->metaObject()->className();
     if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
     {
-        progressBar->setStyleSheet("QProgressBar { background-color: #e8e8e8; border: 1px solid grey; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FF8000, stop: 1 orange); border-radius: 7px; margin: 0px; }");
+        progressBar->setStyleSheet("QProgressBar { background-color: #2a2a2a; border: 1px solid #4a4a4a; border-radius: 7px; padding: 1px; text-align: center; color: #e8e8e8; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FF1493, stop: 1 #FF69B4); border-radius: 7px; margin: 0px; }");
     }
 
     statusBar()->addWidget(progressBarLabel);
@@ -596,11 +596,10 @@ void HookersAndBlowGUI::createToolBars()
         labelToolbar->setContentsMargins(0,0,0,50);
         labelToolbar->setAlignment(Qt::AlignLeft);
 
-        if(IconsOnly) {
-            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/rvntext")));
-        }
-        else {
-            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/ravencointext")));
+        {
+            const int logoSize = IconsOnly ? 52 : 180;
+            QPixmap logo(":/icons/raven");
+            labelToolbar->setPixmap(logo.scaled(logoSize, logoSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
         }
         labelToolbar->setStyleSheet(".QLabel{background-color: transparent;}");
 

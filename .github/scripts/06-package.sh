@@ -129,6 +129,34 @@ elif [[ ${OS} == "osx" ]]; then
     else
         echo "release directory doesn't exist"
     fi
+elif [[ ${OS} == "linux-qt" ]]; then
+    make install DESTDIR=${STAGE_DIR}/${DISTNAME}
+
+    cd ${STAGE_DIR}
+    find . -name "lib*.la" -delete
+    find . -name "lib*.a" -delete
+    rm -rf ${DISTNAME}/lib/pkgconfig
+
+    QT_BIN="${STAGE_DIR}/${DISTNAME}/bin/raven-qt"
+    if [[ ! -x ${QT_BIN} ]]; then
+        echo "raven-qt not found at ${QT_BIN}"
+        exit 1
+    fi
+
+    QT_PKG="${DISTNAME}-qt-x86_64-linux-gnu"
+    mkdir -p ${QT_PKG}/bin
+    cp -a ${QT_BIN} ${QT_PKG}/bin/
+    cp -a ${STAGE_DIR}/${DISTNAME}/share ${QT_PKG}/ 2>/dev/null || true
+
+    if [[ -e ${RELEASE_LOCATION} ]]; then
+        tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -C ${STAGE_DIR} ${QT_PKG} | gzip -9n > ${RELEASE_LOCATION}/${QT_PKG}.tar.gz
+        cd ${RELEASE_LOCATION}
+        md5sum ${QT_PKG}.tar.gz >> ${QT_PKG}.tar.gz.md5sum
+        sha256sum ${QT_PKG}.tar.gz >> ${QT_PKG}.tar.gz.sha256sum
+    else
+        echo "release directory doesn't exist"
+        exit 1
+    fi
 elif [[ ${OS} == "linux" || ${OS} == "linux-disable-wallet" ]]; then
 
     make install DESTDIR=${STAGE_DIR}/${DISTNAME}

@@ -70,6 +70,37 @@ elif [[ ${OS} == "osx" ]]; then
 
     pip3 install ds-store
     
+elif [[ ${OS} == "linux-qt" ]]; then
+    apt -y install \
+    apt-file \
+    autoconf \
+    automake \
+    autotools-dev \
+    bsdmainutils \
+    build-essential \
+    ca-certificates \
+    curl \
+    g++-10 \
+    gcc-10 \
+    git \
+    gnupg \
+    libdb++-dev \
+    libdbus-1-dev \
+    libevent-dev \
+    libharfbuzz-dev \
+    libminiupnpc-dev \
+    libprotobuf-dev \
+    libqrencode-dev \
+    libssl-dev \
+    libtool \
+    libzmq3-dev \
+    pkg-config \
+    protobuf-compiler \
+    python3 \
+    qtbase5-dev \
+    qttools5-dev-tools \
+    bison
+
 elif [[ ${OS} == "linux" || ${OS} == "linux-disable-wallet" || ${OS} == "aarch64" || ${OS} == "aarch64-disable-wallet" ]]; then
     apt -y install \
     apt-file \
