@@ -4,7 +4,7 @@
 
 # HookersAndBlowCoin
 
-Independent KawPow blockchain for HNB-native asset transfer. See [mainnet launch](contrib/mainnet/README.md) and [testnet guide](contrib/testnet/README.md).
+Independent KawPow blockchain for HNB-native asset transfer. See [mainnet launch](contrib/mainnet/README.md), [testnet guide](contrib/testnet/README.md), and [wallets](contrib/wallets/README.md) (desktop / web / mobile).
 
 To build and run, see [the doc folder](doc).
 
