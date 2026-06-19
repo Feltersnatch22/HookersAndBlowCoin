@@ -48,6 +48,15 @@ jobs:
       - name: Build raven-qt
         run: ./.github/scripts/build-windows-qt-msys2.sh
 
+      - name: Upload configure log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: configure-log
+          path: |
+            configure.out
+            config.log
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:

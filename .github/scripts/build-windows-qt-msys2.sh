@@ -24,12 +24,21 @@ export BDB_LIBS="-L${MSYSTEM_PREFIX}/lib -ldb_cxx"
 # boost_filesystem/thread/chrono link against boost_system during ax_boost AC_CHECK_LIB tests.
 export LIBS="-lboost_system ${LIBS:-}"
 
-# MSYS2 Qt5 packages use qmake-qt5 / windeployqt-qt5; autotools expect qmake.
-for tool in qmake windeployqt; do
+# MSYS2 Qt5 packages use *-qt5 tool names; autotools expect unprefixed names.
+for tool in qmake windeployqt moc uic rcc lrelease; do
   if ! command -v "$tool" >/dev/null 2>&1 && command -v "${tool}-qt5" >/dev/null 2>&1; then
     ln -sf "${tool}-qt5" "${MSYSTEM_PREFIX}/bin/${tool}"
   fi
 done
+
+echo "=== MSYS2 dependency probe ==="
+ls -la "${MSYSTEM_PREFIX}/include/db_cxx.h" 2>/dev/null || echo "missing: db_cxx.h"
+command -v protoc && protoc --version || echo "missing: protoc"
+command -v windres || echo "missing: windres"
+pkg-config --modversion Qt5Core || true
+pkg-config --modversion protobuf || true
+pkg-config --modversion libssl || true
+ls "${MSYSTEM_PREFIX}/lib"/libboost_system* 2>/dev/null | head -3 || true
 
 if ! pkg-config --exists Qt5Core; then
   echo "Qt5Core pkg-config missing. PKG_CONFIG_PATH=${PKG_CONFIG_PATH}" >&2
@@ -45,7 +54,7 @@ fi
 
 ./autogen.sh
 
-./configure \
+if ! ./configure \
   --with-gui=qt5 \
   --with-incompatible-bdb \
   --with-boost="${MSYSTEM_PREFIX}" \
@@ -53,10 +62,19 @@ fi
   --with-qt-bindir="${MSYSTEM_PREFIX}/bin" \
   --with-qt-incdir="${MSYSTEM_PREFIX}/include/qt5" \
   --with-qt-libdir="${MSYSTEM_PREFIX}/lib" \
+  --with-protoc-bindir="${MSYSTEM_PREFIX}/bin" \
   --disable-tests \
   --disable-bench \
   --disable-gui-tests \
-  --disable-reduce-exports
+  --disable-reduce-exports 2>&1 | tee configure.out; then
+  echo "=== configure failed ===" >&2
+  tail -n 60 configure.out >&2 || true
+  if [[ -f config.log ]]; then
+    echo "=== config.log (errors) ===" >&2
+    grep -E 'configure: error|error:|Error |failed|FAILED' config.log | tail -n 40 >&2 || true
+  fi
+  exit 77
+fi
 
 make -j"$(nproc)"
 

@@ -1,9 +1,25 @@
-# Preseed autoconf link checks for MSYS2 MinGW Boost import libraries.
-# ax_boost uses AC_CHECK_LIB(..., exit); filesystem/thread/chrono need system at link time.
+# Preseed autoconf for native MSYS2 MINGW64 builds.
+
+# Boost compile + link checks (ax_boost uses AC_CHECK_LIB(..., exit)).
+ax_cv_boost_system=yes
+ax_cv_boost_filesystem=yes
+ax_cv_boost_program_options=yes
+ax_cv_boost_thread=yes
+ax_cv_boost_chrono=yes
 ac_cv_lib_boost_system_exit=yes
 ac_cv_lib_boost_filesystem_exit=yes
 ac_cv_lib_boost_program_options_exit=yes
 ac_cv_lib_boost_thread_exit=yes
 ac_cv_lib_boost_chrono_exit=yes
+have_boost=yes
+BOOST_LDFLAGS="-L/mingw64/lib"
+BOOST_CPPFLAGS="-I/mingw64/include"
+BOOST_SYSTEM_LIB="-lboost_system"
+BOOST_FILESYSTEM_LIB="-lboost_filesystem"
+BOOST_PROGRAM_OPTIONS_LIB="-lboost_program_options"
+BOOST_THREAD_LIB="-lboost_thread"
+BOOST_CHRONO_LIB="-lboost_chrono"
+
+# Berkeley DB 6.x import libs on MSYS2.
 ac_cv_lib_db_cxx_main=yes
 ac_cv_lib_db_cxx_4_8_main=no
