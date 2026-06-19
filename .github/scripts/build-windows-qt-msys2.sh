@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$ROOT"
 
-export PATH="/mingw64/bin:$PATH"
+export PATH="/mingw64/bin:/usr/bin:$PATH"
 export MAKEFLAGS="-j$(nproc)"
 
 if ! command -v qmake >/dev/null 2>&1; then

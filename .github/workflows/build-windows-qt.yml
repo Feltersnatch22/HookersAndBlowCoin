@@ -31,6 +31,7 @@ jobs:
             bison
             mingw-w64-x86_64-toolchain
             mingw-w64-x86_64-qt5
+            mingw-w64-x86_64-qt5-tools
             mingw-w64-x86_64-boost
             mingw-w64-x86_64-openssl
             mingw-w64-x86_64-libevent
@@ -41,7 +42,11 @@ jobs:
             mingw-w64-x86_64-db
 
       - name: Build raven-qt
-        run: bash .github/scripts/build-windows-qt-msys2.sh
+        run: |
+          export PATH="/mingw64/bin:$PATH"
+          command -v qmake
+          command -v windeployqt
+          ./.github/scripts/build-windows-qt-msys2.sh
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
