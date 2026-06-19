@@ -1,9 +1,12 @@
-HookersAndBlow Core integration/staging tree
-=====================================
+<p align="center">
+  <img src="doc/img/hbc-logo.png" alt="HookersAndBlowCoin (HBC)" width="280">
+</p>
 
-https://ravencoin.org
+# HookersAndBlowCoin
 
-To see how to run HookersAndBlowCoin, please read the respective files in [the doc folder](doc)
+Independent KawPow blockchain for HNB-native asset transfer. See [mainnet launch](contrib/mainnet/README.md) and [testnet guide](contrib/testnet/README.md).
+
+To build and run, see [the doc folder](doc).
 
 
 What is HookersAndBlowCoin?

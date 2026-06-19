@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../../doc/img/hbc-logo.png" alt="HookersAndBlowCoin (HBC)" width="200">
+</p>
+
 # HookersAndBlowCoin mainnet launch prep
 
 Independent mainnet (not Raven-compatible). Testnet validation is complete; this doc covers going live on **main**.
