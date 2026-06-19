@@ -14,6 +14,12 @@ export PATH="${MSYSTEM_PREFIX}/bin:/usr/bin:$PATH"
 export PKG_CONFIG="${MSYSTEM_PREFIX}/bin/pkg-config"
 export PKG_CONFIG_PATH="${MSYSTEM_PREFIX}/lib/qt5/pkgconfig:${MSYSTEM_PREFIX}/share/pkgconfig:${PKG_CONFIG_PATH:-}"
 export MAKEFLAGS="-j$(nproc)"
+export BOOST_ROOT="${MSYSTEM_PREFIX}"
+export CONFIG_SITE="$(dirname "$0")/msys2-config.site"
+export LDFLAGS="-L${MSYSTEM_PREFIX}/lib ${LDFLAGS:-}"
+export CPPFLAGS="-I${MSYSTEM_PREFIX}/include ${CPPFLAGS:-}"
+# boost_filesystem/thread/chrono link against boost_system during ax_boost AC_CHECK_LIB tests.
+export LIBS="-lboost_system ${LIBS:-}"
 
 # MSYS2 Qt5 packages use qmake-qt5 / windeployqt-qt5; autotools expect qmake.
 for tool in qmake windeployqt; do
@@ -40,11 +46,7 @@ fi
   --with-gui=qt5 \
   --with-incompatible-bdb \
   --with-boost="${MSYSTEM_PREFIX}" \
-  --with-boost-filesystem=boost_filesystem \
-  --with-boost-system=boost_system \
-  --with-boost-thread=boost_thread \
-  --with-boost-chrono=boost_chrono \
-  --with-boost-program-options=boost_program_options \
+  --with-boost-libdir="${MSYSTEM_PREFIX}/lib" \
   --with-qt-bindir="${MSYSTEM_PREFIX}/bin" \
   --with-qt-incdir="${MSYSTEM_PREFIX}/include/qt5" \
   --with-qt-libdir="${MSYSTEM_PREFIX}/lib" \

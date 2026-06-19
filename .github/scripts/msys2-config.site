@@ -1,0 +1,7 @@
+# Preseed autoconf link checks for MSYS2 MinGW Boost import libraries.
+# ax_boost uses AC_CHECK_LIB(..., exit); filesystem/thread/chrono need system at link time.
+ac_cv_lib_boost_system_exit=yes
+ac_cv_lib_boost_filesystem_exit=yes
+ac_cv_lib_boost_program_options_exit=yes
+ac_cv_lib_boost_thread_exit=yes
+ac_cv_lib_boost_chrono_exit=yes
