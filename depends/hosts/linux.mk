@@ -17,8 +17,8 @@ i686_linux_RANLIB=ranlib
 i686_linux_NM=nm
 i686_linux_STRIP=strip
 
-x86_64_linux_CC=gcc -m64
-x86_64_linux_CXX=g++ -m64
+x86_64_linux_CC=gcc-10 -m64
+x86_64_linux_CXX=g++-10 -m64
 x86_64_linux_AR=ar
 x86_64_linux_RANLIB=ranlib
 x86_64_linux_NM=nm

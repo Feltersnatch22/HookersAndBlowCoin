@@ -82,6 +82,8 @@ elif [[ ${OS} == "linux" || ${OS} == "linux-disable-wallet" || ${OS} == "aarch64
     build-essential \
     ca-certificates \
     curl \
+    g++-10 \
+    gcc-10 \
     g++-aarch64-linux-gnu \
     g++-9-aarch64-linux-gnu \
     g++-9-multilib \
