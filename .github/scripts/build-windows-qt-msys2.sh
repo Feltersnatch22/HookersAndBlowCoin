@@ -11,6 +11,7 @@ case "${MSYSTEM:-MINGW64}" in
   *)       MSYSTEM_PREFIX=/mingw64 ;;
 esac
 export PATH="${MSYSTEM_PREFIX}/bin:/usr/bin:$PATH"
+export PKG_CONFIG_PATH="${MSYSTEM_PREFIX}/lib/qt5/pkgconfig:${MSYSTEM_PREFIX}/share/pkgconfig:${PKG_CONFIG_PATH:-}"
 export MAKEFLAGS="-j$(nproc)"
 
 # MSYS2 Qt5 packages use qmake-qt5 / windeployqt-qt5; autotools expect qmake.
@@ -19,6 +20,12 @@ for tool in qmake windeployqt; do
     ln -sf "${tool}-qt5" "${MSYSTEM_PREFIX}/bin/${tool}"
   fi
 done
+
+if ! pkg-config --exists Qt5Core; then
+  echo "Qt5Core pkg-config missing. PKG_CONFIG_PATH=${PKG_CONFIG_PATH}" >&2
+  pkg-config --list-all | grep -i qt5 | head -20 || true
+  exit 1
+fi
 
 if ! command -v qmake >/dev/null 2>&1; then
   echo "qmake not found under ${MSYSTEM_PREFIX}/bin:" >&2
