@@ -11,6 +11,7 @@ case "${MSYSTEM:-MINGW64}" in
   *)       MSYSTEM_PREFIX=/mingw64 ;;
 esac
 export PATH="${MSYSTEM_PREFIX}/bin:/usr/bin:$PATH"
+export PKG_CONFIG="${MSYSTEM_PREFIX}/bin/pkg-config"
 export PKG_CONFIG_PATH="${MSYSTEM_PREFIX}/lib/qt5/pkgconfig:${MSYSTEM_PREFIX}/share/pkgconfig:${PKG_CONFIG_PATH:-}"
 export MAKEFLAGS="-j$(nproc)"
 
@@ -38,6 +39,9 @@ fi
 ./configure \
   --with-gui=qt5 \
   --with-incompatible-bdb \
+  --with-qt-bindir="${MSYSTEM_PREFIX}/bin" \
+  --with-qt-incdir="${MSYSTEM_PREFIX}/include/qt5" \
+  --with-qt-libdir="${MSYSTEM_PREFIX}/lib" \
   --disable-tests \
   --disable-bench \
   --disable-gui-tests \

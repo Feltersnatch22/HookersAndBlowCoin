@@ -327,8 +327,12 @@ use_pkgconfig=yes
 case $host in
   *mingw*)
 
-     #pkgconfig does more harm than good with MinGW
-     use_pkgconfig=no
+     dnl Cross-compiles use depends config.site; native MSYS2 needs pkg-config for Qt5.
+     if test x$cross_compiling = xyes; then
+       use_pkgconfig=no
+     else
+       use_pkgconfig=yes
+     fi
 
      TARGET_OS=windows
      AC_CHECK_LIB([mingwthrd],      [main],, AC_MSG_ERROR(lib missing))

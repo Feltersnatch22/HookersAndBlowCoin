@@ -30,6 +30,7 @@ jobs:
             libtool
             bison
             mingw-w64-x86_64-toolchain
+            mingw-w64-x86_64-pkgconf
             mingw-w64-x86_64-qt5
             mingw-w64-x86_64-qt5-tools
             mingw-w64-x86_64-boost
