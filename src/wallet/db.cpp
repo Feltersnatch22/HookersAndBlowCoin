@@ -706,7 +706,7 @@ bool CWalletDBWrapper::Backup(const std::string& strDest)
                     pathDest /= strFile;
 
                 try {
-#if BOOST_VERSION >= 107000
+#if BOOST_VERSION >= 108000
                     fs::copy_file(pathSrc, pathDest, fs::copy_options::overwrite_existing);
 #else
                     fs::copy_file(pathSrc, pathDest, fs::copy_option::overwrite_if_exists);
