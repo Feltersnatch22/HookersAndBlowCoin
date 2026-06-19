@@ -83,13 +83,15 @@ Optional user service: `contrib/mainnet/systemd/hnbcoin-ravend-mainnet.service`
 
 ### Mining at launch
 
-Mainnet uses **KawPow** from the first minable blocks (wall-clock past `nKAWPOWActivationTime`). Use the same patched stratum proxy as testnet, but RPC port **28887** and mainnet datadir.
+Mainnet uses **KawPow** from the first minable blocks. Use the KawPow-patched stratum proxy (`contrib/testnet/patch_stratum_kawpow.py`) plus HNB address prefix patch (`contrib/mainnet/patch_stratum_hnb_addresses.py`). RPC port **28887**; stratum **3334** (leave 3333 for testnet).
 
 ```bash
-.venv/bin/python stratum-converter.py 3333 127.0.0.1 hnb YOUR_RPC_PASS 28887 true true
+./contrib/mainnet/start-mining.sh
+# Manual: stratum last args must be `true false true` (not testnet)
+.venv/bin/python stratum-converter.py 3334 127.0.0.1 hnb YOUR_RPC_PASS 28887 true false true
 ```
 
-Set `-miningaddress=` to a mainnet wallet address before/at launch if solo mining from `ravend`.
+Set `-miningaddress=` to a mainnet `H...` address when starting `ravend`.
 
 ### Post-launch smoke test
 
