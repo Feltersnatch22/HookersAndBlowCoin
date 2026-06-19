@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/hbc-logo.png" alt="HookersAndBlowCoin (HBC)" width="200">
+</p>
+
 HookersAndBlowCoin Core
 ==============
 

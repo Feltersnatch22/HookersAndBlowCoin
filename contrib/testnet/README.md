@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../../doc/img/hbc-logo.png" alt="HookersAndBlowCoin (HBC)" width="200">
+</p>
+
 # HNB testnet — node and solo mining
 
 Independent testnet (not Raven-compatible).

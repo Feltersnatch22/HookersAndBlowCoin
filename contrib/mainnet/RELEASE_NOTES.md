@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Feltersnatch22/HookersAndBlowCoin/release-v4.6.1/doc/img/hbc-logo.png" alt="HookersAndBlowCoin (HBC)" width="200">
+</p>
+
 # HookersAndBlowCoin v4.6.1 — Mainnet launch
 
 First public release for the independent HNB chain.
