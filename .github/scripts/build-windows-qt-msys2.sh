@@ -39,13 +39,19 @@ fi
 ./configure \
   --with-gui=qt5 \
   --with-incompatible-bdb \
+  --with-boost="${MSYSTEM_PREFIX}" \
+  --with-boost-filesystem=boost_filesystem \
+  --with-boost-system=boost_system \
+  --with-boost-thread=boost_thread \
+  --with-boost-chrono=boost_chrono \
+  --with-boost-program-options=boost_program_options \
   --with-qt-bindir="${MSYSTEM_PREFIX}/bin" \
   --with-qt-incdir="${MSYSTEM_PREFIX}/include/qt5" \
   --with-qt-libdir="${MSYSTEM_PREFIX}/lib" \
   --disable-tests \
   --disable-bench \
   --disable-gui-tests \
-  --enable-reduce-exports
+  --disable-reduce-exports
 
 make -j"$(nproc)"
 
