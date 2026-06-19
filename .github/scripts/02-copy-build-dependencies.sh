@@ -23,14 +23,14 @@ echo "----------------------------------------"
 
 cd depends
 if [[ ${OS} == "windows" ]]; then
-    make HOST=x86_64-w64-mingw32 -j2
+    make HOST=x86_64-w64-mingw32 NO_QT=1 -j2
 elif [[ ${OS} == "osx" ]]; then
     echo "OSX building is not currently enabled"
     exit 1
 elif [[ ${OS} == "linux" || ${OS} == "linux-disable-wallet" ]]; then
-    make HOST=x86_64-linux-gnu -j2
+    make HOST=x86_64-linux-gnu NO_QT=1 -j2
 elif [[ ${OS} == "arm32v7" || ${OS} == "arm32v7-disable-wallet" ]]; then
-    make HOST=arm-linux-gnueabihf -j2
+    make HOST=arm-linux-gnueabihf NO_QT=1 -j2
 elif [[ ${OS} == "aarch64" || ${OS} == "aarch64-disable-wallet" ]]; then
-    make HOST=aarch64-linux-gnu -j2
+    make HOST=aarch64-linux-gnu NO_QT=1 -j2
 fi

@@ -53,13 +53,10 @@ fi
 if [[ ${OS} == "windows" ]]; then
     PATH=$(echo "$PATH" | sed -e 's/:\/mnt.*//g')
 
-    make deploy
-    mv *-setup.exe ${DISTNAME}-win64-setup-unsigned.exe
-
     make install DESTDIR=${STAGE_DIR}/${DISTNAME}
 
     cd ${STAGE_DIR}
-    mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/
+    mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/ 2>/dev/null || true
     find . -name "lib*.la" -delete
     find . -name "lib*.a" -delete
     rm -rf ${DISTNAME}/lib/pkgconfig
@@ -67,31 +64,20 @@ if [[ ${OS} == "windows" ]]; then
     find ${DISTNAME}/bin -type f -executable -exec x86_64-w64-mingw32-objcopy --only-keep-debug {} {}.dbg \; -exec x86_64-w64-mingw32-strip -s {} \; -exec x86_64-w64-mingw32-objcopy --add-gnu-debuglink={}.dbg {} \;
 
     if [[ -e ${RELEASE_LOCATION} ]]; then
-        find ./${DISTNAME} -not -name "*.dbg"  -type f | sort | zip -X@ ./${DISTNAME}-x86_64-w64-mingw32.zip
+        find ./${DISTNAME} -not -name "*.dbg" -type f | sort | zip -X@ ./${DISTNAME}-x86_64-w64-mingw32.zip
         mv ./${DISTNAME}-x86_64-*.zip ${RELEASE_LOCATION}/${DISTNAME}-win64.zip
-        cp -rf ${GITHUB_WORKSPACE}/contrib/windeploy ${RELEASE_LOCATION}
-        cd ${RELEASE_LOCATION}/windeploy
-        mkdir unsigned
-        mv ${GITHUB_WORKSPACE}/${DISTNAME}-win64-setup-unsigned.exe ${RELEASE_LOCATION}
-        find . | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ${RELEASE_LOCATION}/${DISTNAME}-win64-unsigned.tar.gz
     else
         echo "${RELEASE_LOCATION} doesn't exist"
         exit 1
     fi
 
     cd ${RELEASE_LOCATION}/
-    for i in ${DISTNAME}-win64.zip ${DISTNAME}-win64-setup.exe ${DISTNAME}-win64-setup-unsigned.exe; do
+    for i in ${DISTNAME}-win64.zip; do
         if [[ -e ${i} ]]; then
             md5sum ${i} >> ${i}.md5sum
             sha256sum ${i} >> ${i}.sha256sum
         else
             echo "${i} doesn't exist"
-        fi
-    done
-
-    for rmfile in detach-sig-create.sh win-codesign.cert raven-cli.exe raven-qt.exe ravend.exe; do
-        if [[ -e ${rmfile} ]]; then
-            rm -f ${rmfile}
         fi
     done
     

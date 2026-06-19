@@ -6,8 +6,10 @@ First public release for the independent HNB chain.
 
 | Platform | File |
 |----------|------|
-| Linux x86_64 | `linux` artifact from [CI run](https://github.com/Feltersnatch22/HookersAndBlowCoin/actions) |
-| Windows x64 | `windows` artifact from CI run |
+| Linux x86_64 (headless) | `raven-*-x86_64-linux-gnu.tar.gz` |
+| Windows x64 (headless) | `raven-*-win64.zip` |
+
+These packages include `ravend` and `raven-cli` only (no Qt GUI wallet).
 
 Build from source: [doc/build-ubuntu.md](https://github.com/Feltersnatch22/HookersAndBlowCoin/blob/release-v4.6.1/doc/build-ubuntu.md)
 
