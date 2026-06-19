@@ -18,6 +18,9 @@ export BOOST_ROOT="${MSYSTEM_PREFIX}"
 export CONFIG_SITE="$(dirname "$0")/msys2-config.site"
 export LDFLAGS="-L${MSYSTEM_PREFIX}/lib ${LDFLAGS:-}"
 export CPPFLAGS="-I${MSYSTEM_PREFIX}/include ${CPPFLAGS:-}"
+# MSYS2 ships Berkeley DB 6.x (not 4.8); bypass autoconf header probing with explicit flags.
+export BDB_CFLAGS="-I${MSYSTEM_PREFIX}/include"
+export BDB_LIBS="-L${MSYSTEM_PREFIX}/lib -ldb_cxx"
 # boost_filesystem/thread/chrono link against boost_system during ax_boost AC_CHECK_LIB tests.
 export LIBS="-lboost_system ${LIBS:-}"
 

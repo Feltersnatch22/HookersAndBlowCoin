@@ -5,3 +5,5 @@ ac_cv_lib_boost_filesystem_exit=yes
 ac_cv_lib_boost_program_options_exit=yes
 ac_cv_lib_boost_thread_exit=yes
 ac_cv_lib_boost_chrono_exit=yes
+ac_cv_lib_db_cxx_main=yes
+ac_cv_lib_db_cxx_4_8_main=no
