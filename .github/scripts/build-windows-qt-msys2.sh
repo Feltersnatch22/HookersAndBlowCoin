@@ -13,6 +13,13 @@ esac
 export PATH="${MSYSTEM_PREFIX}/bin:/usr/bin:$PATH"
 export MAKEFLAGS="-j$(nproc)"
 
+# MSYS2 Qt5 packages use qmake-qt5 / windeployqt-qt5; autotools expect qmake.
+for tool in qmake windeployqt; do
+  if ! command -v "$tool" >/dev/null 2>&1 && command -v "${tool}-qt5" >/dev/null 2>&1; then
+    ln -sf "${tool}-qt5" "${MSYSTEM_PREFIX}/bin/${tool}"
+  fi
+done
+
 if ! command -v qmake >/dev/null 2>&1; then
   echo "qmake not found under ${MSYSTEM_PREFIX}/bin:" >&2
   ls -la "${MSYSTEM_PREFIX}/bin"/qmake* 2>/dev/null || true
