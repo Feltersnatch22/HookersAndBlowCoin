@@ -45,7 +45,7 @@ jobs:
       - name: Ensure Qt build tools
         run: pacman -S --needed --noconfirm mingw-w64-x86_64-qt5-base mingw-w64-x86_64-qt5-tools mingw-w64-x86_64-qt5-svg
 
-      - name: Build raven-qt
+      - name: Build hnb-qt
         run: ./.github/scripts/build-windows-qt-msys2.sh
 
       - name: Upload configure log on failure

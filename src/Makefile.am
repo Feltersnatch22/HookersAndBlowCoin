@@ -66,15 +66,15 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_RAVEND
-  bin_PROGRAMS += ravend
+  bin_PROGRAMS += hnbd
 endif
 
 if BUILD_RAVEN_CLI
-  bin_PROGRAMS += raven-cli
+  bin_PROGRAMS += hnb-cli
 endif
 
 if BUILD_RAVEN_TX
-  bin_PROGRAMS += raven-tx
+  bin_PROGRAMS += hnb-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -475,17 +475,17 @@ libraven_cli_a_SOURCES = \
 nodist_libraven_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# ravend binary #
-ravend_SOURCES = ravend.cpp
-ravend_CPPFLAGS = $(AM_CPPFLAGS) $(RAVEN_INCLUDES)
-ravend_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-ravend_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# hnbd binary #
+hnbd_SOURCES = ravend.cpp
+hnbd_CPPFLAGS = $(AM_CPPFLAGS) $(RAVEN_INCLUDES)
+hnbd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+hnbd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-ravend_SOURCES += ravend-res.rc
+hnbd_SOURCES += ravend-res.rc
 endif
 
-ravend_LDADD = \
+hnbd_LDADD = \
   $(LIBRAVEN_SERVER) \
   $(LIBRAVEN_COMMON) \
   $(LIBUNIVALUE) \
@@ -499,38 +499,38 @@ ravend_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-ravend_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+hnbd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# raven-cli binary #
-raven_cli_SOURCES = raven-cli.cpp
-raven_cli_CPPFLAGS = $(AM_CPPFLAGS) $(RAVEN_INCLUDES) $(EVENT_CFLAGS)
-raven_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-raven_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# hnb-cli binary #
+hnb_cli_SOURCES = raven-cli.cpp
+hnb_cli_CPPFLAGS = $(AM_CPPFLAGS) $(RAVEN_INCLUDES) $(EVENT_CFLAGS)
+hnb_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+hnb_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-raven_cli_SOURCES += raven-cli-res.rc
+hnb_cli_SOURCES += raven-cli-res.rc
 endif
 
-raven_cli_LDADD = \
+hnb_cli_LDADD = \
   $(LIBRAVEN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBRAVEN_UTIL) \
   $(LIBRAVEN_CRYPTO)
 
-raven_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+hnb_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# raven-tx binary #
-raven_tx_SOURCES = raven-tx.cpp
-raven_tx_CPPFLAGS = $(AM_CPPFLAGS) $(RAVEN_INCLUDES)
-raven_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-raven_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# hnb-tx binary #
+hnb_tx_SOURCES = raven-tx.cpp
+hnb_tx_CPPFLAGS = $(AM_CPPFLAGS) $(RAVEN_INCLUDES)
+hnb_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+hnb_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-raven_tx_SOURCES += raven-tx-res.rc
+hnb_tx_SOURCES += raven-tx-res.rc
 endif
 
-raven_tx_LDADD = \
+hnb_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBRAVEN_COMMON) \
   $(LIBRAVEN_UTIL) \
@@ -538,7 +538,7 @@ raven_tx_LDADD = \
   $(LIBRAVEN_CRYPTO) \
   $(LIBSECP256K1)
 
-raven_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+hnb_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # ravenconsensus library #

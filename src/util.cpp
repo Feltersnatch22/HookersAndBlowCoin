@@ -88,8 +88,8 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char *const RAVEN_CONF_FILENAME = "raven.conf";
-const char *const RAVEN_PID_FILENAME = "ravend.pid";
+const char *const RAVEN_CONF_FILENAME = "hnb.conf";
+const char *const RAVEN_PID_FILENAME = "hnbd.pid";
 
 ArgsManager gArgs;
 bool fPrintToConsole = false;
@@ -552,7 +552,7 @@ fs::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\HookersAndBlow
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\HookersAndBlow
     // Mac: ~/Library/Application Support/HookersAndBlow
-    // Unix: ~/.raven
+    // Unix: ~/.hnb
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "HookersAndBlow";
@@ -568,7 +568,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/HookersAndBlow";
 #else
     // Unix
-    return pathRet / ".raven";
+    return pathRet / ".hnb";
 #endif
 #endif
 }

@@ -189,7 +189,7 @@ HookersAndBlowGUI::HookersAndBlowGUI(const PlatformStyle *_platformStyle, const 
     loadFonts();
 
 #if !defined(Q_OS_MAC)
-    this->setFont(QFont("Open Sans"));
+    this->setFont(QFont("Outfit"));
 #endif
 
     // Create actions for the toolbar, menu bar and tray/dock icon
@@ -301,16 +301,10 @@ HookersAndBlowGUI::~HookersAndBlowGUI()
 
 void HookersAndBlowGUI::loadFonts()
 {
-    QFontDatabase::addApplicationFont(":/fonts/opensans-bold");
-    QFontDatabase::addApplicationFont(":/fonts/opensans-bolditalic");
-    QFontDatabase::addApplicationFont(":/fonts/opensans-extrabold");
-    QFontDatabase::addApplicationFont(":/fonts/opensans-extrabolditalic");
-    QFontDatabase::addApplicationFont(":/fonts/opensans-italic");
-    QFontDatabase::addApplicationFont(":/fonts/opensans-light");
-    QFontDatabase::addApplicationFont(":/fonts/opensans-lightitalic");
-    QFontDatabase::addApplicationFont(":/fonts/opensans-regular");
-    QFontDatabase::addApplicationFont(":/fonts/opensans-semibold");
-    QFontDatabase::addApplicationFont(":/fonts/opensans-semibolditalic");
+    QFontDatabase::addApplicationFont(":/fonts/outfit-regular");
+    QFontDatabase::addApplicationFont(":/fonts/outfit-medium");
+    QFontDatabase::addApplicationFont(":/fonts/outfit-semibold");
+    QFontDatabase::addApplicationFont(":/fonts/outfit-bold");
 }
 
 
@@ -320,9 +314,9 @@ void HookersAndBlowGUI::createActions()
     font.setPixelSize(22);
     font.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.43);
 #if !defined(Q_OS_MAC)
-    font.setFamily("Open Sans");
+    font.setFamily("Outfit");
 #endif
-    font.setWeight(QFont::Weight::ExtraLight);
+    font.setWeight(QFont::Weight::Bold);
 
     QActionGroup *tabGroup = new QActionGroup(this);
 
@@ -347,7 +341,7 @@ void HookersAndBlowGUI::createActions()
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
     receiveCoinsAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/receiving_addresses_selected", ":/icons/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and raven: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and hnb: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -492,7 +486,7 @@ void HookersAndBlowGUI::createActions()
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(platformStyle->TextColorIcon(":/icons/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a raven: URI or payment request"));
+    openAction->setStatusTip(tr("Open a hnb: URI or payment request"));
 
     showHelpMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/info"), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
@@ -629,7 +623,7 @@ void HookersAndBlowGUI::createToolBars()
 //        m_toolbar->addAction(votingAction);
         m_toolbar->addAction(restrictedAssetAction);
 
-        QString openSansFontString = "font: normal 22pt \"Open Sans\";";
+        QString openSansFontString = "font: bold 22pt \"Outfit\";";
         QString normalString = "font: normal 22pt \"Arial\";";
         QString stringToUse = "";
 
@@ -688,8 +682,8 @@ void HookersAndBlowGUI::createToolBars()
         headerWidget->setFixedHeight(75);
 
         QFont currentMarketFont;
-        currentMarketFont.setFamily("Open Sans");
-        currentMarketFont.setWeight(QFont::Weight::Normal);
+        currentMarketFont.setFamily("Outfit");
+        currentMarketFont.setWeight(QFont::Weight::Medium);
         currentMarketFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.6);
         currentMarketFont.setPixelSize(18);
 

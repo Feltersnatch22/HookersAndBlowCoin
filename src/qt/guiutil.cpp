@@ -93,9 +93,9 @@ QFont getSubLabelFont()
 {
     QFont labelSubFont;
 #if !defined(Q_OS_MAC)
-    labelSubFont.setFamily("Open Sans");
+    labelSubFont.setFamily("Outfit");
 #endif
-    labelSubFont.setWeight(QFont::Weight::ExtraLight);
+    labelSubFont.setWeight(QFont::Weight::Medium);
     labelSubFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.6);
     labelSubFont.setPixelSize(14);
     return labelSubFont;
@@ -105,7 +105,7 @@ QFont getSubLabelFontBolded()
 {
     QFont labelSubFont;
 #if !defined(Q_OS_MAC)
-    labelSubFont.setFamily("Open Sans");
+    labelSubFont.setFamily("Outfit");
 #endif
     labelSubFont.setWeight(QFont::Weight::Bold);
     labelSubFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.6);
@@ -117,7 +117,7 @@ QFont getTopLabelFontBolded()
 {
     QFont labelTopFont;
 #if !defined(Q_OS_MAC)
-    labelTopFont.setFamily("Open Sans");
+    labelTopFont.setFamily("Outfit");
 #endif
     labelTopFont.setWeight(QFont::Weight::Bold);
     labelTopFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.6);
@@ -129,7 +129,7 @@ QFont getTopLabelFont(int weight, int pxsize)
 {
     QFont labelTopFont;
 #if !defined(Q_OS_MAC)
-    labelTopFont.setFamily("Open Sans");
+    labelTopFont.setFamily("Outfit");
 #endif
     labelTopFont.setWeight(weight);
     labelTopFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.6);
@@ -141,9 +141,9 @@ QFont getTopLabelFont()
 {
     QFont labelTopFont;
 #if !defined(Q_OS_MAC)
-    labelTopFont.setFamily("Open Sans");
+    labelTopFont.setFamily("Outfit");
 #endif
-    labelTopFont.setWeight(QFont::Weight::Light);
+    labelTopFont.setWeight(QFont::Weight::Medium);
     labelTopFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.6);
     labelTopFont.setPixelSize(18);
     return labelTopFont;
@@ -230,7 +230,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseHookersAndBlowURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no raven: URI
+    // return if URI is not valid or is no hnb: URI
     if(!uri.isValid() || uri.scheme() != QString("raven"))
         return false;
 
@@ -291,13 +291,13 @@ bool parseHookersAndBlowURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseHookersAndBlowURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert raven:// to raven:
+    // Convert hnb:// to hnb:
     //
-    //    Cannot handle this later, because raven:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because hnb:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("raven://", Qt::CaseInsensitive))
+    if(uri.startsWith("hnb://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 10, "raven:");
+        uri.replace(0, 6, "hnb:");
     }
     QUrl uriInstance(uri);
     return parseHookersAndBlowURI(uriInstance, out);
@@ -305,7 +305,7 @@ bool parseHookersAndBlowURI(QString uri, SendCoinsRecipient *out)
 
 QString formatHookersAndBlowURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("raven:%1").arg(info.address);
+    QString ret = QString("hnb:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)

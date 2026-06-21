@@ -50,6 +50,6 @@ fi
 # Always configure for Qt + wallet (safe after headless builds).
 ./configure "${CONFIGURE_FLAGS[@]}"
 
-make -j"$(nproc)" src/qt/raven-qt
+make -j"$(nproc)" src/qt/hnb-qt
 
-echo "Built: $ROOT/src/qt/raven-qt"
+echo "Built: $ROOT/src/qt/hnb-qt"

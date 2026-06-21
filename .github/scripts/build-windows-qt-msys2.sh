@@ -78,25 +78,25 @@ fi
 
 make -j"$(nproc)"
 
-QT_BIN="src/qt/raven-qt.exe"
+QT_BIN="src/qt/hnb-qt.exe"
 if [[ ! -f "$QT_BIN" ]]; then
   echo "Build failed: $QT_BIN not found" >&2
   exit 1
 fi
 
 PKGVERSION="$(grep PACKAGE_VERSION src/config/raven-config.h | cut -d\" -f2)"
-DISTNAME="raven-${PKGVERSION}"
+DISTNAME="hnb-${PKGVERSION}"
 STAGE="${ROOT}/stage/${DISTNAME}-win64-qt"
 RELEASE="${ROOT}/release"
 rm -rf "$STAGE"
 mkdir -p "$STAGE" "$RELEASE"
 
 cp "$QT_BIN" "$STAGE/"
-[[ -f src/ravend.exe ]] && cp src/ravend.exe "$STAGE/"
-[[ -f src/raven-cli.exe ]] && cp src/raven-cli.exe "$STAGE/"
+[[ -f src/hnbd.exe ]] && cp src/hnbd.exe "$STAGE/"
+[[ -f src/hnb-cli.exe ]] && cp src/hnb-cli.exe "$STAGE/"
 
 # Bundle Qt runtime DLLs and plugins next to the GUI binary.
-windeployqt --no-translations "$STAGE/raven-qt.exe"
+windeployqt --no-translations "$STAGE/hnb-qt.exe"
 
 (
   cd "$(dirname "$STAGE")"

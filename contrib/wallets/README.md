@@ -1,8 +1,8 @@
 # HNB wallets — desktop, web, and mobile
 
-HookersAndBlowCoin ships a full **Qt desktop wallet** in this repo (`raven-qt`). **Web** and **mobile** wallets live under this directory; mobile requires forking upstream Raven wallets with HNB parameters.
+HookersAndBlowCoin ships a full **Qt desktop wallet** in this repo (`hnb-qt`). **Web** and **mobile** wallets live under this directory; mobile requires forking upstream Raven wallets with HNB parameters.
 
-CI releases include headless binaries (`ravend` + `raven-cli`). A **`linux-qt`** CI job builds the desktop GUI tarball. Windows GUI still needs native Qt or fixed `depends/` Qt cross-build.
+CI releases include headless binaries (`hnbd` + `hnb-cli`). A **`linux-qt`** CI job builds the desktop GUI tarball. Windows GUI still needs native Qt or fixed `depends/` Qt cross-build.
 
 Shared network constants: [hnb-network.json](hnb-network.json).
 
@@ -22,9 +22,9 @@ Shared network constants: [hnb-network.json](hnb-network.json).
 
 | Binary | Description |
 |--------|-------------|
-| `raven-qt` | Qt GUI — send/receive HNB, assets, messaging UI |
-| `ravend` | Headless node (in releases) |
-| `raven-cli` | RPC CLI (in releases) |
+| `hnb-qt` | Qt GUI — send/receive HNB, assets, messaging UI |
+| `hnbd` | Headless node (in releases) |
+| `hnb-cli` | RPC CLI (in releases) |
 
 **Build (Linux, system Qt + BDB 4.8):**
 
@@ -32,7 +32,7 @@ Shared network constants: [hnb-network.json](hnb-network.json).
 ./contrib/install_db4.sh ../
 export BDB_PREFIX=$(pwd)/../db4
 ./contrib/wallets/build-desktop-qt.sh
-# output: src/qt/raven-qt
+# output: src/qt/hnb-qt
 ```
 
 **CI:** `linux-qt` job produces `raven-*-qt-x86_64-linux-gnu.tar.gz` on release branches.

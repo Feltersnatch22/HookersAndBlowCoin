@@ -9,17 +9,17 @@ define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2022)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
 define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[HookersAndBlow Core]])
-AC_INIT([HookersAndBlow Core],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_REVISION, m4_if(_CLIENT_VERSION_BUILD, [0], [], _CLIENT_VERSION_BUILD))m4_if(_CLIENT_VERSION_RC, [0], [], [test]_CLIENT_VERSION_RC),[https://github.com/HookersAndBlowProject/HookersAndBlowCoin/issues],[raven],[https://ravencoin.org/])
+AC_INIT([HookersAndBlow Core],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_REVISION, m4_if(_CLIENT_VERSION_BUILD, [0], [], _CLIENT_VERSION_BUILD))m4_if(_CLIENT_VERSION_RC, [0], [], [test]_CLIENT_VERSION_RC),[https://github.com/Feltersnatch22/HookersAndBlowCoin/issues],[hnb],[https://github.com/Feltersnatch22/HookersAndBlowCoin])
 
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/raven-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-RAVEN_DAEMON_NAME=ravend
-RAVEN_GUI_NAME=raven-qt
-RAVEN_CLI_NAME=raven-cli
-RAVEN_TX_NAME=raven-tx
+RAVEN_DAEMON_NAME=hnbd
+RAVEN_GUI_NAME=hnb-qt
+RAVEN_CLI_NAME=hnb-cli
+RAVEN_TX_NAME=hnb-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])

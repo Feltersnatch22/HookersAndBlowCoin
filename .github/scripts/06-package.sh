@@ -34,9 +34,9 @@ echo "GITHUB_BASE_REF: ${GITHUB_BASE_REF}"
 echo "----------------------------------------"
 
 if [[ ${GITHUB_BASE_REF} =~ "release" ]]; then
-    DISTNAME="raven-${VERSION}"
+    DISTNAME="hnb-${VERSION}"
 else
-    DISTNAME="raven-${VERSION}-${SHORTHASH}"
+    DISTNAME="hnb-${VERSION}-${SHORTHASH}"
 fi
 
 echo "----------------------------------------"
@@ -87,17 +87,17 @@ elif [[ ${OS} == "windows-qt" ]]; then
     make install DESTDIR=${STAGE_DIR}/${DISTNAME}
 
     cd ${STAGE_DIR}
-    QT_BIN="${STAGE_DIR}/${DISTNAME}/bin/raven-qt.exe"
+    QT_BIN="${STAGE_DIR}/${DISTNAME}/bin/hnb-qt.exe"
     if [[ ! -f ${QT_BIN} ]]; then
-        echo "raven-qt.exe not found at ${QT_BIN}"
+        echo "hnb-qt.exe not found at ${QT_BIN}"
         exit 1
     fi
 
     QT_PKG="${DISTNAME}-win64-qt"
     mkdir -p ${QT_PKG}/bin
     cp -a ${QT_BIN} ${QT_PKG}/bin/
-    cp -a ${STAGE_DIR}/${DISTNAME}/bin/ravend.exe ${QT_PKG}/bin/ 2>/dev/null || true
-    cp -a ${STAGE_DIR}/${DISTNAME}/bin/raven-cli.exe ${QT_PKG}/bin/ 2>/dev/null || true
+    cp -a ${STAGE_DIR}/${DISTNAME}/bin/hnbd.exe ${QT_PKG}/bin/ 2>/dev/null || true
+    cp -a ${STAGE_DIR}/${DISTNAME}/bin/hnb-cli.exe ${QT_PKG}/bin/ 2>/dev/null || true
     cp -a ${STAGE_DIR}/${DISTNAME}/share ${QT_PKG}/ 2>/dev/null || true
 
     if [[ -e ${RELEASE_LOCATION} ]]; then
@@ -166,9 +166,9 @@ elif [[ ${OS} == "linux-qt" ]]; then
     find . -name "lib*.a" -delete
     rm -rf ${DISTNAME}/lib/pkgconfig
 
-    QT_BIN="${STAGE_DIR}/${DISTNAME}/bin/raven-qt"
+    QT_BIN="${STAGE_DIR}/${DISTNAME}/bin/hnb-qt"
     if [[ ! -x ${QT_BIN} ]]; then
-        echo "raven-qt not found at ${QT_BIN}"
+        echo "hnb-qt not found at ${QT_BIN}"
         exit 1
     fi
 
@@ -251,8 +251,8 @@ elif [[ ${OS} == "arm32v7" || ${OS} == "arm32v7-disable-wallet" ]]; then
             exit 1
         fi
         cd ${STAGE_DIR}
-        cp -Rf ${DISTNAME}/bin/ravend .
-        cp -Rf ${DISTNAME}/bin/raven-cli .
+        cp -Rf ${DISTNAME}/bin/hnbd .
+        cp -Rf ${DISTNAME}/bin/hnb-cli .
     else
         echo "release directory doesn't exist"
     fi
@@ -287,8 +287,8 @@ elif [[ ${OS} == "aarch64" || ${OS} == "aarch64-disable-wallet" ]]; then
             exit 1
         fi
         cd ${STAGE_DIR}
-        cp -Rf ${DISTNAME}/bin/ravend .
-        cp -Rf ${DISTNAME}/bin/raven-cli .
+        cp -Rf ${DISTNAME}/bin/hnbd .
+        cp -Rf ${DISTNAME}/bin/hnb-cli .
     else
         echo "release directory doesn't exist"
     fi
