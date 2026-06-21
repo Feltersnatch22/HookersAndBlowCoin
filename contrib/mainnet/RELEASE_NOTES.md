@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Feltersnatch22/HookersAndBlowCoin/release-v4.6.1/doc/img/hbc-logo.png" alt="HookersAndBlowCoin (HBC)" width="200">
+  <img src="https://raw.githubusercontent.com/Feltersnatch22/HookersAndBlowCoin/release-v4.6.1/assets/brand/favicon.svg" alt="HNB" width="80">
 </p>
 
 # HookersAndBlowCoin v4.6.1 — Mainnet launch
@@ -12,8 +12,12 @@ First public release for the independent HNB chain.
 |----------|------|
 | Linux x86_64 (headless) | `raven-*-x86_64-linux-gnu.tar.gz` |
 | Windows x64 (headless) | `raven-*-win64.zip` |
+| Linux x86_64 (GUI) | `raven-*-x86_64-linux-gnu-qt.tar.gz` |
+| Windows x64 (GUI) | `raven-*-win64-qt.zip` |
 
-These packages include `ravend` and `raven-cli` only (no Qt GUI wallet).
+Headless packages include `ravend` and `raven-cli`. The Qt tarball includes `raven-qt` (requires system Qt5 libs — see README inside the archive).
+
+Web wallet: https://hookersandblow.vercel.app/wallet/
 
 Build from source: [doc/build-ubuntu.md](https://github.com/Feltersnatch22/HookersAndBlowCoin/blob/release-v4.6.1/doc/build-ubuntu.md)
 
