@@ -14,7 +14,7 @@ echo "----------------------------------------"
 
 apt-get update
 
-if [[ ${OS} == "windows" ]]; then
+if [[ ${OS} == "windows" || ${OS} == "windows-qt" ]]; then
     apt-get install -y \
     automake \
     autotools-dev \
