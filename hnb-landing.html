@@ -48,18 +48,17 @@
     get releasesPage() { return `https://github.com/${this.githubRepo}/releases/tag/${this.releaseTag}`; },
 
     // Tokenomics (numbers only — formatting handled in markup)
-    totalSupply: "69,000,000,000",
-    tax: "0 / 0",               // buy / sell
-    liquidity: "Locked · 12 mo",
-    burned: "21%",
+    totalSupply: "420,690,000",
+    blockReward: "60 HNB",
+    algo: "KawPoW",
+    burned: "Deflationary",
 
     // Token distribution (must sum to 100)
     distribution: [
-      { label: "Liquidity Pool",     pct: 45, accent: "magenta" },
-      { label: "Community & CoLab",  pct: 25, accent: "cyan" },
-      { label: "The House (Treasury)", pct: 15, accent: "gold" },
-      { label: "Marketing",          pct: 10, accent: "magenta" },
-      { label: "Team (Vested)",      pct: 5,  accent: "cyan" }
+      { label: "Mining Rewards (PoW)", pct: 60, accent: "magenta" },
+      { label: "Liquidity Bootstrap",  pct: 20, accent: "cyan" },
+      { label: "Dev & Team (Vested)", pct: 10, accent: "gold" },
+      { label: "Marketing & Community", pct: 10, accent: "magenta" }
     ],
 
     // Socials
@@ -220,12 +219,12 @@
 
         <!-- Nav links -->
         <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-white/60">
-          <a href="#codex" class="nav-link hover:text-white transition">The Codex</a>
+          <a href="#codex" class="nav-link hover:text-white transition">Use Cases</a>
           <a href="#tokenomics" class="nav-link hover:text-white transition">Tokenomics</a>
-          <a href="#portal" class="nav-link hover:text-white transition">The Portal</a>
-          <a href="#enter" class="nav-link hover:text-white transition">How to Enter</a>
-          <a href="#colab" class="nav-link hover:text-white transition">CoLab</a>
-          <a href="#chapters" class="nav-link hover:text-white transition">Chapters</a>
+          <a href="#portal" class="nav-link hover:text-white transition">Wallets</a>
+          <a href="#enter" class="nav-link hover:text-white transition">Get Started</a>
+          <a href="#chapters" class="nav-link hover:text-white transition">Roadmap</a>
+          <a href="/whitepaper" class="nav-link hover:text-white transition">Whitepaper</a>
           <a href="/downloads" class="nav-link hover:text-cyan transition text-cyan/80">Downloads</a>
         </nav>
 
@@ -245,14 +244,14 @@
     <!-- Mobile menu -->
     <div id="mobileMenu" class="lg:hidden hidden border-t hairline bg-ink/95 backdrop-blur-xl">
       <nav class="px-6 py-6 flex flex-col gap-5 text-base font-medium text-white/75">
-        <a href="#codex" class="hover:text-magenta transition">The Codex</a>
+        <a href="#codex" class="hover:text-magenta transition">Use Cases</a>
         <a href="#tokenomics" class="hover:text-magenta transition">Tokenomics</a>
-        <a href="#portal" class="hover:text-magenta transition">The Portal</a>
-        <a href="#enter" class="hover:text-magenta transition">How to Enter</a>
-        <a href="#colab" class="hover:text-magenta transition">CoLab</a>
-        <a href="#chapters" class="hover:text-magenta transition">Chapters</a>
+        <a href="#portal" class="hover:text-magenta transition">Wallets</a>
+        <a href="#enter" class="hover:text-magenta transition">Get Started</a>
+        <a href="#chapters" class="hover:text-magenta transition">Roadmap</a>
+        <a href="/whitepaper" class="hover:text-magenta transition">Whitepaper</a>
         <a href="/downloads" class="hover:text-cyan transition text-cyan/80">Downloads</a>
-        <a href="#portal" class="mt-2 inline-flex justify-center items-center rounded-full bg-white text-ink px-5 py-3 font-display font-semibold">Enter</a>
+        <a href="/downloads" class="mt-2 inline-flex justify-center items-center rounded-full bg-white text-ink px-5 py-3 font-display font-semibold">Download Wallet</a>
       </nav>
     </div>
   </header>
@@ -271,39 +270,39 @@
         <!-- Eyebrow -->
         <div class="reveal inline-flex items-center gap-2.5 rounded-full glass px-4 py-1.5 text-xs font-medium tracking-wide text-white/70 mb-8">
           <span class="h-1.5 w-1.5 rounded-full bg-magenta pulse-slow"></span>
-          The most unapologetic culture in crypto
+          Fair launch · KawPoW PoW · Testnet live
         </div>
 
         <!-- Headline -->
         <h1 class="reveal font-display font-bold tracking-tightest leading-[0.95] text-[clamp(2.8rem,8vw,6.2rem)]">
-          <span class="text-white">Welcome to the</span><br />
-          <span class="text-gradient">good life.</span>
+          <span class="text-white">Own Your</span><br />
+          <span class="text-gradient">Hustle.</span>
         </h1>
 
         <!-- Subhead -->
         <p class="reveal mt-7 max-w-xl text-lg md:text-xl text-white/65 leading-relaxed">
-          Hookers and Blow Coin is the velvet-rope entrance to a culture that refuses to apologize.
-          Bold by design, premium by obsession. <span class="text-white/90">One portal. Every device.</span>
+          The first blockchain built for creators, nightlife, and the underground economy.
+          Issue assets, split revenue, and tokenize your world — <span class="text-white/90">all for less than a cent.</span>
         </p>
 
         <!-- CTAs -->
         <div class="reveal mt-10 flex flex-col sm:flex-row gap-4">
-          <a data-hnb-href="walletUrl" href="/wallet/" class="group inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-magenta to-hotpink text-white px-8 py-4 font-display font-semibold text-[15px] tracking-tight btn-glow transition">
-            Enter the Portal
+          <a href="/downloads" class="group inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-magenta to-hotpink text-white px-8 py-4 font-display font-semibold text-[15px] tracking-tight btn-glow transition">
+            Download Wallet
             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#codex" class="inline-flex items-center justify-center gap-2.5 rounded-full glass text-white px-8 py-4 font-display font-semibold text-[15px] tracking-tight hover:bg-white/[0.07] transition ring-cyan">
-            Read the Codex
+          <a href="/whitepaper" class="inline-flex items-center justify-center gap-2.5 rounded-full glass text-white px-8 py-4 font-display font-semibold text-[15px] tracking-tight hover:bg-white/[0.07] transition ring-cyan">
+            Read the Whitepaper
           </a>
         </div>
 
         <!-- Trust strip -->
         <div class="reveal mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm text-white/45">
-          <div><span class="block font-display font-bold text-2xl text-white" data-hnb="totalSupply">69,000,000,000</span> Total Supply</div>
+          <div><span class="block font-display font-bold text-2xl text-white" data-hnb="totalSupply">420,690,000</span> Total Supply</div>
           <div class="h-8 w-px bg-white/10 hidden sm:block"></div>
-          <div><span class="block font-display font-bold text-2xl text-gold-grad" data-hnb="tax">0 / 0</span> Buy / Sell Tax</div>
+          <div><span class="block font-display font-bold text-2xl text-gold-grad" data-hnb="blockReward">60 HNB</span> Block Reward</div>
           <div class="h-8 w-px bg-white/10 hidden sm:block"></div>
-          <div><span class="block font-display font-bold text-2xl text-white" data-hnb="liquidity">Locked · 12 mo</span> Liquidity</div>
+          <div><span class="block font-display font-bold text-2xl text-white" data-hnb="algo">KawPoW</span> Algorithm</div>
         </div>
       </div>
     </div>
@@ -330,8 +329,8 @@
   <div class="border-y hairline bg-coal/80 py-4 overflow-hidden">
     <div class="marquee-track items-center gap-10 text-white/30 font-display font-semibold tracking-tight text-lg whitespace-nowrap">
       <!-- duplicated for seamless loop -->
-      <span>● Premium by obsession</span><span>● Bold by design</span><span>● One portal, every device</span><span>● The house always pours</span><span>● Culture, not noise</span>
-      <span>● Premium by obsession</span><span>● Bold by design</span><span>● One portal, every device</span><span>● The house always pours</span><span>● Culture, not noise</span>
+      <span>● Own Your Hustle</span><span>● Sub-cent asset issuance</span><span>● Fair PoW launch</span><span>● No gas fees</span><span>● No platform to ban you</span><span>● Creator royalties on-chain</span><span>● Mine. Own. Hustle.</span>
+      <span>● Own Your Hustle</span><span>● Sub-cent asset issuance</span><span>● Fair PoW launch</span><span>● No gas fees</span><span>● No platform to ban you</span><span>● Creator royalties on-chain</span><span>● Mine. Own. Hustle.</span>
     </div>
   </div>
 
@@ -341,14 +340,17 @@
       <div class="grid lg:grid-cols-12 gap-14 lg:gap-20 items-start">
         <!-- left rail -->
         <div class="lg:col-span-5 lg:sticky lg:top-28">
-          <p class="reveal text-sm font-medium tracking-[0.25em] uppercase text-magenta/80 mb-5">The Codex · I</p>
+          <p class="reveal text-sm font-medium tracking-[0.25em] uppercase text-magenta/80 mb-5">What HNB Does</p>
           <h2 class="reveal font-display font-bold tracking-tightest text-4xl md:text-5xl lg:text-6xl leading-[1.02] text-white">
-            A culture<br/>worth the<br/><span class="text-gold-grad">velvet rope.</span>
+            Real infrastructure<br/>for the<br/><span class="text-gold-grad">underground economy.</span>
           </h2>
           <p class="reveal mt-7 text-lg text-white/55 leading-relaxed max-w-md">
-            Most tokens shout. We invite. The Codex is the living record of who we are —
-            our origin, our philosophy, and the cultural weight we carry without ever apologizing for it.
+            Most chains ignore the creator economy. HNB is built for it — asset issuance, royalty enforcement, and revenue sharing at sub-cent fees, with no corporate middleman in the loop.
           </p>
+          <a href="/whitepaper" class="reveal mt-8 inline-flex items-center gap-2 text-sm font-semibold text-magenta hover:text-hotpink transition">
+            Read the full whitepaper
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
 
         <!-- right entries -->
@@ -357,12 +359,11 @@
             <div class="flex items-center gap-4 mb-4">
               <span class="font-display font-bold text-magenta text-lg">01</span>
               <div class="h-px flex-1 bg-white/10"></div>
-              <span class="text-xs uppercase tracking-widest text-white/40">Origin</span>
+              <span class="text-xs uppercase tracking-widest text-white/40">Creators</span>
             </div>
-            <h3 class="font-display font-semibold text-2xl text-white tracking-tight mb-3">Born after midnight.</h3>
+            <h3 class="font-display font-semibold text-2xl text-white tracking-tight mb-3">Your content. Your asset. Your cut.</h3>
             <p class="text-white/55 leading-relaxed">
-              HNB began where the best ideas always do — late, loud, and entirely too honest. A community
-              tired of sterile finance built a token with a pulse: hedonistic, generous, and proudly itself.
+              Issue VIP passes, content gates, and tip tokens in minutes. Set a royalty once — every resale pays you automatically, forever. No platform taking 20%. No account to ban. Your assets live on-chain and belong to you unconditionally.
             </p>
           </article>
 
@@ -370,12 +371,11 @@
             <div class="flex items-center gap-4 mb-4">
               <span class="font-display font-bold text-cyan text-lg">02</span>
               <div class="h-px flex-1 bg-white/10"></div>
-              <span class="text-xs uppercase tracking-widest text-white/40">Philosophy</span>
+              <span class="text-xs uppercase tracking-widest text-white/40">Nightlife & Events</span>
             </div>
-            <h3 class="font-display font-semibold text-2xl text-white tracking-tight mb-3">Excess, refined.</h3>
+            <h3 class="font-display font-semibold text-2xl text-white tracking-tight mb-3">Turn your door into a programmable asset.</h3>
             <p class="text-white/55 leading-relaxed">
-              We believe indulgence and craft are not opposites. Every surface is considered, every interaction
-              intentional. The personality is bold; the execution is Apple-grade. That tension is the point.
+              Digital tickets that can't be faked or duplicated. VIP passes that enforce bottle service entitlements. Revenue-split escrow that pays promoter and venue the moment the tx clears — no chasing Venmo, no disputes.
             </p>
           </article>
 
@@ -383,12 +383,11 @@
             <div class="flex items-center gap-4 mb-4">
               <span class="font-display font-bold text-gold text-lg">03</span>
               <div class="h-px flex-1 bg-white/10"></div>
-              <span class="text-xs uppercase tracking-widest text-white/40">Cultural Angle</span>
+              <span class="text-xs uppercase tracking-widest text-white/40">Degens</span>
             </div>
-            <h3 class="font-display font-semibold text-2xl text-white tracking-tight mb-3">The house always pours.</h3>
+            <h3 class="font-display font-semibold text-2xl text-white tracking-tight mb-3">Launch your asset. Own the narrative.</h3>
             <p class="text-white/55 leading-relaxed">
-              HNB is a members' club disguised as a token. Holders aren't an audience — they're guests, then
-              hosts. The culture compounds the same way the bag does: by who you bring through the door.
+              Issue a community token in under two minutes. Fixed supply, provable on-chain, no dev needed. Meme collections, prediction markets, DAO governance passes — the infrastructure is real. What you do with it is up to you.
             </p>
           </article>
         </div>
@@ -412,20 +411,20 @@
       <!-- stat grid -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-5">
         <div class="reveal glass rounded-2xl p-7 transition">
-          <p class="text-sm text-white/45 mb-3">Total Supply</p>
-          <p class="font-display font-bold text-3xl text-white tracking-tight" data-hnb="totalSupply">69,000,000,000</p>
+          <p class="text-sm text-white/45 mb-3">Hard Cap Supply</p>
+          <p class="font-display font-bold text-3xl text-white tracking-tight" data-hnb="totalSupply">420,690,000</p>
         </div>
         <div class="reveal glass rounded-2xl p-7 transition">
-          <p class="text-sm text-white/45 mb-3">Buy / Sell Tax</p>
-          <p class="font-display font-bold text-3xl text-gold-grad tracking-tight" data-hnb="tax">0 / 0</p>
+          <p class="text-sm text-white/45 mb-3">Starting Block Reward</p>
+          <p class="font-display font-bold text-3xl text-gold-grad tracking-tight" data-hnb="blockReward">60 HNB</p>
         </div>
         <div class="reveal glass rounded-2xl p-7 transition">
-          <p class="text-sm text-white/45 mb-3">Liquidity</p>
-          <p class="font-display font-bold text-3xl text-white tracking-tight" data-hnb="liquidity">Locked · 12 mo</p>
+          <p class="text-sm text-white/45 mb-3">Mining Algorithm</p>
+          <p class="font-display font-bold text-3xl text-white tracking-tight" data-hnb="algo">KawPoW</p>
         </div>
         <div class="reveal glass rounded-2xl p-7 transition">
-          <p class="text-sm text-white/45 mb-3">Supply Burned</p>
-          <p class="font-display font-bold text-3xl text-cyan tracking-tight" data-hnb="burned">21%</p>
+          <p class="text-sm text-white/45 mb-3">Burn Mechanic</p>
+          <p class="font-display font-bold text-3xl text-cyan tracking-tight" data-hnb="burned">Deflationary</p>
         </div>
       </div>
 
@@ -543,33 +542,32 @@
   <section id="enter" class="relative py-28 md:py-40 bg-coal/60 border-y hairline">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="max-w-2xl mb-16">
-        <p class="reveal text-sm font-medium tracking-[0.25em] uppercase text-gold/80 mb-5">How to Enter</p>
+        <p class="reveal text-sm font-medium tracking-[0.25em] uppercase text-gold/80 mb-5">How to Get Started</p>
         <h2 class="reveal font-display font-bold tracking-tightest text-4xl md:text-6xl leading-[1.02] text-white">
-          Four steps<br/>past the <span class="text-gold-grad">rope.</span>
+          Four steps to<br/>owning your <span class="text-gold-grad">hustle.</span>
         </h2>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 rounded-3xl overflow-hidden">
-        <!-- step -->
         <div class="reveal bg-ink p-9 md:p-10 group hover:bg-char transition duration-500">
           <span class="font-display font-bold text-5xl text-white/10 group-hover:text-magenta/40 transition">01</span>
-          <h3 class="font-display font-semibold text-xl text-white tracking-tight mt-6 mb-3">Get a Wallet</h3>
-          <p class="text-white/55 leading-relaxed text-[15px]">Pick desktop, web, or mobile. Any of them opens the same door.</p>
+          <h3 class="font-display font-semibold text-xl text-white tracking-tight mt-6 mb-3">Download a Wallet</h3>
+          <p class="text-white/55 leading-relaxed text-[15px]">Grab the Qt wallet for Windows or Linux, or open the web wallet in your browser. No account required.</p>
         </div>
         <div class="reveal bg-ink p-9 md:p-10 group hover:bg-char transition duration-500">
           <span class="font-display font-bold text-5xl text-white/10 group-hover:text-cyan/40 transition">02</span>
-          <h3 class="font-display font-semibold text-xl text-white tracking-tight mt-6 mb-3">Fund It</h3>
-          <p class="text-white/55 leading-relaxed text-[15px]">Top up with <span data-hnb="chain">Ethereum</span> for the swap and the network fee.</p>
+          <h3 class="font-display font-semibold text-xl text-white tracking-tight mt-6 mb-3">Connect to Testnet</h3>
+          <p class="text-white/55 leading-relaxed text-[15px]">The wallet auto-connects to public seed nodes. Sync is fast — the chain is light and your node VPS keeps it live 24/7.</p>
         </div>
         <div class="reveal bg-ink p-9 md:p-10 group hover:bg-char transition duration-500">
           <span class="font-display font-bold text-5xl text-white/10 group-hover:text-gold/40 transition">03</span>
-          <h3 class="font-display font-semibold text-xl text-white tracking-tight mt-6 mb-3">Swap for HNB</h3>
-          <p class="text-white/55 leading-relaxed text-[15px]">Paste the official contract, confirm, and you're holding the house token.</p>
+          <h3 class="font-display font-semibold text-xl text-white tracking-tight mt-6 mb-3">Mine or Receive HNB</h3>
+          <p class="text-white/55 leading-relaxed text-[15px]">Point your GPU miner at <span class="font-mono text-white/80 text-xs">91.98.170.126:3333</span> using Rigel or any KawPoW miner. Or receive HNB from someone on the network.</p>
         </div>
         <div class="reveal bg-ink p-9 md:p-10 group hover:bg-char transition duration-500">
           <span class="font-display font-bold text-5xl text-white/10 group-hover:text-magenta/40 transition">04</span>
-          <h3 class="font-display font-semibold text-xl text-white tracking-tight mt-6 mb-3">Walk In</h3>
-          <p class="text-white/55 leading-relaxed text-[15px]">Join the CoLab, find your people, and help the culture compound.</p>
+          <h3 class="font-display font-semibold text-xl text-white tracking-tight mt-6 mb-3">Issue Your First Asset</h3>
+          <p class="text-white/55 leading-relaxed text-[15px]">Burn a small amount of HNB to mint a fungible token, NFT, or sub-asset collection. Name it. Set the supply. It's yours forever.</p>
         </div>
       </div>
     </div>
@@ -658,9 +656,9 @@
           <div class="reveal relative md:grid md:grid-cols-2 md:gap-12 md:items-center">
             <div class="pl-14 md:pl-0 md:pr-12 md:text-right">
               <div class="glass rounded-3xl p-8 inline-block w-full md:w-auto">
-                <span class="text-xs uppercase tracking-widest text-magenta">Chapter I · Live</span>
-                <h3 class="font-display font-semibold text-2xl text-white tracking-tight mt-2 mb-2">The Doors Open</h3>
-                <p class="text-white/55 leading-relaxed">Launch, liquidity locked, the Portal goes live across desktop, web, and mobile.</p>
+                <span class="text-xs uppercase tracking-widest text-magenta">Phase 1 · Live Now</span>
+                <h3 class="font-display font-semibold text-2xl text-white tracking-tight mt-2 mb-2">Testnet</h3>
+                <p class="text-white/55 leading-relaxed">Asset issuance, Qt wallets for Windows & Linux, KawPoW GPU mining, block explorer, stratum proxy. All live on testnet.</p>
               </div>
             </div>
             <span class="absolute left-3 md:left-1/2 top-8 md:top-1/2 h-4 w-4 rounded-full bg-magenta ring-4 ring-ink md:-translate-x-1/2 md:-translate-y-1/2"></span>
@@ -673,9 +671,9 @@
             <span class="absolute left-3 md:left-1/2 top-8 md:top-1/2 h-4 w-4 rounded-full bg-cyan ring-4 ring-ink md:-translate-x-1/2 md:-translate-y-1/2"></span>
             <div class="pl-14 md:pl-12">
               <div class="glass rounded-3xl p-8">
-                <span class="text-xs uppercase tracking-widest text-cyan">Chapter II · Next</span>
-                <h3 class="font-display font-semibold text-2xl text-white tracking-tight mt-2 mb-2">The Members' Floor</h3>
-                <p class="text-white/55 leading-relaxed">CoLab governance, token-gated drops, and the first IRL house nights.</p>
+                <span class="text-xs uppercase tracking-widest text-cyan">Phase 2 · Q3 2026</span>
+                <h3 class="font-display font-semibold text-2xl text-white tracking-tight mt-2 mb-2">Mainnet Launch</h3>
+                <p class="text-white/55 leading-relaxed">Mainnet genesis, asset marketplace v1, creator dashboard, mobile wallet, and first exchange listings.</p>
               </div>
             </div>
           </div>
@@ -684,9 +682,9 @@
           <div class="reveal relative md:grid md:grid-cols-2 md:gap-12 md:items-center md:mt-4">
             <div class="pl-14 md:pl-0 md:pr-12 md:text-right">
               <div class="glass rounded-3xl p-8 inline-block w-full md:w-auto">
-                <span class="text-xs uppercase tracking-widest text-gold">Chapter III · Soon</span>
-                <h3 class="font-display font-semibold text-2xl text-white tracking-tight mt-2 mb-2">The Expansion</h3>
-                <p class="text-white/55 leading-relaxed">Multi-chain bridges, partner collabs, and the HNB merch atelier.</p>
+                <span class="text-xs uppercase tracking-widest text-gold">Phase 3 · Q4 2026</span>
+                <h3 class="font-display font-semibold text-2xl text-white tracking-tight mt-2 mb-2">Ecosystem Growth</h3>
+                <p class="text-white/55 leading-relaxed">Royalty enforcement contracts, event ticket platform, revenue share passes, and third-party API integrations.</p>
               </div>
             </div>
             <span class="absolute left-3 md:left-1/2 top-8 md:top-1/2 h-4 w-4 rounded-full bg-gold ring-4 ring-ink md:-translate-x-1/2 md:-translate-y-1/2"></span>
@@ -699,9 +697,9 @@
             <span class="absolute left-3 md:left-1/2 top-8 md:top-1/2 h-4 w-4 rounded-full bg-white/40 ring-4 ring-ink md:-translate-x-1/2 md:-translate-y-1/2"></span>
             <div class="pl-14 md:pl-12">
               <div class="glass rounded-3xl p-8">
-                <span class="text-xs uppercase tracking-widest text-white/50">Chapter IV · The Legend</span>
-                <h3 class="font-display font-semibold text-2xl text-white tracking-tight mt-2 mb-2">A Culture That Lasts</h3>
-                <p class="text-white/55 leading-relaxed">A self-sustaining ecosystem where the culture — and the Codex — outlive the cycle.</p>
+                <span class="text-xs uppercase tracking-widest text-white/50">Phase 4 · Q1 2027</span>
+                <h3 class="font-display font-semibold text-2xl text-white tracking-tight mt-2 mb-2">RWA & DAO</h3>
+                <p class="text-white/55 leading-relaxed">Real-world asset tokenization, on-chain DAO governance, community treasury, and cross-chain bridge research.</p>
               </div>
             </div>
           </div>
@@ -715,12 +713,12 @@
     <div class="absolute inset-0 -z-10" style="background: radial-gradient(60% 80% at 50% 50%, rgba(255,45,142,0.18), transparent 70%);"></div>
     <div class="mx-auto max-w-4xl px-6 text-center">
       <h2 class="reveal font-display font-bold tracking-tightest text-4xl md:text-6xl leading-[1.02] text-white">
-        The rope is<br/><span class="text-gradient">lifting.</span>
+        The underground economy<br/>deserves real <span class="text-gradient">infrastructure.</span>
       </h2>
-      <p class="reveal mt-6 text-lg text-white/55 max-w-xl mx-auto">Step through the Portal and join the most unapologetic culture in crypto.</p>
+      <p class="reveal mt-6 text-lg text-white/55 max-w-xl mx-auto">Download the wallet. Connect to testnet. Issue your first asset. No gas fees, no gatekeepers, no bullshit.</p>
       <div class="reveal mt-9 flex flex-col sm:flex-row gap-4 justify-center">
-        <a data-hnb-href="walletUrl" href="/wallet/" class="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-magenta to-hotpink text-white px-9 py-4 font-display font-semibold text-[15px] tracking-tight btn-glow transition">Enter the Portal</a>
-        <a data-hnb-href="explorerUrl" href="/explorer/" class="inline-flex items-center justify-center rounded-full glass text-white px-9 py-4 font-display font-semibold text-[15px] tracking-tight hover:bg-white/[0.07] transition ring-cyan">Block Explorer</a>
+        <a href="/downloads" class="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-magenta to-hotpink text-white px-9 py-4 font-display font-semibold text-[15px] tracking-tight btn-glow transition">Download Wallet</a>
+        <a href="/whitepaper" class="inline-flex items-center justify-center rounded-full glass text-white px-9 py-4 font-display font-semibold text-[15px] tracking-tight hover:bg-white/[0.07] transition ring-cyan">Read Whitepaper</a>
       </div>
     </div>
   </section>
@@ -734,16 +732,16 @@
             <span class="hnb-logo-mark hnb-logo-mark--sm" aria-hidden="true">HNB<span class="hnb-logo-mark__glow"></span></span>
             <span class="font-display font-semibold tracking-tight text-white/90" data-hnb="name">Hookers and Blow Coin</span>
           </a>
-          <p class="mt-4 text-sm text-white/40 max-w-xs leading-relaxed">One portal. Every device. Premium by obsession, bold by design.</p>
+          <p class="mt-4 text-sm text-white/40 max-w-xs leading-relaxed">The underground economy deserves real infrastructure. Mine. Own. Hustle.</p>
         </div>
 
         <nav class="grid grid-cols-2 sm:grid-cols-3 gap-x-12 gap-y-3 text-sm text-white/55">
-          <a href="#codex" class="hover:text-white transition">The Codex</a>
+          <a href="#codex" class="hover:text-white transition">Use Cases</a>
           <a href="#tokenomics" class="hover:text-white transition">Tokenomics</a>
-          <a href="#portal" class="hover:text-white transition">The Portal</a>
-          <a href="#enter" class="hover:text-white transition">How to Enter</a>
-          <a href="#colab" class="hover:text-white transition">CoLab</a>
-          <a href="#chapters" class="hover:text-white transition">Chapters</a>
+          <a href="#portal" class="hover:text-white transition">Wallets</a>
+          <a href="#enter" class="hover:text-white transition">Get Started</a>
+          <a href="#chapters" class="hover:text-white transition">Roadmap</a>
+          <a href="/whitepaper" class="hover:text-white transition">Whitepaper</a>
           <a href="/downloads" class="hover:text-cyan transition text-cyan/70">Downloads</a>
         </nav>
       </div>

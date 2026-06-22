@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Whitepaper — HNB · Hookers and Blow Coin</title>
+<meta name="description" content="HNB Whitepaper v1.1 — A Ravencoin fork engineered for the decentralized creator and underground economy. Own Your Hustle." />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="stylesheet" href="/assets/brand/hnb-brand.css" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:      "#050507",
+          coal:     "#0b0b0f",
+          char:     "#14141b",
+          smoke:    "#1d1d27",
+          magenta:  "#ff2d8e",
+          hotpink:  "#ff5cad",
+          cyan:     "#22e3ff",
+          gold:     "#e9c46a",
+          goldsoft: "#f4d999"
+        },
+        fontFamily: {
+          display: ['Outfit', 'system-ui', 'sans-serif'],
+          body: ['Inter', 'system-ui', 'sans-serif']
+        },
+        letterSpacing: { tightest: '-0.04em' }
+      }
+    }
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background-color: #050507; }
+
+  .text-gradient {
+    background: linear-gradient(92deg, #ffffff 0%, #ffd9ec 38%, #ff2d8e 70%, #22e3ff 120%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gold-grad {
+    background: linear-gradient(95deg, #f4d999, #e9c46a 60%, #b8923f);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .glass {
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012));
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+  }
+  .glass-magenta { border-color: rgba(255,45,142,0.25); }
+  .glass-cyan    { border-color: rgba(34,227,255,0.25); }
+  .glass-gold    { border-color: rgba(233,196,106,0.25); }
+  .hairline      { border-color: rgba(255,255,255,0.08); }
+  .btn-glow { box-shadow: 0 0 0 1px rgba(255,45,142,0.5), 0 12px 40px -8px rgba(255,45,142,0.55); }
+
+  /* Side nav active state */
+  .side-link { transition: color .2s, padding-left .2s; }
+  .side-link:hover, .side-link.active { color: #fff; padding-left: 4px; }
+  .side-link.active { color: #ff2d8e; }
+
+  /* Section reveal */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Allocation bar */
+  .alloc-bar { height: 8px; border-radius: 4px; }
+
+  /* Table styling */
+  .wp-table { width: 100%; border-collapse: collapse; }
+  .wp-table th { background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.5); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; padding: 10px 14px; text-align: left; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .wp-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 14px; color: rgba(255,255,255,0.75); vertical-align: top; }
+  .wp-table tr:last-child td { border-bottom: none; }
+  .wp-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .nav-link { position: relative; }
+  .nav-link::after { content:""; position:absolute; left:0; bottom:-4px; height:1px; width:0; background: linear-gradient(90deg,#ff2d8e,#22e3ff); transition: width .35s ease; }
+  .nav-link:hover::after { width:100%; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { transition: none; opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+
+<body class="bg-ink font-body text-white/80 antialiased">
+
+<!-- NAVBAR -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="/" class="flex items-center gap-3">
+        <span class="hnb-logo-mark hnb-logo-mark--sm" aria-hidden="true">HNB<span class="hnb-logo-mark__glow"></span></span>
+        <span class="hidden sm:block font-display font-semibold tracking-tight text-white/90 text-[15px]">Hookers and Blow Coin</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-white/60">
+        <a href="/" class="nav-link hover:text-white transition">Home</a>
+        <a href="/#tokenomics" class="nav-link hover:text-white transition">Tokenomics</a>
+        <a href="/whitepaper" class="nav-link hover:text-white transition text-white">Whitepaper</a>
+        <a href="/downloads" class="nav-link hover:text-cyan transition text-cyan/80">Downloads</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="/downloads" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-magenta to-hotpink text-white px-5 py-2.5 text-sm font-display font-semibold tracking-tight btn-glow transition">
+          Download Wallet
+        </a>
+        <button id="mobileBtn" class="lg:hidden grid place-items-center h-10 w-10 rounded-lg border hairline text-white/80">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobileMenu" class="lg:hidden hidden border-t hairline bg-ink/95 backdrop-blur-xl">
+    <nav class="px-6 py-6 flex flex-col gap-5 text-base font-medium text-white/75">
+      <a href="/">Home</a>
+      <a href="/#tokenomics">Tokenomics</a>
+      <a href="/whitepaper" class="text-white">Whitepaper</a>
+      <a href="/downloads" class="text-cyan/80">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-36 pb-20 overflow-hidden">
+  <div class="absolute inset-0 -z-10" style="background: radial-gradient(60% 50% at 20% 0%, rgba(255,45,142,0.15), transparent 60%), radial-gradient(50% 40% at 80% 20%, rgba(34,227,255,0.10), transparent 60%);"></div>
+  <div class="mx-auto max-w-4xl px-6 lg:px-8">
+    <div class="reveal inline-flex items-center gap-2.5 rounded-full glass px-4 py-1.5 text-xs font-medium tracking-wide text-white/70 mb-8">
+      <span class="h-1.5 w-1.5 rounded-full bg-magenta"></span>
+      Version 1.1 · Testnet · June 2026
+    </div>
+    <h1 class="font-display font-bold tracking-tightest leading-[0.95] text-[clamp(2.4rem,6vw,4.5rem)] text-white mb-6">
+      HNB <span class="text-gradient">Whitepaper</span>
+    </h1>
+    <p class="text-lg md:text-xl text-white/60 leading-relaxed max-w-2xl mb-10">
+      A Ravencoin fork engineered for the decentralized creator and underground economy. Asset issuance, royalty enforcement, and programmable ownership — all for less than a cent per transaction.
+    </p>
+    <div class="flex flex-wrap gap-3">
+      <span class="glass rounded-full px-4 py-2 text-sm font-medium text-white/70">420,690,000 HNB supply</span>
+      <span class="glass rounded-full px-4 py-2 text-sm font-medium text-white/70">KawPoW · GPU mining</span>
+      <span class="glass rounded-full px-4 py-2 text-sm font-medium text-white/70">UTXO asset protocol</span>
+      <span class="glass rounded-full px-4 py-2 text-sm font-medium text-white/70">Fair PoW launch</span>
+      <span class="glass rounded-full px-4 py-2 text-sm font-medium text-white/70">Sub-cent fees</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="mx-auto max-w-7xl px-6 lg:px-8 pb-32">
+  <div class="lg:grid lg:grid-cols-[220px_1fr] lg:gap-16">
+
+    <!-- SIDE NAV (desktop) -->
+    <aside class="hidden lg:block">
+      <nav class="sticky top-28 space-y-1 text-sm text-white/40" id="sideNav">
+        <p class="text-[11px] font-semibold uppercase tracking-widest text-white/25 mb-4">Contents</p>
+        <a href="#abstract"       class="side-link block py-1.5">Abstract</a>
+        <a href="#differentiation" class="side-link block py-1.5">Why HNB</a>
+        <a href="#technical"      class="side-link block py-1.5">Technical Foundation</a>
+        <a href="#contracts"      class="side-link block py-1.5">Contract Primitives</a>
+        <a href="#usecases"       class="side-link block py-1.5">Use Cases</a>
+        <a href="#tokenomics"     class="side-link block py-1.5">Tokenomics</a>
+        <a href="#roadmap"        class="side-link block py-1.5">Roadmap</a>
+        <a href="#risks"          class="side-link block py-1.5">Risks</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="min-w-0 space-y-20 pt-2">
+
+      <!-- ABSTRACT -->
+      <section id="abstract" class="scroll-mt-28">
+        <div class="reveal">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-magenta/70 mb-4">Section 1</p>
+          <h2 class="font-display font-bold tracking-tightest text-3xl md:text-4xl text-white mb-6">Abstract</h2>
+          <p class="text-white/65 leading-relaxed mb-5">
+            Hookers and Blow Coin (HNB) is a UTXO-based asset protocol and proof-of-work cryptocurrency designed for the creator, nightlife, and underground economies — markets where existing platforms extract excessive rents, censor content, and strip creators of ownership over their work and audience.
+          </p>
+          <p class="text-white/65 leading-relaxed mb-5">
+            Built as a targeted fork of Ravencoin, HNB adds lightweight contract primitives — royalty enforcement, burn-to-claim, time-locked vesting, and soulbound assets — without adopting the complexity or cost structure of full EVM chains. The result is a chain where issuing a VIP pass, splitting event revenue, or gating content costs fractions of a cent and requires no developer.
+          </p>
+          <div class="glass glass-magenta rounded-2xl p-6 mt-6">
+            <p class="font-display font-semibold text-white text-lg mb-2">Own Your Hustle.</p>
+            <p class="text-white/60 leading-relaxed">HNB exists to make the underground economy programmable and self-sovereign. No platform to ban you. No gas fee to kill your margin. No VC allocation to dump on retail.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-t hairline"></div>
+
+      <!-- DIFFERENTIATION -->
+      <section id="differentiation" class="scroll-mt-28">
+        <div class="reveal">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-cyan/70 mb-4">Section 2</p>
+          <h2 class="font-display font-bold tracking-tightest text-3xl md:text-4xl text-white mb-4">Why HNB — Not the Alternatives</h2>
+          <p class="text-white/55 leading-relaxed mb-8">Every chain claims to solve creator economy problems. Here is why the existing options fail this market specifically:</p>
+
+          <div class="overflow-x-auto rounded-2xl border hairline">
+            <table class="wp-table">
+              <thead>
+                <tr>
+                  <th>Competitor</th>
+                  <th>What They Do Well</th>
+                  <th>Why They Fail This Market</th>
+                  <th>Verdict</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-white font-medium">Ethereum / Base</td>
+                  <td>Smart contracts, liquidity, ecosystem</td>
+                  <td>Gas fees destroy micro-transactions. $10+ to mint an NFT kills creator margins.</td>
+                  <td class="text-white/45 italic">Too expensive</td>
+                </tr>
+                <tr>
+                  <td class="text-white font-medium">Solana</td>
+                  <td>Fast, cheap, large ecosystem</td>
+                  <td>VC-heavy launch, outages, centralized validators. Not censorship-resistant for adult content.</td>
+                  <td class="text-white/45 italic">Too corporate</td>
+                </tr>
+                <tr>
+                  <td class="text-white font-medium">DOGE / PEPE</td>
+                  <td>Culture and community</td>
+                  <td>Zero utility. No asset issuance. No way to build real products on top.</td>
+                  <td class="text-white/45 italic">Culture, no infrastructure</td>
+                </tr>
+                <tr>
+                  <td class="text-white font-medium">Ravencoin (RVN)</td>
+                  <td>Asset protocol, fair PoW launch</td>
+                  <td>Stagnant development, no community direction, no contract layer.</td>
+                  <td class="text-white/45 italic">HNB is what RVN should have become</td>
+                </tr>
+                <tr>
+                  <td class="text-white font-medium">Flow / Tezos NFT chains</td>
+                  <td>NFT-native, royalties baked in</td>
+                  <td>Enterprise-focused, minimal retail culture, high barrier to participate.</td>
+                  <td class="text-white/45 italic">Built for brands, not builders</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="glass glass-cyan rounded-2xl p-6 mt-6">
+            <p class="font-display font-semibold text-cyan text-sm mb-2">HNB's actual moat</p>
+            <p class="text-white/65 leading-relaxed">UTXO asset issuance at sub-cent fees + PoW fair launch + a community explicitly built around creators, nightlife, and degen culture. This combination does not exist anywhere else. Ravencoin had the tech but never found the community. HNB finds both.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-t hairline"></div>
+
+      <!-- TECHNICAL FOUNDATION -->
+      <section id="technical" class="scroll-mt-28">
+        <div class="reveal">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gold/70 mb-4">Section 3</p>
+          <h2 class="font-display font-bold tracking-tightest text-3xl md:text-4xl text-white mb-4">Technical Foundation</h2>
+          <p class="text-white/55 leading-relaxed mb-8">HNB implements ownership primitives as targeted protocol extensions on top of the Ravencoin UTXO model — not a full EVM. Each primitive is designed to cover a specific creator economy use case with minimal protocol complexity and a small, auditable attack surface.</p>
+
+          <div class="grid md:grid-cols-2 gap-5">
+            <div class="glass rounded-2xl p-6">
+              <h3 class="font-display font-semibold text-white text-lg mb-3">Asset Protocol (UTXO-native)</h3>
+              <ul class="space-y-2.5">
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-magenta mt-1.5 shrink-0"></span>Fungible tokens, NFTs, unique assets, sub-assets — all native to the UTXO model</li>
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-magenta mt-1.5 shrink-0"></span>On-chain metadata via IPFS CID in OP_RETURN</li>
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-magenta mt-1.5 shrink-0"></span>Divisibility 0–8 decimals, set at mint</li>
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-magenta mt-1.5 shrink-0"></span>Reissuable or fixed supply — issuer's choice at creation</li>
+              </ul>
+            </div>
+            <div class="glass rounded-2xl p-6">
+              <h3 class="font-display font-semibold text-white text-lg mb-3">KawPoW Proof-of-Work</h3>
+              <ul class="space-y-2.5">
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-cyan mt-1.5 shrink-0"></span>ASIC-resistant DAG algorithm — GPU mining only</li>
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-cyan mt-1.5 shrink-0"></span>4 GB+ VRAM minimum — accessible to consumer hardware</li>
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-cyan mt-1.5 shrink-0"></span>~1 minute target block time</li>
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-cyan mt-1.5 shrink-0"></span>Dark Gravity Wave (DGW) difficulty retarget</li>
+              </ul>
+            </div>
+            <div class="glass rounded-2xl p-6">
+              <h3 class="font-display font-semibold text-white text-lg mb-3">Security Model</h3>
+              <ul class="space-y-2.5">
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-gold mt-1.5 shrink-0"></span>No reentrancy — UTXO inputs spent atomically</li>
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-gold mt-1.5 shrink-0"></span>No approval exploits — assets require direct ownership</li>
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-gold mt-1.5 shrink-0"></span>Script-based — limited opcodes = smaller attack surface</li>
+                <li class="flex gap-3 text-sm text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-gold mt-1.5 shrink-0"></span>SPV-compatible lightweight client verification</li>
+              </ul>
+            </div>
+            <div class="glass rounded-2xl p-6">
+              <h3 class="font-display font-semibold text-white text-lg mb-3">Why Not EVM?</h3>
+              <p class="text-sm text-white/55 leading-relaxed">EVM gives you Turing-complete contracts but also: reentrancy attacks, approval drains, and $10+ gas for simple operations. A creator selling 200 VIP passes at $5 each cannot absorb those costs. HNB's UTXO script extensions cover 90% of use cases at a fraction of the cost.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-t hairline"></div>
+
+      <!-- CONTRACT PRIMITIVES -->
+      <section id="contracts" class="scroll-mt-28">
+        <div class="reveal">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-magenta/70 mb-4">Section 4</p>
+          <h2 class="font-display font-bold tracking-tightest text-3xl md:text-4xl text-white mb-4">Contract Primitives</h2>
+          <p class="text-white/55 leading-relaxed mb-8">Six targeted ownership primitives — no Turing-complete overhead, no new attack surface. Each one covers a specific real-world use case.</p>
+
+          <div class="space-y-4">
+            <!-- Timelock -->
+            <div class="glass rounded-2xl overflow-hidden">
+              <div class="flex items-center justify-between px-6 py-4 border-b hairline">
+                <div class="flex items-center gap-3">
+                  <span class="h-2 w-2 rounded-full bg-cyan"></span>
+                  <span class="font-display font-semibold text-white">Timelock Vesting</span>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-cyan/80 glass glass-cyan rounded-full px-3 py-1">Phase 1/2</span>
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-white/50 glass rounded-full px-3 py-1">High feasibility</span>
+                </div>
+              </div>
+              <div class="px-6 py-5 grid md:grid-cols-2 gap-6">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Mechanism</p>
+                  <p class="text-sm text-white/65 leading-relaxed">CheckLockTimeVerify (CLTV) inherited from Bitcoin via Ravencoin. Coins or assets are locked in P2SH with a script requiring block height &gt; N to spend. Fully enforced by consensus.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Use Case</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Team allocation: 10% locked in CLTV. Unlocks 20%/year starting at mainnet block 525,600. Cannot be spent early by any party — verifiable by anyone on the explorer.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Multi-sig -->
+            <div class="glass rounded-2xl overflow-hidden">
+              <div class="flex items-center justify-between px-6 py-4 border-b hairline">
+                <div class="flex items-center gap-3">
+                  <span class="h-2 w-2 rounded-full bg-cyan"></span>
+                  <span class="font-display font-semibold text-white">Multi-Sig Escrow</span>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-cyan/80 glass glass-cyan rounded-full px-3 py-1">Phase 1/2</span>
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-white/50 glass rounded-full px-3 py-1">High feasibility</span>
+                </div>
+              </div>
+              <div class="px-6 py-5 grid md:grid-cols-2 gap-6">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Mechanism</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Standard P2SH multi-sig (N-of-M). Two parties deposit to escrow address; release requires M signatures. Arbiter key can be a trusted third party or a DAO key.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Use Case</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Promoter books venue: 50% deposit locked in 2-of-3 (promoter, venue, arbiter). Funds release to venue after event, or return to promoter if event cancels.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Burn-to-claim -->
+            <div class="glass rounded-2xl overflow-hidden">
+              <div class="flex items-center justify-between px-6 py-4 border-b hairline">
+                <div class="flex items-center gap-3">
+                  <span class="h-2 w-2 rounded-full bg-magenta"></span>
+                  <span class="font-display font-semibold text-white">Burn-to-Claim</span>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-magenta/80 glass glass-magenta rounded-full px-3 py-1">Phase 2</span>
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-white/50 glass rounded-full px-3 py-1">High feasibility</span>
+                </div>
+              </div>
+              <div class="px-6 py-5 grid md:grid-cols-2 gap-6">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Mechanism</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Atomic transaction spends (burns) asset X as input and creates asset Y as output. Both settle in the same block — no escrow, no counterparty risk.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Use Case</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Venue issues CLUB/TICKET (1000 supply). Each ticket can be burned to claim CLUB/PROOF_OF_ATTENDANCE (soulbound) after the event date.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Soulbound -->
+            <div class="glass rounded-2xl overflow-hidden">
+              <div class="flex items-center justify-between px-6 py-4 border-b hairline">
+                <div class="flex items-center gap-3">
+                  <span class="h-2 w-2 rounded-full bg-magenta"></span>
+                  <span class="font-display font-semibold text-white">Soulbound Assets</span>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-magenta/80 glass glass-magenta rounded-full px-3 py-1">Phase 2</span>
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-white/50 glass rounded-full px-3 py-1">High feasibility</span>
+                </div>
+              </div>
+              <div class="px-6 py-5 grid md:grid-cols-2 gap-6">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Mechanism</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Protocol-level flag set at asset issuance marks asset as non-transferable. Consensus rejects any tx attempting to move a soulbound asset. Burn is still permitted.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Use Case</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Event attendance badge, membership tier, verified creator status — issued once, lives permanently in that wallet, provable on-chain without third-party attestation.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Royalties -->
+            <div class="glass rounded-2xl overflow-hidden">
+              <div class="flex items-center justify-between px-6 py-4 border-b hairline">
+                <div class="flex items-center gap-3">
+                  <span class="h-2 w-2 rounded-full bg-gold"></span>
+                  <span class="font-display font-semibold text-white">Royalty Enforcement</span>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-gold/80 glass glass-gold rounded-full px-3 py-1">Phase 3</span>
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-white/50 glass rounded-full px-3 py-1">Medium complexity</span>
+                </div>
+              </div>
+              <div class="px-6 py-5 grid md:grid-cols-2 gap-6">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Mechanism</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Transaction script validates that N% of HNB in the tx routes to creator address embedded in asset metadata. Enforced at consensus — any tx missing the royalty payment is invalid.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Use Case</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Creator mints ARTIST/PRINT with 10% royalty. Every resale on-chain automatically sends 10% to creator wallet. No manual claiming required.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Revenue share -->
+            <div class="glass rounded-2xl overflow-hidden">
+              <div class="flex items-center justify-between px-6 py-4 border-b hairline">
+                <div class="flex items-center gap-3">
+                  <span class="h-2 w-2 rounded-full bg-gold"></span>
+                  <span class="font-display font-semibold text-white">Revenue Share Pass</span>
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-gold/80 glass glass-gold rounded-full px-3 py-1">Phase 3–4</span>
+                  <span class="text-[11px] font-semibold uppercase tracking-wide text-white/50 glass rounded-full px-3 py-1">Complex</span>
+                </div>
+              </div>
+              <div class="px-6 py-5 grid md:grid-cols-2 gap-6">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Mechanism (v1)</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Snapshot-based: issuer takes on-chain snapshot of token holders at a defined block height, then runs a distribution tx paying each holder proportionally. Semi-automatic in Phase 3, fully trustless in Phase 4.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-white/35 mb-2">Use Case</p>
+                  <p class="text-sm text-white/65 leading-relaxed">Creator issues 1000 CREATOR/REVENUE_PASS. Monthly snapshot distributes 70% of tip revenue to all pass holders proportionally.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-t hairline"></div>
+
+      <!-- USE CASES -->
+      <section id="usecases" class="scroll-mt-28">
+        <div class="reveal">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-cyan/70 mb-4">Section 5</p>
+          <h2 class="font-display font-bold tracking-tightest text-3xl md:text-4xl text-white mb-4">Use Cases</h2>
+          <p class="text-white/55 leading-relaxed mb-8">HNB targets four overlapping markets that share a common problem: they need programmable ownership without corporate intermediaries or enterprise-level costs.</p>
+
+          <div class="grid md:grid-cols-2 gap-5">
+            <div class="glass glass-magenta rounded-2xl p-6">
+              <p class="text-xs uppercase tracking-widest text-magenta/70 mb-3">Creator Economy</p>
+              <h3 class="font-display font-semibold text-white text-xl mb-2">Your content. Your asset. Your cut.</h3>
+              <p class="text-white/55 text-sm leading-relaxed mb-5">Issue VIP passes, content gates, and tip tokens in minutes. Royalties enforced by protocol — every resale pays you automatically. No OnlyFans taking 20%. No platform ban.</p>
+              <ul class="space-y-2">
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-magenta">→</span> Creator VIP Pass — NFT + revenue share, transferable or soulbound</li>
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-magenta">→</span> Content Drop Token — burn-to-unlock pay-per-view</li>
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-magenta">→</span> Tip Token — branded fungible token redeemable for perks</li>
+              </ul>
+            </div>
+            <div class="glass glass-cyan rounded-2xl p-6">
+              <p class="text-xs uppercase tracking-widest text-cyan/70 mb-3">Nightlife & Events</p>
+              <h3 class="font-display font-semibold text-white text-xl mb-2">Turn your door into a programmable asset.</h3>
+              <p class="text-white/55 text-sm leading-relaxed mb-5">Tickets that can't be faked. VIP passes that enforce themselves. Revenue splits that execute the moment the transaction clears — no chasing Venmo, no disputes.</p>
+              <ul class="space-y-2">
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-cyan">→</span> Digital Ticket NFT — timed validity, on-chain redemption</li>
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-cyan">→</span> VIP Table Pass — secondary market with venue royalty</li>
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-cyan">→</span> Promoter Revenue Share — multi-sig door split</li>
+              </ul>
+            </div>
+            <div class="glass glass-gold rounded-2xl p-6">
+              <p class="text-xs uppercase tracking-widest text-gold/70 mb-3">Meme & Degen Economy</p>
+              <h3 class="font-display font-semibold text-white text-xl mb-2">Launch your asset. Own the narrative.</h3>
+              <p class="text-white/55 text-sm leading-relaxed mb-5">Issue a community token in two minutes. Fixed supply, provable on-chain, no dev needed. Meme collections, prediction markets, DAO governance passes.</p>
+              <ul class="space-y-2">
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-gold">→</span> Community Asset — meme collection with provable supply</li>
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-gold">→</span> Prediction Market Token — burn-to-claim resolution</li>
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-gold">→</span> Degen DAO Pass — governance for community treasury</li>
+              </ul>
+            </div>
+            <div class="glass rounded-2xl p-6">
+              <p class="text-xs uppercase tracking-widest text-white/40 mb-3">Real-World Asset Lite</p>
+              <h3 class="font-display font-semibold text-white text-xl mb-2">Tokenize the physical without enterprise overhead.</h3>
+              <p class="text-white/55 text-sm leading-relaxed mb-5">Permanent provenance tracking. Fractional ownership. Physical + digital twin. Asset transfer equals ownership handoff — dispute-free.</p>
+              <ul class="space-y-2">
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-white/40">→</span> Memorabilia Provenance — IPFS metadata on-chain forever</li>
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-white/40">→</span> Fractional Experience — studio session, luxury trip</li>
+                <li class="text-sm text-white/60 flex gap-2"><span class="text-white/40">→</span> Collectible Authentication — transfer = handoff</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-t hairline"></div>
+
+      <!-- TOKENOMICS -->
+      <section id="tokenomics" class="scroll-mt-28">
+        <div class="reveal">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gold/70 mb-4">Section 6</p>
+          <h2 class="font-display font-bold tracking-tightest text-3xl md:text-4xl text-white mb-4">Tokenomics</h2>
+
+          <!-- Key stats -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <div class="glass rounded-2xl p-5 text-center">
+              <p class="font-display font-bold text-2xl text-white">420.69M</p>
+              <p class="text-xs text-white/45 mt-1">Hard Cap Supply</p>
+            </div>
+            <div class="glass rounded-2xl p-5 text-center">
+              <p class="font-display font-bold text-2xl text-gold">60 HNB</p>
+              <p class="text-xs text-white/45 mt-1">Starting Block Reward</p>
+            </div>
+            <div class="glass rounded-2xl p-5 text-center">
+              <p class="font-display font-bold text-2xl text-cyan">~4 years</p>
+              <p class="text-xs text-white/45 mt-1">Halving Interval</p>
+            </div>
+            <div class="glass rounded-2xl p-5 text-center">
+              <p class="font-display font-bold text-2xl text-magenta">~14 years</p>
+              <p class="text-xs text-white/45 mt-1">Full Emission</p>
+            </div>
+          </div>
+
+          <!-- Allocation -->
+          <h3 class="font-display font-semibold text-white text-xl mb-5">Supply Allocation</h3>
+          <div class="space-y-4 mb-8">
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="text-white/75">Mining Rewards (PoW)</span><span class="font-semibold text-white">60% — 252,414,000 HNB</span></div>
+              <div class="alloc-bar bg-magenta/70" style="width:60%"></div>
+              <p class="text-xs text-white/40 mt-1.5">Fair launch distribution over ~14 years via block rewards. No premine, no founder allocation in coinbase.</p>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="text-white/75">Liquidity Bootstrap</span><span class="font-semibold text-white">20% — 84,138,000 HNB</span></div>
+              <div class="alloc-bar bg-cyan/70" style="width:20%"></div>
+              <p class="text-xs text-white/40 mt-1.5">DEX seeding and initial exchange listings to ensure trading liquidity at mainnet launch.</p>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="text-white/75">Dev & Team (Vested)</span><span class="font-semibold text-white">10% — 42,069,000 HNB</span></div>
+              <div class="alloc-bar bg-gold/70" style="width:10%"></div>
+              <p class="text-xs text-white/40 mt-1.5">3-year linear vest, 6-month cliff. Enforced via CLTV timelock scripts — verifiable by anyone on the block explorer.</p>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2"><span class="text-white/75">Marketing & Community</span><span class="font-semibold text-white">10% — 42,069,000 HNB</span></div>
+              <div class="alloc-bar bg-magenta/40" style="width:10%"></div>
+              <p class="text-xs text-white/40 mt-1.5">Bounties, events, partnerships, and community grants.</p>
+            </div>
+          </div>
+
+          <!-- Emission schedule -->
+          <h3 class="font-display font-semibold text-white text-xl mb-4">Emission Schedule</h3>
+          <div class="overflow-x-auto rounded-2xl border hairline mb-6">
+            <table class="wp-table">
+              <thead><tr><th>Epoch</th><th>Period</th><th>Block Reward</th><th>Blocks</th><th>HNB Emitted</th><th>Cumulative</th></tr></thead>
+              <tbody>
+                <tr><td class="text-magenta font-medium">Epoch 1</td><td>Year 1–4</td><td class="font-mono">60 HNB</td><td class="font-mono">2,100,000</td><td class="font-mono">126,000,000</td><td>50%</td></tr>
+                <tr><td class="text-white/70">Epoch 2</td><td>Year 4–8</td><td class="font-mono">30 HNB</td><td class="font-mono">2,100,000</td><td class="font-mono">63,000,000</td><td>75%</td></tr>
+                <tr><td class="text-white/70">Epoch 3</td><td>Year 8–12</td><td class="font-mono">15 HNB</td><td class="font-mono">2,100,000</td><td class="font-mono">31,500,000</td><td>87.5%</td></tr>
+                <tr><td class="text-white/70">Epoch 4</td><td>Year 12–16</td><td class="font-mono">7.5 HNB</td><td class="font-mono">2,100,000</td><td class="font-mono">15,750,000</td><td>93.75%</td></tr>
+                <tr><td class="text-white/40">Tail</td><td>Year 16+</td><td class="font-mono">↓</td><td>∞</td><td class="font-mono">16,164,000</td><td>100%</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Asset burns -->
+          <h3 class="font-display font-semibold text-white text-xl mb-4">Asset Creation Burns (Deflationary)</h3>
+          <div class="overflow-x-auto rounded-2xl border hairline">
+            <table class="wp-table">
+              <thead><tr><th>Asset Type</th><th>HNB Burned</th><th>Example</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td class="text-white font-medium">Main Asset</td><td class="font-mono text-magenta">500 HNB</td><td class="font-mono text-sm">NIGHTCLUB</td><td>Permanent ticker reservation on-chain</td></tr>
+                <tr><td class="text-white font-medium">Sub-Asset</td><td class="font-mono text-magenta">100 HNB</td><td class="font-mono text-sm">NIGHTCLUB/VIP_PASS</td><td>Nested under a main asset you own</td></tr>
+                <tr><td class="text-white font-medium">Unique Asset (NFT)</td><td class="font-mono text-magenta">5 HNB</td><td class="font-mono text-sm">NIGHTCLUB/VIP_PASS#0001</td><td>One-of-one under a sub-asset</td></tr>
+                <tr><td class="text-white font-medium">HNB Transfer</td><td class="font-mono text-white/40">~0.01 HNB</td><td class="font-mono text-sm">Send / receive</td><td>Sub-cent at any reasonable price point</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-t hairline"></div>
+
+      <!-- ROADMAP -->
+      <section id="roadmap" class="scroll-mt-28">
+        <div class="reveal">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-magenta/70 mb-4">Section 7</p>
+          <h2 class="font-display font-bold tracking-tightest text-3xl md:text-4xl text-white mb-8">Roadmap</h2>
+
+          <div class="grid md:grid-cols-2 gap-5">
+            <div class="glass glass-magenta rounded-2xl p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase tracking-widest text-magenta/80">Phase 1</span>
+                <span class="text-[11px] font-semibold bg-magenta/20 text-magenta rounded-full px-3 py-1">Live Now · Q2 2026</span>
+              </div>
+              <h3 class="font-display font-semibold text-white text-xl mb-4">Testnet</h3>
+              <ul class="space-y-2">
+                <li class="text-sm text-white/65 flex gap-2"><span class="text-magenta">✓</span> Asset issuance & transfer</li>
+                <li class="text-sm text-white/65 flex gap-2"><span class="text-magenta">✓</span> Qt wallet (Windows + Linux)</li>
+                <li class="text-sm text-white/65 flex gap-2"><span class="text-magenta">✓</span> KawPoW GPU mining + stratum</li>
+                <li class="text-sm text-white/65 flex gap-2"><span class="text-magenta">✓</span> Block explorer</li>
+                <li class="text-sm text-white/65 flex gap-2"><span class="text-magenta">✓</span> Dedicated seed node VPS</li>
+              </ul>
+            </div>
+            <div class="glass rounded-2xl p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase tracking-widest text-cyan/80">Phase 2</span>
+                <span class="text-[11px] font-semibold glass glass-cyan text-cyan rounded-full px-3 py-1">Q3 2026</span>
+              </div>
+              <h3 class="font-display font-semibold text-white text-xl mb-4">Mainnet Launch</h3>
+              <ul class="space-y-2">
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Mainnet genesis</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Asset marketplace v1</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Creator dashboard</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Mobile wallet</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> CEX/DEX listings</li>
+              </ul>
+            </div>
+            <div class="glass rounded-2xl p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase tracking-widest text-gold/80">Phase 3</span>
+                <span class="text-[11px] font-semibold glass glass-gold text-gold rounded-full px-3 py-1">Q4 2026</span>
+              </div>
+              <h3 class="font-display font-semibold text-white text-xl mb-4">Ecosystem Growth</h3>
+              <ul class="space-y-2">
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Royalty enforcement contracts</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Event ticket platform</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Revenue share passes</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> API for third-party apps</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Community grants program</li>
+              </ul>
+            </div>
+            <div class="glass rounded-2xl p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase tracking-widest text-white/40">Phase 4</span>
+                <span class="text-[11px] font-semibold glass text-white/50 rounded-full px-3 py-1">Q1 2027</span>
+              </div>
+              <h3 class="font-display font-semibold text-white text-xl mb-4">RWA & DAO</h3>
+              <ul class="space-y-2">
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Real-world asset tokenization</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> On-chain DAO governance</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Community treasury</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Cross-chain bridge research</li>
+                <li class="text-sm text-white/55 flex gap-2"><span class="text-white/30">→</span> Enterprise partnerships</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-t hairline"></div>
+
+      <!-- RISKS -->
+      <section id="risks" class="scroll-mt-28">
+        <div class="reveal">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/40 mb-4">Section 8</p>
+          <h2 class="font-display font-bold tracking-tightest text-3xl md:text-4xl text-white mb-6">Risks & Disclaimers</h2>
+
+          <div class="glass rounded-2xl border border-gold/30 p-5 mb-6">
+            <p class="font-semibold text-gold text-sm mb-1">High-risk experimental cryptocurrency</p>
+            <p class="text-white/60 text-sm leading-relaxed">HNB is in active testnet. Mainnet has not launched. Do not invest more than you can afford to lose completely. This document is not financial advice.</p>
+          </div>
+
+          <div class="overflow-x-auto rounded-2xl border hairline">
+            <table class="wp-table">
+              <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td class="text-white font-medium">Market risk</td><td>Cryptocurrency valuations can reach zero. This is not financial advice. DYOR.</td></tr>
+                <tr><td class="text-white font-medium">Technical risk</td><td>Contract primitives are unaudited pre-mainnet. Get an independent audit before production use.</td></tr>
+                <tr><td class="text-white font-medium">Regulatory risk</td><td>Content-adjacent projects face uncertain treatment in many jurisdictions. Know your local laws.</td></tr>
+                <tr><td class="text-white font-medium">Mining centralization</td><td>KawPoW ASIC resistance mitigates but does not eliminate 51% attack risk if hash rate concentrates.</td></tr>
+                <tr><td class="text-white font-medium">Liquidity risk</td><td>Early-stage chain. Exit liquidity may be limited at launch.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="mt-5 text-xs text-white/30 leading-relaxed italic">For informational purposes only. Not financial advice. Adult-themed project — participation subject to applicable local laws and platform terms of service. © 2026 Hookers and Blow Coin.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- FOOTER CTA -->
+<section class="border-t hairline bg-coal/60 py-20">
+  <div class="mx-auto max-w-4xl px-6 text-center">
+    <h2 class="font-display font-bold tracking-tightest text-3xl md:text-5xl text-white mb-5">Ready to own your hustle?</h2>
+    <p class="text-white/55 leading-relaxed mb-8 max-w-xl mx-auto">Download the wallet, connect to testnet, and issue your first asset — all for less than a cent.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/downloads" class="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-magenta to-hotpink text-white px-9 py-4 font-display font-semibold text-[15px] tracking-tight btn-glow transition">
+        Download Wallet
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="/explorer/" class="inline-flex items-center justify-center rounded-full glass text-white px-9 py-4 font-display font-semibold text-[15px] tracking-tight hover:bg-white/[0.07] transition">Block Explorer</a>
+    </div>
+    <p class="mt-6 text-sm text-white/35">
+      <a href="https://github.com/Feltersnatch22/HookersAndBlowCoin" target="_blank" rel="noopener" class="hover:text-cyan transition">github.com/Feltersnatch22/HookersAndBlowCoin</a>
+    </p>
+  </div>
+</section>
+
+<footer class="border-t hairline bg-ink py-10">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+    <div class="flex items-center gap-3">
+      <span class="hnb-logo-mark hnb-logo-mark--sm" aria-hidden="true">HNB<span class="hnb-logo-mark__glow"></span></span>
+      <span class="font-display font-semibold text-white/70 text-sm">Hookers and Blow Coin · Whitepaper v1.1</span>
+    </div>
+    <nav class="flex flex-wrap gap-6 text-sm text-white/45">
+      <a href="/" class="hover:text-white transition">Home</a>
+      <a href="/downloads" class="hover:text-cyan transition">Downloads</a>
+      <a href="/explorer/" class="hover:text-white transition">Explorer</a>
+      <a href="https://github.com/Feltersnatch22/HookersAndBlowCoin" target="_blank" rel="noopener" class="hover:text-white transition">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    // Sticky nav
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('bg-ink/80', window.scrollY > 24);
+      nav.classList.toggle('backdrop-blur-xl', window.scrollY > 24);
+      nav.classList.toggle('border-b', window.scrollY > 24);
+    }, { passive: true });
+
+    // Mobile menu
+    const mb = document.getElementById('mobileBtn');
+    const mm = document.getElementById('mobileMenu');
+    if (mb) mb.addEventListener('click', () => mm.classList.toggle('hidden'));
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Side nav active section highlight
+    const sections = document.querySelectorAll('section[id]');
+    const links = document.querySelectorAll('#sideNav a');
+    const sio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector('#sideNav a[href="#' + e.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    sections.forEach(s => sio.observe(s));
+  })();
+</script>
+</body>
+</html>

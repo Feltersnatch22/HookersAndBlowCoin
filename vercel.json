@@ -20,8 +20,10 @@
     { "source": "/explorer", "destination": "/block-explorer/index.html" },
     { "source": "/explorer/", "destination": "/block-explorer/index.html" },
     { "source": "/explorer/:path*", "destination": "/block-explorer/:path*" },
-    { "source": "/downloads", "destination": "/downloads.html" },
-    { "source": "/downloads/", "destination": "/downloads.html" },
+{ "source": "/whitepaper", "destination": "/whitepaper.html" },
+                { "source": "/whitepaper/", "destination": "/whitepaper.html" },
+                { "source": "/downloads", "destination": "/downloads.html" },
+                { "source": "/downloads/", "destination": "/downloads.html" },
     { "source": "/", "destination": "/hnb-landing.html" }
   ]
 }
