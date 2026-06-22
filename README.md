@@ -4,7 +4,7 @@
 
 # HookersAndBlowCoin
 
-Independent KawPow blockchain for HNB-native asset transfer. See [mainnet launch](contrib/mainnet/README.md) and [testnet guide](contrib/testnet/README.md).
+Independent KawPow blockchain for HNB-native asset transfer. See [mainnet launch](contrib/mainnet/README.md), [testnet guide](contrib/testnet/README.md), and [wallets](contrib/wallets/README.md) (desktop / web / mobile).
 
 To build and run, see [the doc folder](doc).
 
@@ -72,14 +72,7 @@ not straightforward.
 
 About HookersAndBlowCoin
 ----------------
-A digital peer to peer network for the facilitation of asset transfer.
-
-
-
-In the fictional world of Westeros, ravens are used as messengers who carry statements of truth. HookersAndBlowCoin is a use case specific blockchain designed to carry statements of truth about who owns what assets. 
-
-
-
+HookersAndBlowCoin (HNB) is a KawPoW proof-of-work chain built for programmable asset ownership. Every asset on the network is a durable statement of who owns what — tickets, passes, creator tokens, revenue shares, and community assets that anyone can verify without trusting a platform. HNB targets creators, nightlife, and the underground economy: markets where ownership and payouts should live on-chain, not in a terms-of-service update.
 Thank you to the Bitcoin developers. 
 
 The HookersAndBlowCoin project is launched based on the hard work and continuous effort of over 400 Bitcoin developers who made over 14,000 commits over the life to date of the Bitcoin project. We are eternally grateful to you for your efforts and diligence in making a secure network and for their support of free and open source software development.  The HookersAndBlowCoin experiment is made on the foundation you built.
