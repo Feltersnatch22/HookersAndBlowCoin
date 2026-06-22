@@ -231,7 +231,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseHookersAndBlowURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no hnb: URI
-    if(!uri.isValid() || uri.scheme() != QString("raven"))
+    if(!uri.isValid() || uri.scheme() != QString("hnb"))
         return false;
 
     SendCoinsRecipient rv;
@@ -512,7 +512,7 @@ bool openHookersAndBlowConf()
     
     configFile.close();
     
-    /* Open raven.conf with the associated application */
+    /* Open hnb.conf with the associated application */
     return QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 }
 
@@ -700,8 +700,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "raven.desktop";
-    return GetAutostartDir() / strprintf("raven-%s.lnk", chain);
+        return GetAutostartDir() / "hnb.desktop";
+    return GetAutostartDir() / strprintf("hnb-%s.lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -741,7 +741,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         std::string chain = ChainNameFromCommandLine();
-        // Write a raven.desktop file to the autostart directory:
+        // Write a hnb.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
@@ -773,7 +773,7 @@ LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef
         return nullptr;
     }
     
-    // loop through the list of startup items and try to find the raven app
+        // loop through the list of startup items and try to find the hnb app
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
         UInt32 resolutionFlags = kLSSharedFileListNoUserInteraction | kLSSharedFileListDoNotMountVolumes;
@@ -830,7 +830,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, ravenAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add raven app to startup item list
+        // add hnb app to startup item list
         LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, nullptr, nullptr, ravenAppUrl, nullptr, nullptr);
     }
     else if(!fAutoStart && foundItem) {

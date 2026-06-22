@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Native Linux build of raven-qt using system Qt5 (no depends/ Qt cross-build).
+# Native Linux build of hnb-qt using system Qt5 (no depends/ Qt cross-build).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"

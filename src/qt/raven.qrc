@@ -1,6 +1,6 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/icons">
-        <file alias="raven">res/icons/raven.png</file>
+        <file alias="hnb">res/icons/hnb.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
         <file alias="send">res/icons/send.png</file>
@@ -72,7 +72,7 @@
         <file alias="asset_manage_selected">res/icons/asset_manage_selected.png</file>
         <file alias="asset_transfer">res/icons/asset_transfer.png</file>
         <file alias="asset_transfer_selected">res/icons/asset_transfer_selected.png</file>
-        <file alias="ravencointext">res/icons/ravencointext.png</file>
+        <file alias="hnbcointext">res/icons/hnbcointext.png</file>
         <file alias="rvntext">res/icons/rvntext.png</file>
 	<file alias="restricted_asset">res/icons/restricted_asset.png</file>
 	<file alias="restricted_asset_selected">res/icons/restricted_asset_selected.png</file>
@@ -142,15 +142,9 @@
         <file alias="radio-unchecked-disabled">res/darkstyle/icon_radiobutton_unchecked_disabled.png</file>
     </qresource>
     <qresource prefix="/fonts">
-        <file alias="opensans-bold">res/fonts/OpenSans-Bold.ttf</file>
-        <file alias="opensans-bolditalic">res/fonts/OpenSans-BoldItalic.ttf</file>
-        <file alias="opensans-extrabold">res/fonts/OpenSans-ExtraBold.ttf</file>
-        <file alias="opensans-extrabolditalic">res/fonts/OpenSans-ExtraBoldItalic.ttf</file>
-        <file alias="opensans-italic">res/fonts/OpenSans-Italic.ttf</file>
-        <file alias="opensans-light">res/fonts/OpenSans-Light.ttf</file>
-        <file alias="opensans-lightitalic">res/fonts/OpenSans-LightItalic.ttf</file>
-        <file alias="opensans-regular">res/fonts/OpenSans-Regular.ttf</file>
-        <file alias="opensans-semibold">res/fonts/OpenSans-SemiBold.ttf</file>
-        <file alias="opensans-semibolditalic">res/fonts/OpenSans-SemiBoldItalic.ttf</file>
+        <file alias="outfit-regular">res/fonts/Outfit-400.ttf</file>
+        <file alias="outfit-medium">res/fonts/Outfit-500.ttf</file>
+        <file alias="outfit-semibold">res/fonts/Outfit-600.ttf</file>
+        <file alias="outfit-bold">res/fonts/Outfit-700.ttf</file>
     </qresource>
 </RCC>

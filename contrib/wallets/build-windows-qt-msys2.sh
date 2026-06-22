@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build raven-qt.exe natively on Windows using MSYS2 MINGW64.
+# Build hnb-qt.exe natively on Windows using MSYS2 MINGW64.
 # Run inside "MSYS2 MinGW 64-bit" terminal (not MSYS).
 set -euo pipefail
 

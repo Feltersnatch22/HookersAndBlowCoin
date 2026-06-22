@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Cross-compile raven-qt.exe for Windows from Linux or WSL.
+# Cross-compile hnb-qt.exe for Windows from Linux or WSL.
 # Requires: mingw-w64, depends/ Qt build (~1–2 hours first run).
 set -euo pipefail
 

@@ -592,7 +592,7 @@ void HookersAndBlowGUI::createToolBars()
 
         {
             const int logoSize = IconsOnly ? 52 : 180;
-            QPixmap logo(":/icons/raven");
+            QPixmap logo(":/icons/hnb");
             labelToolbar->setPixmap(logo.scaled(logoSize, logoSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
         }
         labelToolbar->setStyleSheet(".QLabel{background-color: transparent;}");
@@ -913,7 +913,7 @@ void HookersAndBlowGUI::updateIconsOnlyToolbar(bool IconsOnly)
         m_toolbar->setToolButtonStyle(Qt::ToolButtonIconOnly);
     }
     else {
-        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/ravencointext")));
+        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/hnbcointext")));
         m_toolbar->setMinimumWidth(labelToolbar->width());
         m_toolbar->setMaximumWidth(255);
         m_toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);        

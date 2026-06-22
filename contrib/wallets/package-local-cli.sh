@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Package locally built ravend + raven-cli (no make install / depends required).
+# Package locally built hnbd + hnb-cli (no make install / depends required).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
@@ -24,13 +24,13 @@ rm -rf "$STAGE"
 mkdir -p "$STAGE/bin"
 cp "$RAVEND" "$STAGE/bin/hnbd"
 cp "$CLI" "$STAGE/bin/hnb-cli"
-strip "$STAGE/bin/ravend" "$STAGE/bin/raven-cli" 2>/dev/null || true
+strip "$STAGE/bin/hnbd" "$STAGE/bin/hnb-cli" 2>/dev/null || true
 
 cat > "$STAGE/README.txt" <<'EOF'
 HNB Node + CLI — Linux x86_64 (headless)
 ========================================
 
-Includes: ravend (daemon), raven-cli (RPC client)
+Includes: hnbd (daemon), hnb-cli (RPC client)
 
 Quick start (testnet):
   ./bin/ravend -testnet -daemon -bypassdownload
