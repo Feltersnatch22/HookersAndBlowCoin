@@ -1,244 +1,251 @@
-<h1 align="center">
-  HookersAndBlowCoin: A Peer to Peer Electronic System for the Creation and Transfer of Assets<br>
-</h1>
-
-
-<p align="center">
-Bruce Fenton<br>
-Tron Black<br>
-http://www.ravencoin.org<br>
-3rd April 2018
-</p>
-<p align="center"><i>
-HookersAndBlowCoin (HNB) is a KawPoW proof-of-work chain built for programmable asset ownership. Every asset on the network is a durable statement of who owns what — tickets, passes, creator tokens, revenue shares, and community assets that anyone can verify without trusting a platform.
-</i></p> 
-
-Thank you to the Bitcoin founder and developers. The HookersAndBlowCoin project was launched based on the hard work and continuous effort of over 430 Bitcoin developers who made over 14,000 commits by the date of the HookersAndBlowCoin code fork. We are eternally grateful to you for your diligence in making a secure network and for your support of free and open source software development. The HookersAndBlowCoin project is built on the foundation you built.
-
-> **Abstract**. HookersAndBlowCoin is a blockchain and platform optimized for transferring assets, such as tokens, from one holder to another. Based on the extensive development and testing of the UTXO model of the Bitcoin protocol, HookersAndBlowCoin is built on a fork of the Bitcoin code. Key changes include a block reward time of one minute, a change in the number of coins issued, but not the weighted distribution schedule and the addition of asset creation and messaging capabilities. HookersAndBlowCoin is free and open source. All HookersAndBlowCoin (HNB) are fairly issued and mined publicly and transparently using Proof of Work (POW) using the x16r algorithm which was created for HookersAndBlowCoin. There is no private, public, founder, or developer allocation set aside. HookersAndBlowCoin is intended to prioritize security, user control, privacy, and censorship resistance. It is open to use and development in any jurisdiction, while allowing simple additional features for users based on need.
-
-## 1. Introduction
-
-A blockchain is a ledger showing the quantity of something controlled by a user. It enables one to transfer control of that digital representation to someone else. Of the many possible uses for blockchain technology, the reporting of who owns what is one of its core functions. This is likely why the first, and to date most successful, use case for blockchain technology has been Bitcoin, which was announced by Satoshi Nakamoto on October 31, 2008[1].
-
-
-The Ethereum ERC20, ERC223 and ERC721 protocols and other projects show tokenized assets that use another blockchain can be created with a wide variety of purposes and structures. Tokens offer several advantages to traditional shares or other participation mechanisms, e.g. faster transfer speed, increased user control and censorship resistance, and a reduction or elimination of the need for a trusted third party.
-
-Bitcoin also has the capability of serving as the rails for tokens by using projects like Omnilayer, RSK, or Counterparty. However, neither Bitcoin nor Ethereum were specifically designed for facilitating ownership of additional assets, and the users and development teams generally prioritize other features.
-
-HookersAndBlowCoin is designed to efficiently handle one specific function well: the transfer of assets from one party to another. One goal of the HookersAndBlow protocol is to create a use case focused blockchain and development effort which can create code, providing advantages for specific use cases, while contributing to open source code which could be used by Bitcoin or other projects.
-
-If the global economy is influenced by actors using various blockchains, then the way capital markets work today could also change. Borders and jurisdictions may become less relevant as more assets become tradable and trading across borders grows increasingly frictionless. In an age where people can move significant amounts of wealth instantly using Bitcoin, global consumers will likely demand the same efficiency for their securities and similar asset holdings.
-
-## 2. Background Tokens and Other Assets
-
-On January 3, 2009, Bitcoin was launched as a peer-to-peer electronic cash system. Years later, after it achieved a notable level of security, it was recognized that assets could be created "on top of" or embedded in the Bitcoin blockchain. New assets can be added to the Bitcoin blockchain by creating secure, signed, immutable bitcoin transactions which also carry information on asset issuance, and transfer.
-
-There were several projects that added tokens to the Bitcoin blockchain. The first was Mastercoin[2] by JR Willett, followed by Counterparty[3] and other projects. One category of protocols developed to facilitate the creation of assets on the Bitcoin blockchain became known as ColoredCoins[4], as they mark bitcoin transactions with specially crafted transactions in the OP_RETURN[5], which is like a comment field in the Bitcoin protocol.
-
-The advantage of embedding assets in the Bitcoin blockchain is the high level of security. Bitcoin is considered by many to be the most secure blockchain because there is a tremendous amount of distributed mining power that secures each block with a "high difficulty hash"[6]. Because the distributed Bitcoin nodes recognize the level of effort to create a high difficulty hash, this makes it nearly impossible to re-write, or modify the blockchain without prohibitively high mining investment. To tamper with the Bitcoin blockchain, to re-write or modify its ledger, would take significant efforts from an investor at the level of a nation state.
-
-The disadvantage of embedding assets in the Bitcoin blockchain is that the Bitcoin rules must be followed as originally written, and the Bitcoin nodes are unaware that assets are being embedded. This means that a Bitcoin transaction must be used for every asset transaction, and it must send enough bitcoin to be considered a valid transaction, even though the primary purpose of the transaction is to send the asset. That is inconvenient, but a major disadvantage is that a Bitcoin client that spends that bitcoin without being aware of the embedded asset transaction will destroy the asset. For example, a holder of the Bitcoin private keys to Bitcoin which hold the Counterparty assets, could accidentally send that Bitcoin to an exchange or wallet and lose those assets. A partial solution to solving this issue is to create a special address format that is used for the asset, but that doesn't prevent the mistake that may destroy the asset. It just provides more clues that there is an asset embedded in the transaction.
-
-Other token standards like ERC20, ERC721 and ERC223 are built on Ethereum or other blockchains that support smart contracts. A different problem exists when using these smart contracts. Since the Ethereum network does not natively recognize these smart contract tokens, it is currently unable to protect against some common problems. Smart contracts can be confusing for users as there can be multiple ERC20 tokens with identical names. The only distinction between contracts with identical
-names is the contract hash.
-
-## 3. Full Asset Aware Protocol Level System
-
-<p align="center"><i>
-Who will not change a raven for a dove? The will of man is by his reason swayed.  
-– William Shakespeare
-</i></p>
-The solution is to create a bitcoin-like system that is fully asset aware. A system being asset aware provides two major advantages. First, it allows the client and RPC commands to protect the asset from being destroyed accidentally. Second, it allows a single native client to issue, track, and transfer the assets.
-Lastly, to provide security for the underlying assets, the bitcoin-like system functions only with a market value, a strong mining community, and wide distribution.  
-  
-**Assets**  
-Assets are tokens that can be issued by users of the HookersAndBlow protocol without the need to be mined. Users of the HookersAndBlow protocol create these assets and decide their purpose and rules independent of the protocol. These assets or tokens exist on the HookersAndBlowCoin blockchain and could be whatever name, denomination or purpose selected by the creators of each asset, coin, or token. The tokens are transferable and move with the same ease as bitcoin, or other similarly functioning cryptocurrencies. In HookersAndBlowCoin, an asset is just a limited quantity of a unique symbol, and transferable to any HookersAndBlowCoin address. Assets have been available for some time on other platforms such as Open Assets, Mastercoin, Counterparty, and as an ERC20[7] or ERC223 [8] token on Ethereum [9]. Assets created on the HookersAndBlow protocol have several advantages: they are easier to use, tightly integrated with a native coin, and secured with fair POW mining and open source code not run by a centralized organization.
-
-**Uses for Assets**  
-Assets or tokens can be used for anything the creator’s imagination can conjure. The ideas presented here are a sampling.
-
-**Representing real world custodied physical or digital assets to tokens**
-*  Gold bars
-*  Silver coins
-*  Physical Euros
-*  Artwork
-*  Land Deeds
-*  DC Comics Presents #26
-*  Energy credits (Electricity, Wood, Gas, Oil, Wind)
-
-**Representing a share of a project**
-*  Securities tokens: stock or shares of a company where the shares are represented by a token
-rather than a physical stock certificate
-*  Securities or partnership interests with the built-in ability to pay rewards in HNB (legal in
-many free market countries)
-*  Tokens which represent a coop, limited partnership, royalty sharing or profit sharing platform
-*  A token which represents a crowd-funded item with the ability to transfer or resell the item
-
-**Representing virtual goods**
-*  Tickets to an event such as a Baltimore HookersAndBlows game with the ability to resell
-*  A license to allow an activity
-*  An access token to use a service
-*  In-game currency and items, transferable outside of the game platform
-
-**Representing a credit**
-*  Gift cards
-*  Airline miles
-*  Reward points
-
-Satoshi Nakamoto described bitcoin as an implementation of Wei Dai’s bmoney [10], designed to afford users more control, security, and privacy than more centralized systems. A design with the potential to prevent violence and discrimination, given the holder of bitcoin remains private. HookersAndBlowCoin aims to continue this implementation by focusing on assets other than cash, providing a platform that users can easily issue assets they control under the rules they establish on a secure blockchain.
-
-## 4. HookersAndBlowCoin Launch and Algorithm
-
-HookersAndBlowCoin was announced on October 31, 2017[11] and released binaries for mining on Jan 3, 2018,[12] the respective ninth anniversary of the announcement and launch of Bitcoin. HookersAndBlowCoin is the bitcoin-like system that will allow users to issue and integrate assets into its blockchain. This will be accomplished in phases which build upon each other.
-
-\- In progress
-
-Create a platform like Bitcoin with a new mining algorithm, x16r[13], intended to prevent immediate dominance by mining pools, and future dominance by ASIC mining equipment.
-
-Launch the token with no pre-mine and a fair launch to widely distribute the tokens.
-
-Allow the mining rate to increase and the value of the HNB token to naturally grow and gradually disburse to holders that understand the value of the platform.
-
-Utilize proof of work mining, not because it burns a scarce resource of electricity, or the requirement of computer hardware, but instead focuses on the most valuable part of the "work" which is building an ever-larger and time-based wall that protects user data from future tampering and censorship with every new layer.
-
-## 5. Asset Issuance & Transfer
-
-<p align="center"><i>
-Deep into that darkness peering, long I stood there wondering, fearing, Doubting, dreaming dreams no mortal ever dared to dream before; But the silence was unbroken, and the stillness gave no token.  
-\- Edgar Allan Poe, The HookersAndBlow
-</i></p>
-Token names are guaranteed unique. The first to issue a token with a given name is the owner of that token project.
-
-The issuer of a token burns 500 HNB and must provide a unique token name. The issuer determines the quantity issued, the number of decimal places, and whether they will be allowed to issue more of the same token in the future.
-
-Allow the issuance of other tokens using similar method as Mastercoin, Counterparty, or CoinSpark[14].
-
-Tightly integrate assets with the GUI wallet and create new RPC calls, which provides intuitive asset management. Easily issue new assets, report current balances, and transfer to other users.
-
-The combination of open source and crypto enables interests to be aligned in ways that traditional structures cannot.
-
-Fair and open source crypto projects can replace bosses, rulers, employees & corporate structure with aligned interests & economic choice for participants.
-
-So, in some cases, whether one is selflessly, or selfishly motivated, open source may be a better model for many new and interesting types of projects than other structures. HookersAndBlowCoin will allow projects to issue tokens to represent co-ops, corporations or partnerships.
-
-Co-ops, for example, are a common organization form in which employees and participants are owners. Large organizations such as Credit Agricole, REI, Land O' Lakes, Ace Hardware, Co-op Kobe, Sunkist and Ocean Spray are structured as co-ops. Despite offering many advantages to participants, co-ops are sometimes difficult to structure and maintain. Tokenizing co-op interests opens many new ways this structure can be used to allocate resources and capital. Since the rules for each token can be changed by each issuer and the record keeping is done on the HookersAndBlowCoin blockchain with the work distributed, organizations can adapt and deploy a variety of participation structures.
-
-In addition, since the tokens can be made either unique, limited, or fungible by the issuer, token project managers will be able to have categories of token holders such as “Class A Shareholders”, “Lifetime social club members”, “Benefactors”, or “Holders of __ in game item”.
-
-Tokens allow easier issuance of small scale public offerings.
-
-“In the future the size distribution of multinationals will approach that of local business. The phase change between these states may be quite rapid as telecom and transport costs pass through a "melting point", creating a wide variety of new multinational small businesses, and industries to support those businesses.” Nick Szabo, Secure Property Titles with Owner Authority, 1998[15].
-
-This also could decrease fraud, Economist Dr. Robert Shapiro noted significant evidence of Wall St. fraud which can be tied to custody issues (Patrick Byrne, PhD [16]).
-
-Only an open protocol will work in a global economy where there are multiple jurisdictions, each with complex and conflicting regulations.
-
-## 6. Rewards
-
-Allow the payment of rewards in the native token. With a single command the reward, denominated in HNB, is automatically divided evenly and sent pro-rata to the holders of the asset.
-
-Example:
-
-A young child, in a country that permits it, could create a token that represents a lemonade stand business. Suppose she creates 10,000 LEMONADE tokens. These tokens could be used to raise funds for the lemonade stand at AUD$0.01 per LEMONADE token allowing her to raise AUD$ to build her business. These tokens can be sold and transferred easily by the owners. Suppose the lemonade stand does extraordinarily well because the neighborhood is invested in this entrepreneurial project. Now our fictional eight-year-old wants to reward those who believed in her project. With one command, she can send profits - denominated in any value HNB may have - to LEMONADE token holders. There could even be new holders of LEMONADE tokens that she’s never met. The built-in ease of use should allow anyone, anywhere in the world to do so on a mobile phone, or computer running Windows, Mac, or Linux.
-
-For such a global system to work it will need to be independent of regulatory jurisdictions. This is not due to ideological belief, but practicality: if the rails for blockchain asset transfer are not censorship resistant and jurisdiction agnostic, any given jurisdiction may conflict with another. In legacy systems, wealth was generally confined in the jurisdiction of the holder and therefore easy to control based on the policies of that jurisdiction. Because of the global nature of blockchain technology, any protocol level ability to control wealth will potentially place jurisdictions in conflict and will not be able to operate fairly.
-
-## 7. Unique Tokens
-
-Unique tokens allow token holders to create unique assets. Like ERC721 tokens, unique tokens are guaranteed to be unique and only one will exist. Unique tokens can change ownership by sending the unique token to another user’s address.
-
-Some examples of unique tokens:
-
-*  Imagine an art dealer issues the asset named ART. The dealer can then make unique ART assets by attaching a name or a serialized number to each piece of art. These unique tokens can be transferred to the new owner along with the artwork as a proof of authenticity. The tokens ART:MonaLisa and ART:VenusDeMilo are not fungible and represent distinct pieces of art.
-
-*  A software developer can issue the asset with the name of their software ABCGAME, and then assign each ABCGAME token a unique id or license key. The game tokens could be transferred as the license transfers. Each token ABCGAME:398222 and ABCGAME:423655 are unique tokens.
-
-*  In game assets. A game ZYX_GAME could create unique limited edition in-game assets that are owned and used by the game player. Example: ZYX_GAME:SwordOfTruth005 and ZYX_GAME:HammerOfThor These in game assets could then be kept, traded with other players via QR codes and wallets or uploaded into an upgrade or different version of a game.
-
-*  HNB based unique assets can be tied to real world assets. Create an asset named GOLDVAULT. Each gold coin or gold bar in a vault can be serialized and audited. Associated unique assets GOLDVAULT:444322 and GOLDVAULT:555994 can be created to represent the specific assets in the physical gold vault. The public nature of the chain allows for full transparency.
-
-Example:
-
-The holder of the token CAR could issue a unique token for each car by including the VIN number.
-
-Example: CAR:19UYA31581L000000
-
-Some use cases for unique assets include:
-
-*  Software licensing
-*  Car registration
-*  Proof of authenticity tokens to transfer along with items that could be counterfeited
-*  A token that allows communication on a channel (see Messaging)
-
-## 8. Messaging Stakeholders
-
-<p align="center"><i>
-"If the Tower of London ravens are lost or fly away, the Crown will fall and Britain with it." -
-Unknown
-</i></p>
-A common problem with tokens/assets is that the token issuer cannot communicate with the token holders. This must be handled very carefully because the token holders do not always wish to be identified. The communication should allow the token holder to opt-out at any time. The message system should only allow select parties to use the message channel so that it is not a spam conduit.
-
-
-The messaging system uses unique tokens to allow communication on the main token channel. For example, the COMPANY token would have a ~COMPANY:Alert token which allows alerts to be sent to all holders of COMPANY.
-
-Newsletters, game developers, non-profits, activist organizations, corporations and other entities will be able to issue tokens for specific users and then message those users but unlike email or other messaging services, the messaging itself will be enabled only for token holders, thereby making the token transferable.
-
-Messaging to token holders by authorized senders will be layered on top of the unique assets. The unique assets will act as a "talking stick" allowing messages to be sent by the channel owner. The KAAAWWW Protocol will be published with more information on this separately.
-
-## 9. Voting
-
-One of the problems, among many, with the existing US financial system is that all the shares are held in street name. In this age of fast communication, this makes holding a vote ridiculously difficult. A public company that issues shares on Nasdaq, as an example, will have to pay a quasi-monopoly company just to get the mailing addresses of their own shareholders at a given point in time. Then, a physical (dead tree) mailing must be sent out to shareholders with information on how to vote along with a proxy voting form.
-
-By using the messaging system, the holders of a token can be notified of the vote, and by automatically issuing a VOTE token to every holder of a token, the vote can be automated from the client or through a web or mobile interface using the protocol built into HookersAndBlowCoin.
-
-Tokens are created to represent votes. HookersAndBlowCoin will create an exact number of VOTE tokens and distribute them 1:1 to the token holders. These votes can be sent via the protocol to addresses that tally the votes. Because the voting tokens move the same way as assets, delegation of votes - sometimes known as delegative or liquid democracy[17] - is possible.
-
-## 10. Privacy
-
-<p align="center"><i>
-It's a community where the threat of violence is impotent because violence is impossible, and violence is impossible because its participants cannot be linked to their true names or physical locations. (Wei Dai)
-</i></p>  
-Privacy is key in investments and tokens because financial systems function better when assets are fungible and can trade in a frictionless manner. The project should seek to strengthen privacy in any way possible as future technological improvements are made.
-
-As capabilities like messaging, assets, and rewards are added, privacy will be preserved in the same way that UTXO based cryptocurrencies separate identity from public addresses.
-
-“Since we desire privacy, we must ensure that each party to a transaction have knowledge only of that which is directly necessary for that transaction. Since any information can be spoken of, we must ensure that we reveal as little as possible. In most cases personal identity is not salient.  
-... When my identity is revealed by the underlying mechanism of the transaction, I have no privacy. I cannot here selectively reveal myself; I must always reveal myself.  
-“Therefore, privacy in an open society requires anonymous transaction systems. Until now, cash has been the primary such system. An anonymous transaction system is not a secret transaction system. An anonymous system empowers individuals to reveal their identity when desired and only when desired; this is the essence of privacy.” (E. Hughes)[18].
-
-## 11. Additional
-
-Other projects can use this chain. Second layer solutions, particularly those being built for projects which share the code base of Bitcoin can be built on the HookersAndBlowCoin project. RSK, the Lightning Network, confidential transactions, and other scalability improvements, etc. to various open source projects could benefit projects built on this platform.
-
-## 12. Conclusion
-
-HookersAndBlowCoin is a platform coin built on the UTXO[19] model of Bitcoin. Modifying Bitcoin code to add these capabilities is not practical, but HookersAndBlowCoin is a platform built from a code fork and issuing newly mined HNB. HookersAndBlowCoin will be adding assets, rewards, unique assets, messaging, and voting. The HookersAndBlow protocol’s capabilities will be rolled out in phases which will be done as a planned hard fork upgrade. The code base is designed allow users and developers to maintain a secure, decentralized, and tamper resistant network.
-
-The HookersAndBlowCoin project can also serve as a base and starting point for projects, second layer solutions, experiments, and business ideas which might benefit from either the Bitcoin-based code base with adjustments or the native additional features added to the HookersAndBlowCoin blockchain.
-
-_The Inuit, Tlinglit, Tahitian, Chukchi, Sioux, the Haida, and many others call HookersAndBlow the magical keeper of secrets, the trickster, friend of the First Men and Creator of the World - an idea or force able to shift, change, and create something from nothing. In open source, the power of the crowd can accomplish much more than any one person or organization. All are welcome to contribute._
+# Hookers and Blow Coin (HNB) Whitepaper
+
+**Version 1.1 · Testnet · June 2026**
+
+A Ravencoin fork engineered for the decentralized creator and underground economy. Asset issuance, royalty enforcement, and programmable ownership — all for less than a cent per transaction.
+
+| | |
+|---|---|
+| **Ticker** | HNB |
+| **Algorithm** | KawPoW (GPU mining) |
+| **Block time** | ~1 minute |
+| **Hard cap** | 420,690,000 HNB |
+| **Website** | https://hookersandblow.xyz |
+| **Whitepaper (web)** | https://hookersandblow.xyz/whitepaper |
+| **Repository** | https://github.com/Feltersnatch22/HookersAndBlowCoin |
 
 ---
 
-References
+## Abstract
 
-[1] S. Nakamoto, “Bitcoin: A Peer-to-Peer Electronic Cash System https://bitcoin.org/bitcoin.pdf  
-[2] https://bravenewcoin.com/assets/Whitepapers/2ndBitcoinWhitepaper.pdf  
-[3] https://counterparty.io/  
-[4] https://en.bitcoin.it/wiki/Colored_Coins  
-[5] https://en.bitcoin.it/wiki/OP_RETURN  
-[6] https://bitcoinwisdom.com/bitcoin/difficulty  
-[7] https://theethereum.wiki/w/index.php/ERC20_Token_Standard  
-[8] https://github.com/Dexaran/ERC223-token-standard  
-[9] https://www.ethereum.org/  
-[10] W. Dei, “B-Money” [http://www.weidai.com/bmoney.txt](http://www.weidai.com/bmoney.txt)  
-[11] B. Fenton, “HookersAndBlowCoin: A digital peer to peer network for the facilitation of asset transfers.” https://medium.com/@ravencoin/ravencoin-4683cd00f83c  
-[12] https://github.com/HookersAndBlowProject/HookersAndBlowCoin  
-[13] T. Black, J. Weight “X16R” Algorithm White Paper https://ravencoin.org/wp-content/uploads/2018/03/X16R-Whitepaper.pdf  
-[14] [http://coinspark.org/developers/assets-introduction/](http://coinspark.org/developers/assets-introduction/)  
-[15] N. Szabo, “Secure Property Titles with Owner Authority” [http://nakamotoinstitute.org/secure-property-titles/#selection-7.7-7.50](http://nakamotoinstitute.org/secure-property-titles/#selection-7.7-7.50)  
-[16] https://www.forbes.com/2008/09/23/naked-shorting-trades-oped-cx_pb_0923byrne.html#63076e102e6c  
-[17] https://en.wikipedia.org/wiki/Delegative_democracy  
-[18] E. Hughes https://www.activism.net/cypherpunk/manifesto.html  
-[19] https://bitcoin.org/en/glossary/unspent-transaction-output  
+Hookers and Blow Coin (HNB) is a UTXO-based asset protocol and proof-of-work cryptocurrency designed for the creator, nightlife, and underground economies — markets where existing platforms extract excessive rents, censor content, and strip creators of ownership over their work and audience.
+
+Built as a targeted fork of Ravencoin, HNB adds lightweight contract primitives — royalty enforcement, burn-to-claim, time-locked vesting, and soulbound assets — without adopting the complexity or cost structure of full EVM chains. The result is a chain where issuing a VIP pass, splitting event revenue, or gating content costs fractions of a cent and requires no developer.
+
+**Own Your Hustle.** HNB exists to make the underground economy programmable and self-sovereign. No platform to ban you. No gas fee to kill your margin. No VC allocation to dump on retail.
+
+---
+
+## 1. Why HNB — Not the Alternatives
+
+Every chain claims to solve creator economy problems. Here is why the existing options fail this market specifically:
+
+| Competitor | What they do well | Why they fail this market | Verdict |
+|---|---|---|---|
+| Ethereum / Base | Smart contracts, liquidity, ecosystem | Gas fees destroy micro-transactions. $10+ to mint an NFT kills creator margins. | Too expensive |
+| Solana | Fast, cheap, large ecosystem | VC-heavy launch, outages, centralized validators. Not censorship-resistant for adult content. | Too corporate |
+| DOGE / PEPE | Culture and community | Zero utility. No asset issuance. No way to build real products on top. | Culture, no infrastructure |
+| Ravencoin (RVN) | Asset protocol, fair PoW launch | Stagnant development, no community direction, no contract layer. | HNB is what RVN should have become |
+| Flow / Tezos NFT chains | NFT-native, royalties baked in | Enterprise-focused, minimal retail culture, high barrier to participate. | Built for brands, not builders |
+
+**HNB's moat:** UTXO asset issuance at sub-cent fees + PoW fair launch + a community built around creators, nightlife, and degen culture. Ravencoin had the tech but never found the community. HNB finds both.
+
+---
+
+## 2. Technical Foundation
+
+HNB implements ownership primitives as targeted protocol extensions on top of the Ravencoin UTXO model — not a full EVM. Each primitive is designed to cover a specific creator economy use case with minimal protocol complexity and a small, auditable attack surface.
+
+### Asset Protocol (UTXO-native)
+
+- Fungible tokens, NFTs, unique assets, sub-assets — all native to the UTXO model
+- On-chain metadata via IPFS CID in OP_RETURN
+- Divisibility 0–8 decimals, set at mint
+- Reissuable or fixed supply — issuer's choice at creation
+
+### KawPoW Proof-of-Work
+
+- ASIC-resistant DAG algorithm — GPU mining only
+- 4 GB+ VRAM minimum — accessible to consumer hardware
+- ~1 minute target block time
+- Dark Gravity Wave (DGW) difficulty retarget
+
+### Security Model
+
+- No reentrancy — UTXO inputs spent atomically
+- No approval exploits — assets require direct ownership
+- Script-based — limited opcodes = smaller attack surface
+- SPV-compatible lightweight client verification
+
+### Why Not EVM?
+
+EVM gives you Turing-complete contracts but also reentrancy attacks, approval drains, and $10+ gas for simple operations. A creator selling 200 VIP passes at $5 each cannot absorb those costs. HNB's UTXO script extensions cover 90% of use cases at a fraction of the cost.
+
+---
+
+## 3. Contract Primitives
+
+Six targeted ownership primitives — no Turing-complete overhead. Each covers a specific real-world use case.
+
+### Timelock Vesting *(Phase 1/2 · High feasibility)*
+
+**Mechanism:** CheckLockTimeVerify (CLTV) inherited from Bitcoin via Ravencoin. Coins or assets are locked in P2SH with a script requiring block height > N to spend. Fully enforced by consensus.
+
+**Use case:** Team allocation: 10% locked in CLTV. Unlocks 20%/year starting at mainnet block 525,600. Verifiable by anyone on the explorer.
+
+### Multi-Sig Escrow *(Phase 1/2 · High feasibility)*
+
+**Mechanism:** Standard P2SH multi-sig (N-of-M). Two parties deposit to escrow address; release requires M signatures. Arbiter key can be a trusted third party or a DAO key.
+
+**Use case:** Promoter books venue: 50% deposit locked in 2-of-3 (promoter, venue, arbiter). Funds release to venue after event, or return to promoter if event cancels.
+
+### Burn-to-Claim *(Phase 2 · High feasibility)*
+
+**Mechanism:** Atomic transaction spends (burns) asset X as input and creates asset Y as output. Both settle in the same block — no escrow, no counterparty risk.
+
+**Use case:** Venue issues `CLUB/TICKET` (1000 supply). Each ticket can be burned to claim `CLUB/PROOF_OF_ATTENDANCE` (soulbound) after the event date.
+
+### Soulbound Assets *(Phase 2 · High feasibility)*
+
+**Mechanism:** Protocol-level flag set at asset issuance marks asset as non-transferable. Consensus rejects any tx attempting to move a soulbound asset. Burn is still permitted.
+
+**Use case:** Event attendance badge, membership tier, verified creator status — issued once, lives permanently in that wallet, provable on-chain.
+
+### Royalty Enforcement *(Phase 3 · Medium complexity)*
+
+**Mechanism:** Transaction script validates that N% of HNB in the tx routes to creator address embedded in asset metadata. Enforced at consensus — any tx missing the royalty payment is invalid.
+
+**Use case:** Creator mints `ARTIST/PRINT` with 10% royalty. Every resale on-chain automatically sends 10% to creator wallet.
+
+### Revenue Share Pass *(Phase 3–4 · Complex)*
+
+**Mechanism (v1):** Snapshot-based: issuer takes on-chain snapshot of token holders at a defined block height, then runs a distribution tx paying each holder proportionally.
+
+**Use case:** Creator issues 1000 `CREATOR/REVENUE_PASS`. Monthly snapshot distributes 70% of tip revenue to all pass holders proportionally.
+
+---
+
+## 4. Use Cases
+
+HNB targets four overlapping markets that share a common problem: they need programmable ownership without corporate intermediaries or enterprise-level costs.
+
+### Creator Economy
+
+Issue VIP passes, content gates, and tip tokens in minutes. Royalties enforced by protocol — every resale pays you automatically. No platform taking 20%. No account to ban.
+
+- Creator VIP Pass — NFT + revenue share, transferable or soulbound
+- Content Drop Token — burn-to-unlock pay-per-view
+- Tip Token — branded fungible token redeemable for perks
+
+### Nightlife & Events
+
+Tickets that can't be faked. VIP passes that enforce themselves. Revenue splits that execute the moment the transaction clears.
+
+- Digital Ticket NFT — timed validity, on-chain redemption
+- VIP Table Pass — secondary market with venue royalty
+- Promoter Revenue Share — multi-sig door split
+
+### Meme & Degen Economy
+
+Issue a community token in two minutes. Fixed supply, provable on-chain, no dev needed.
+
+- Community Asset — meme collection with provable supply
+- Prediction Market Token — burn-to-claim resolution
+- Degen DAO Pass — governance for community treasury
+
+### Real-World Asset Lite
+
+Permanent provenance tracking. Fractional ownership. Asset transfer equals ownership handoff.
+
+- Memorabilia Provenance — IPFS metadata on-chain forever
+- Fractional Experience — studio session, luxury trip
+- Collectible Authentication — transfer = handoff
+
+---
+
+## 5. Tokenomics
+
+| Parameter | Value |
+|---|---|
+| Hard cap supply | 420,690,000 HNB |
+| Starting block reward | 60 HNB |
+| Halving interval | ~4 years |
+| Full emission | ~14 years |
+
+### Supply Allocation
+
+| Allocation | Share | Amount |
+|---|---|---|
+| Mining Rewards (PoW) | 60% | 252,414,000 HNB |
+| Liquidity Bootstrap | 20% | 84,138,000 HNB |
+| Dev & Team (Vested) | 10% | 42,069,000 HNB |
+| Marketing & Community | 10% | 42,069,000 HNB |
+
+Mining rewards are distributed via fair PoW over ~14 years. No premine, no founder allocation in coinbase. Team allocation is subject to 3-year linear vest with 6-month cliff, enforced via CLTV timelock scripts.
+
+### Emission Schedule
+
+| Epoch | Period | Block Reward | Blocks | HNB Emitted | Cumulative |
+|---|---|---|---|---|---|
+| 1 | Year 1–4 | 60 HNB | 2,100,000 | 126,000,000 | 50% |
+| 2 | Year 4–8 | 30 HNB | 2,100,000 | 63,000,000 | 75% |
+| 3 | Year 8–12 | 15 HNB | 2,100,000 | 31,500,000 | 87.5% |
+| 4 | Year 12–16 | 7.5 HNB | 2,100,000 | 15,750,000 | 93.75% |
+| Tail | Year 16+ | ↓ | ∞ | 16,164,000 | 100% |
+
+### Asset Creation Burns (Deflationary)
+
+| Asset Type | HNB Burned | Example |
+|---|---|---|
+| Main Asset | 500 HNB | `NIGHTCLUB` |
+| Sub-Asset | 100 HNB | `NIGHTCLUB/VIP_PASS` |
+| Unique Asset (NFT) | 5 HNB | `NIGHTCLUB/VIP_PASS#0001` |
+| HNB Transfer | ~0.01 HNB | Send / receive |
+
+---
+
+## 6. Roadmap
+
+### Phase 1 — Testnet *(Live · Q2 2026)*
+
+- Asset issuance & transfer
+- Qt wallet (Windows + Linux)
+- KawPoW GPU mining + stratum
+- Block explorer
+- Dedicated seed node VPS
+
+### Phase 2 — Mainnet Launch *(Q3 2026)*
+
+- Mainnet genesis
+- Asset marketplace v1
+- Creator dashboard
+- Mobile wallet
+- CEX/DEX listings
+
+### Phase 3 — Ecosystem Growth *(Q4 2026)*
+
+- Royalty enforcement contracts
+- Event ticket platform
+- Revenue share passes
+- API for third-party apps
+- Community grants program
+
+### Phase 4 — RWA & DAO *(Q1 2027)*
+
+- Real-world asset tokenization
+- On-chain DAO governance
+- Community treasury
+- Cross-chain bridge research
+- Enterprise partnerships
+
+---
+
+## 7. Risks & Disclaimers
+
+**HNB is a high-risk experimental cryptocurrency.** It is in active testnet. Mainnet has not launched. Do not invest more than you can afford to lose completely. This document is not financial advice.
+
+| Risk | Description |
+|---|---|
+| Market risk | Cryptocurrency valuations can reach zero. DYOR. |
+| Technical risk | Contract primitives are unaudited pre-mainnet. Get an independent audit before production use. |
+| Regulatory risk | Content-adjacent projects face uncertain treatment in many jurisdictions. Know your local laws. |
+| Mining centralization | KawPoW ASIC resistance mitigates but does not eliminate 51% attack risk if hash rate concentrates. |
+| Liquidity risk | Early-stage chain. Exit liquidity may be limited at launch. |
+
+*For informational purposes only. Not financial advice. Adult-themed project — participation subject to applicable local laws. © 2026 Hookers and Blow Coin.*
+
+---
+
+## Acknowledgements
+
+HNB is built on Ravencoin and Bitcoin. Thank you to the open-source developers whose work made this project possible.
