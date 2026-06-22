@@ -10,7 +10,7 @@ http://www.ravencoin.org<br>
 3rd April 2018
 </p>
 <p align="center"><i>
-In the fictional world of Westeros, ravens are used as messengers who carry statements of truth. HookersAndBlowCoin is a use-case focused blockchain designed to carry statements of truth about who owns what assets.
+HookersAndBlowCoin (HNB) is a KawPoW proof-of-work chain built for programmable asset ownership. Every asset on the network is a durable statement of who owns what — tickets, passes, creator tokens, revenue shares, and community assets that anyone can verify without trusting a platform.
 </i></p> 
 
 Thank you to the Bitcoin founder and developers. The HookersAndBlowCoin project was launched based on the hard work and continuous effort of over 430 Bitcoin developers who made over 14,000 commits by the date of the HookersAndBlowCoin code fork. We are eternally grateful to you for your diligence in making a secure network and for your support of free and open source software development. The HookersAndBlowCoin project is built on the foundation you built.
