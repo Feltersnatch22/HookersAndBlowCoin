@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/wallet/auth", "destination": "/api/auth" },
+    { "source": "/wallet/rpc", "destination": "/api/rpc" },
+    { "source": "/wallet/config", "destination": "/api/config" },
+    { "source": "/explorer/rpc", "destination": "/api/explorer-rpc" },
+    { "source": "/explorer/config", "destination": "/api/explorer-config" },
+    { "source": "/web-wallet", "destination": "/wallet" },
+    { "source": "/web-wallet/", "destination": "/wallet/" },
+    { "source": "/web-wallet/:path*", "destination": "/wallet/:path*" },
+    { "source": "/wallet", "destination": "/web-wallet/index.html" },
+    { "source": "/wallet/", "destination": "/web-wallet/index.html" },
+    { "source": "/wallet/:path*", "destination": "/web-wallet/:path*" },
+    { "source": "/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/favicon.ico", "destination": "/favicon.ico" },
+    { "source": "/favicon.svg", "destination": "/favicon.svg" },
+    { "source": "/favicon.png", "destination": "/favicon.png" },
+    { "source": "/apple-touch-icon.png", "destination": "/apple-touch-icon.png" },
+    { "source": "/explorer", "destination": "/block-explorer/index.html" },
+    { "source": "/explorer/", "destination": "/block-explorer/index.html" },
+    { "source": "/explorer/:path*", "destination": "/block-explorer/:path*" },
+    { "source": "/downloads", "destination": "/downloads.html" },
+    { "source": "/downloads/", "destination": "/downloads.html" },
+    { "source": "/", "destination": "/hnb-landing.html" }
+  ]
+}

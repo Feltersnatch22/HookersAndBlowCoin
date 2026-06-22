@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Downloads — HNB · Hookers and Blow Coin</title>
+<meta name="description" content="Download the HNBCoin wallet for Windows and Linux. Qt GUI and headless CLI releases." />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:     "#050507",
+          coal:    "#0b0b0f",
+          char:    "#14141b",
+          smoke:   "#1d1d27",
+          magenta: "#ff2d8e",
+          hotpink: "#ff5cad",
+          cyan:    "#22e3ff",
+          gold:    "#e9c46a",
+        },
+        fontFamily: {
+          display: ['Outfit', 'system-ui', 'sans-serif'],
+          body:    ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background-color: #050507; }
+
+  .text-gradient {
+    background: linear-gradient(92deg, #ffffff 0%, #ffd9ec 38%, #ff2d8e 70%, #22e3ff 120%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass {
+    background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012));
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+  }
+  .glass:hover { border-color: rgba(255,45,142,0.25); }
+  .glass-cyan:hover { border-color: rgba(34,227,255,0.35) !important; }
+
+  .hairline { border-color: rgba(255,255,255,0.08); }
+
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content:""; position:absolute; left:0; bottom:-4px; height:1px; width:0;
+    background: linear-gradient(90deg,#ff2d8e,#22e3ff); transition: width .35s ease;
+  }
+  .nav-link:hover::after { width:100%; }
+
+  .dl-btn {
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    border-radius:14px; padding:14px 22px; font-family:'Outfit',sans-serif;
+    font-weight:600; font-size:14px; transition:all .2s; cursor:pointer;
+    text-decoration:none;
+  }
+  .dl-btn-primary {
+    background: linear-gradient(135deg,#ff2d8e,#ff5cad);
+    color:#fff;
+    box-shadow: 0 0 0 1px rgba(255,45,142,0.4), 0 10px 30px -8px rgba(255,45,142,0.5);
+  }
+  .dl-btn-primary:hover {
+    box-shadow: 0 0 0 1px rgba(255,45,142,0.7), 0 14px 40px -8px rgba(255,45,142,0.75);
+    transform: translateY(-1px);
+  }
+  .dl-btn-cyan {
+    background: linear-gradient(135deg,rgba(34,227,255,0.15),rgba(34,227,255,0.08));
+    color:#22e3ff; border:1px solid rgba(34,227,255,0.35);
+  }
+  .dl-btn-cyan:hover { background:rgba(34,227,255,0.18); transform:translateY(-1px); }
+  .dl-btn-ghost {
+    background:rgba(255,255,255,0.05); color:rgba(255,255,255,0.75);
+    border:1px solid rgba(255,255,255,0.1);
+  }
+  .dl-btn-ghost:hover { background:rgba(255,255,255,0.09); transform:translateY(-1px); }
+
+  .platform-card {
+    border-radius:28px; padding:36px; transition:all .3s;
+  }
+  .platform-card:hover { transform:translateY(-2px); }
+
+  .badge {
+    display:inline-flex; align-items:center; gap:6px;
+    border-radius:999px; padding:4px 12px; font-size:11px; font-weight:700;
+    letter-spacing:.08em; text-transform:uppercase;
+  }
+
+  @keyframes pulseDot { 0%,100%{opacity:.4} 50%{opacity:1} }
+  .pulse-dot { animation: pulseDot 2.5s ease-in-out infinite; }
+
+  ::selection { background:rgba(255,45,142,0.35); color:#fff; }
+</style>
+</head>
+
+<body class="bg-ink font-body text-white/80 antialiased">
+
+<!-- ========== NAVBAR ========== -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 bg-ink/80 backdrop-blur-xl border-b hairline">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="/" class="flex items-center gap-3 group">
+        <span class="font-display font-extrabold text-xl text-gradient tracking-tight">HNB</span>
+        <span class="hidden sm:block font-display font-semibold tracking-tight text-white/90 text-[15px]">Hookers and Blow Coin</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/60">
+        <a href="/#codex"      class="nav-link hover:text-white transition">The Codex</a>
+        <a href="/#tokenomics" class="nav-link hover:text-white transition">Tokenomics</a>
+        <a href="/#portal"     class="nav-link hover:text-white transition">The Portal</a>
+        <a href="/#colab"      class="nav-link hover:text-white transition">CoLab</a>
+        <a href="/downloads"   class="nav-link text-cyan/90 hover:text-cyan transition">Downloads</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="/wallet/" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-magenta to-hotpink text-white px-5 py-2.5 text-sm font-display font-semibold tracking-tight transition hover:opacity-90">
+          Web Wallet
+        </a>
+        <button id="mobileBtn" class="lg:hidden grid place-items-center h-10 w-10 rounded-lg border hairline text-white/80">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="lg:hidden hidden border-t hairline bg-ink/95">
+    <nav class="px-6 py-6 flex flex-col gap-5 text-base font-medium text-white/75">
+      <a href="/#codex"      class="hover:text-magenta transition">The Codex</a>
+      <a href="/#tokenomics" class="hover:text-magenta transition">Tokenomics</a>
+      <a href="/#portal"     class="hover:text-magenta transition">The Portal</a>
+      <a href="/#colab"      class="hover:text-magenta transition">CoLab</a>
+      <a href="/downloads"   class="text-cyan/90">Downloads</a>
+      <a href="/wallet/" class="mt-2 inline-flex justify-center items-center rounded-full bg-gradient-to-r from-magenta to-hotpink text-white px-5 py-3 font-display font-semibold">Web Wallet</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="pt-36 pb-20 px-6 relative overflow-hidden">
+  <div class="absolute inset-0 -z-10 pointer-events-none"
+       style="background:radial-gradient(55% 40% at 50% 0%,rgba(34,227,255,0.12),transparent 60%),radial-gradient(40% 30% at 80% 20%,rgba(255,45,142,0.10),transparent 55%);">
+  </div>
+  <div class="mx-auto max-w-3xl text-center">
+    <div class="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium tracking-wide text-white/60 mb-8">
+      <span class="h-1.5 w-1.5 rounded-full bg-cyan pulse-dot"></span>
+      v4.6.1 · Latest Release
+    </div>
+    <h1 class="font-display font-bold text-[clamp(2.4rem,6vw,4.2rem)] tracking-tight leading-[1.05] text-white mb-5">
+      Download<br/><span class="text-gradient">HNBCoin</span>
+    </h1>
+    <p class="text-lg text-white/55 leading-relaxed max-w-xl mx-auto">
+      Full Qt GUI wallet or headless daemon — for Windows and Linux.
+      All binaries are built from the open-source
+      <a href="https://github.com/Feltersnatch22/HookersAndBlowCoin" target="_blank" rel="noopener"
+         class="text-cyan/80 hover:text-cyan underline underline-offset-2 transition">HookersAndBlowCoin</a> repository.
+    </p>
+  </div>
+</section>
+
+<!-- ========== DOWNLOAD CARDS ========== -->
+<section class="pb-24 px-6">
+  <div class="mx-auto max-w-5xl space-y-5">
+
+    <!-- Windows GUI -->
+    <div class="platform-card glass glass-cyan">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="flex items-center gap-5 flex-1 min-w-0">
+          <div class="shrink-0 h-16 w-16 rounded-2xl grid place-items-center bg-gradient-to-br from-cyan/20 to-cyan/5 border border-cyan/30">
+            <svg class="w-8 h-8 text-cyan" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.557 10.025 4.6v6.952H3V5.557Zm0 12.89L10.025 19.4v-6.848H3v5.895Zm7.975-12.68 10.647-1.473v8.226H10.975V5.767Zm0 12.467 10.647 1.466v-8.18H10.975v6.714Z"/></svg>
+          </div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h2 class="font-display font-bold text-xl text-white tracking-tight">Windows GUI Wallet</h2>
+              <span class="badge bg-cyan/10 text-cyan border border-cyan/30">Recommended</span>
+            </div>
+            <p class="text-sm text-white/50">hnb-qt.exe · Full node + wallet · Windows 10/11 x64</p>
+            <p class="text-xs text-white/30 font-mono mt-1">hnb-4.6.1-win64-qt.zip · ~22 MB</p>
+          </div>
+        </div>
+        <a href="https://github.com/Feltersnatch22/HookersAndBlowCoin/releases/download/v4.6.1/hnb-4.6.1-win64-qt.zip"
+           class="dl-btn dl-btn-cyan shrink-0">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v13M6 11l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-linecap="round"/></svg>
+          Download .zip
+        </a>
+      </div>
+      <div class="mt-5 pt-5 border-t hairline grid sm:grid-cols-3 gap-4 text-sm">
+        <div>
+          <p class="text-white/35 text-xs uppercase tracking-widest mb-1">Run</p>
+          <p class="font-mono text-white/70 text-xs">hnb-qt.exe</p>
+        </div>
+        <div>
+          <p class="text-white/35 text-xs uppercase tracking-widest mb-1">Data folder</p>
+          <p class="font-mono text-white/70 text-xs">%APPDATA%\HookersAndBlow\</p>
+        </div>
+        <div>
+          <p class="text-white/35 text-xs uppercase tracking-widest mb-1">Testnet</p>
+          <p class="font-mono text-white/70 text-xs">hnb-qt.exe -testnet</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Windows CLI -->
+    <div class="platform-card glass">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="flex items-center gap-5 flex-1 min-w-0">
+          <div class="shrink-0 h-16 w-16 rounded-2xl grid place-items-center bg-gradient-to-br from-white/10 to-white/5 border border-white/15">
+            <svg class="w-8 h-8 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8l4 4-4 4M13 16h4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h2 class="font-display font-bold text-xl text-white tracking-tight">Windows CLI / Node</h2>
+              <span class="badge bg-white/8 text-white/60 border border-white/15">Headless</span>
+            </div>
+            <p class="text-sm text-white/50">hnbd.exe + hnb-cli.exe · Run a full node without the GUI</p>
+            <p class="text-xs text-white/30 font-mono mt-1">hnb-4.6.1-win64.zip · ~7 MB</p>
+          </div>
+        </div>
+        <a href="https://github.com/Feltersnatch22/HookersAndBlowCoin/releases/download/v4.6.1/hnb-4.6.1-win64.zip"
+           class="dl-btn dl-btn-ghost shrink-0">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v13M6 11l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-linecap="round"/></svg>
+          Download .zip
+        </a>
+      </div>
+      <div class="mt-5 pt-5 border-t hairline grid sm:grid-cols-3 gap-4 text-sm">
+        <div>
+          <p class="text-white/35 text-xs uppercase tracking-widest mb-1">Start daemon</p>
+          <p class="font-mono text-white/70 text-xs">hnbd.exe -daemon</p>
+        </div>
+        <div>
+          <p class="text-white/35 text-xs uppercase tracking-widest mb-1">Check status</p>
+          <p class="font-mono text-white/70 text-xs">hnb-cli.exe getblockchaininfo</p>
+        </div>
+        <div>
+          <p class="text-white/35 text-xs uppercase tracking-widest mb-1">Config</p>
+          <p class="font-mono text-white/70 text-xs">%APPDATA%\HookersAndBlow\hnb.conf</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Linux GUI -->
+    <div class="platform-card glass">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="flex items-center gap-5 flex-1 min-w-0">
+          <div class="shrink-0 h-16 w-16 rounded-2xl grid place-items-center bg-gradient-to-br from-magenta/20 to-magenta/5 border border-magenta/30">
+            <svg class="w-8 h-8 text-magenta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h2 class="font-display font-bold text-xl text-white tracking-tight">Linux GUI Wallet</h2>
+              <span class="badge bg-magenta/10 text-magenta border border-magenta/30">x86_64</span>
+            </div>
+            <p class="text-sm text-white/50">hnb-qt binary · Requires system Qt5 libs</p>
+            <p class="text-xs text-white/30 font-mono mt-1">hnb-4.6.1-x86_64-linux-gnu-qt.tar.gz · ~8 MB</p>
+          </div>
+        </div>
+        <a href="https://github.com/Feltersnatch22/HookersAndBlowCoin/releases/download/v4.6.1/hnb-4.6.1-x86_64-linux-gnu-qt.tar.gz"
+           class="dl-btn dl-btn-primary shrink-0" style="background:linear-gradient(135deg,rgba(255,45,142,0.3),rgba(255,45,142,0.15));color:#ff5cad;border:1px solid rgba(255,45,142,0.35);box-shadow:none;">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v13M6 11l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-linecap="round"/></svg>
+          Download .tar.gz
+        </a>
+      </div>
+      <div class="mt-5 pt-5 border-t hairline">
+        <p class="text-white/35 text-xs uppercase tracking-widest mb-3">Quick start</p>
+        <div class="rounded-xl bg-ink/80 border hairline p-4 font-mono text-xs text-white/65 space-y-1 leading-relaxed">
+          <p><span class="text-white/30">$</span> tar xzf hnb-4.6.1-x86_64-linux-gnu-qt.tar.gz</p>
+          <p><span class="text-white/30">$</span> cd hnb-4.6.1-x86_64-linux-gnu-qt</p>
+          <p><span class="text-white/30">$</span> sudo apt install libqt5gui5 libqt5widgets5 libqt5network5  <span class="text-white/30"># if needed</span></p>
+          <p><span class="text-white/30">$</span> ./bin/hnb-qt</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Linux CLI -->
+    <div class="platform-card glass">
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+        <div class="flex items-center gap-5 flex-1 min-w-0">
+          <div class="shrink-0 h-16 w-16 rounded-2xl grid place-items-center bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/30">
+            <svg class="w-8 h-8 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8l4 4-4 4M13 16h4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <h2 class="font-display font-bold text-xl text-white tracking-tight">Linux CLI / Node</h2>
+              <span class="badge bg-gold/10 text-gold border border-gold/30">Headless</span>
+            </div>
+            <p class="text-sm text-white/50">hnbd + hnb-cli · Run a node, mine, or manage your wallet via RPC</p>
+            <p class="text-xs text-white/30 font-mono mt-1">hnb-4.6.1-x86_64-linux-gnu.tar.gz · ~16 MB</p>
+          </div>
+        </div>
+        <a href="https://github.com/Feltersnatch22/HookersAndBlowCoin/releases/download/v4.6.1/hnb-4.6.1-x86_64-linux-gnu.tar.gz"
+           class="dl-btn dl-btn-ghost shrink-0" style="border-color:rgba(233,196,106,0.3);color:rgba(233,196,106,0.9);">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v13M6 11l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-linecap="round"/></svg>
+          Download .tar.gz
+        </a>
+      </div>
+      <div class="mt-5 pt-5 border-t hairline">
+        <p class="text-white/35 text-xs uppercase tracking-widest mb-3">Quick start</p>
+        <div class="rounded-xl bg-ink/80 border hairline p-4 font-mono text-xs text-white/65 space-y-1 leading-relaxed">
+          <p><span class="text-white/30">$</span> tar xzf hnb-4.6.1-x86_64-linux-gnu.tar.gz &amp;&amp; cd hnb-4.6.1-x86_64-linux-gnu</p>
+          <p><span class="text-white/30">$</span> ./bin/hnbd -daemon  <span class="text-white/30"># starts the background node</span></p>
+          <p><span class="text-white/30">$</span> ./bin/hnb-cli getblockchaininfo</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== SETUP NOTES ========== -->
+<section class="pb-24 px-6">
+  <div class="mx-auto max-w-5xl">
+    <div class="glass rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-10">
+
+      <div>
+        <h3 class="font-display font-bold text-xl text-white tracking-tight mb-5 flex items-center gap-3">
+          <span class="h-8 w-8 rounded-xl grid place-items-center bg-cyan/10 border border-cyan/30 text-cyan text-sm font-bold">⚙</span>
+          Connecting to the Network
+        </h3>
+        <div class="space-y-4 text-sm text-white/60 leading-relaxed">
+          <p>The wallet finds peers automatically on first launch. If it stays at 0 connections, add this to <span class="font-mono text-white/80">hnb.conf</span>:</p>
+          <div class="rounded-xl bg-ink/80 border hairline p-4 font-mono text-xs text-white/65 space-y-1">
+            <p>addnode=23.88.122.228:28888</p>
+            <p>server=1</p>
+            <p>listen=1</p>
+          </div>
+          <p>On Windows the config lives at <span class="font-mono text-white/80">%APPDATA%\HookersAndBlow\hnb.conf</span></p>
+          <p>On Linux: <span class="font-mono text-white/80">~/.hnb/hnb.conf</span></p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-display font-bold text-xl text-white tracking-tight mb-5 flex items-center gap-3">
+          <span class="h-8 w-8 rounded-xl grid place-items-center bg-magenta/10 border border-magenta/30 text-magenta text-sm font-bold">✓</span>
+          Verify Your Download
+        </h3>
+        <div class="space-y-4 text-sm text-white/60 leading-relaxed">
+          <p>Checksums are published alongside each release on GitHub.</p>
+          <div class="rounded-xl bg-ink/80 border hairline p-4 font-mono text-xs text-white/65 space-y-1">
+            <p><span class="text-white/30"># Linux / Mac</span></p>
+            <p>sha256sum hnb-4.6.1-win64-qt.zip</p>
+            <p class="mt-2"><span class="text-white/30"># Windows PowerShell</span></p>
+            <p>Get-FileHash hnb-4.6.1-win64-qt.zip</p>
+          </div>
+          <p>Compare against the <a href="https://github.com/Feltersnatch22/HookersAndBlowCoin/releases/tag/v4.6.1" target="_blank" rel="noopener" class="text-cyan/80 hover:text-cyan underline underline-offset-2 transition">GitHub Release</a> sha256sum file.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="border-t hairline bg-ink">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-12">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+      <div>
+        <a href="/" class="flex items-center gap-3">
+          <span class="font-display font-extrabold text-lg text-gradient tracking-tight">HNB</span>
+          <span class="font-display font-semibold tracking-tight text-white/80">Hookers and Blow Coin</span>
+        </a>
+        <p class="mt-3 text-sm text-white/35 max-w-xs leading-relaxed">One portal. Every device. Premium by obsession, bold by design.</p>
+      </div>
+      <nav class="flex flex-wrap gap-x-8 gap-y-3 text-sm text-white/50">
+        <a href="/"            class="hover:text-white transition">Home</a>
+        <a href="/#portal"     class="hover:text-white transition">The Portal</a>
+        <a href="/wallet/"     class="hover:text-white transition">Web Wallet</a>
+        <a href="/explorer/"   class="hover:text-white transition">Explorer</a>
+        <a href="/downloads"   class="text-cyan/80 hover:text-cyan transition">Downloads</a>
+        <a href="https://github.com/Feltersnatch22/HookersAndBlowCoin/releases/tag/v4.6.1" target="_blank" rel="noopener" class="hover:text-white transition">GitHub Release</a>
+      </nav>
+    </div>
+    <div class="mt-10 pt-7 border-t hairline">
+      <p class="text-xs text-white/30">© <span id="year"></span> Hookers and Blow Coin. HNB is a community culture token. Nothing here is financial advice.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const mb = document.getElementById('mobileBtn');
+  const mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', () => mm.classList.toggle('hidden'));
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.add('hidden')));
+</script>
+</body>
+</html>
